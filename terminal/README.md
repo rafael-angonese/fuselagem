@@ -244,4 +244,43 @@ ZSH_THEME="dracula"
 
 ---
 
+## **🦑 Exports**
+
+Caso você tenha algum exports no final do seu arquivo `~/.bashrc` considere move-los para o seu `~/.zshrc`
+
+No meu caso eu tenho alguns, veja o exemplo.
+
+```bash
+# Exports
+
+# Java JDK
+export JAVA_HOME=/home/rafael/.asdf/installs/java/openjdk-14.0.1
+
+# Android SDK (React Native)
+export ANDROID_HOME=/home/rafael/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export PATH=$PATH:/opt/android-studio/bin
+
+```
+
+Outros exemplos
+
+```bash
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Yarn Global Packages Setup
+export PATH="$PATH:$(yarn global bin)
+
+```
+
+---
+
 Feito com 💜 by Rafael Angonese
