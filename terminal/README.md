@@ -242,6 +242,8 @@ ZSH_THEME="dracula"
 
 ```
 
+![](./images/dracula.png)
+
 ---
 
 ## **🦑 Exports**
