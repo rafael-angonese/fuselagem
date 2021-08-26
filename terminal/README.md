@@ -283,4 +283,12 @@ export PATH="$PATH:$(yarn global bin)
 
 ---
 
+## **🦕 Concluindo**
+
+Agora temos um terminal customizado e muito mais produtivo.
+
+Além disso meu arquivo `~/.zshrc` está diponível em: [~/.zshrc](.zshrc)  
+
+---
+
 Feito com 💜 by Rafael Angonese
