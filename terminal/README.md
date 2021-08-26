@@ -210,4 +210,38 @@ Essas configurações são preferências minhas que gosto de utilizar em meu ter
 
 ---
 
+## **🧛 Dracula**
+
+Uma alternativa ao tema da Spaceship é utilizar o tema Dracula, o tema Dracula é amplamente utilizado e possui suporte para diversas aplicações.
+
+- [Dracula theme](https://draculatheme.com/).
+- [Dracula theme for Zsh](https://draculatheme.com/zsh).
+- [Github Dracula theme](https://github.com/dracula/dracula-theme).
+
+Instalando o Dracula theme.
+
+```bash
+$ git clone https://github.com/dracula/zsh.git
+
+# Criar um link simbólico
+$ ln -s ~/zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
+
+```
+
+Após a instalação, vamos abrir novamente o arquivo `~/.zshrc`.
+
+```bash
+$ code ~/.zshrc
+
+```
+
+Agora dentro do arquivo `~/.zshrc` vamos alterar o tema para o tema Dracula, para isso, sete o valor do ZSH_THEME para dracula.
+
+```bash
+ZSH_THEME="dracula"
+
+```
+
+---
+
 Feito com 💜 by Rafael Angonese
