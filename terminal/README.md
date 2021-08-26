@@ -6,7 +6,9 @@ Todo desenvolvedor utiliza (ou já utilizou) um terminal em sua carreira. É com
 
 ![](./images/terminal.png)
 
-## ✨ **Terminal Hyper**
+---
+
+## 🦩 **Terminal Hyper**
 
 ![](./images/hyper-banner.png)
 
@@ -25,13 +27,15 @@ rafael ~
 
 ```
 
-## **🚀 Donwload Hyper**
+---
+
+## **🦸🏼‍♀️ Download Hyper**
 
 A instalação do Hyper é muito simples, basta acessar o site da ferramenta em seu site oficial, selecionar a versão com base no sistema operacional que você utiliza e fazer a instalação. Ao final deste processo, o Hyper já estará disponível e pronto para ser utilizado.
 
 Basta acessar o site oficial:
 
-- [Hyper.js](https://hyper.is/).
+- [Hyper](https://hyper.is/).
 - [Github Hyper](https://github.com/vercel/hyper).
 
 Para deixar o Hyper como o terminal padrão no linux, possibilitando assim abrir utilizando o atalho CTRL+ALT+T.
