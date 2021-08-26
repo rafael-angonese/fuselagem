@@ -145,4 +145,69 @@ zinit light zdharma/fast-syntax-highlighting
 
 ---
 
+## **🚀 Spaceship**
+
+A Spaceship é um prompt Zsh minimalista, poderoso e extremamente personalizável. Combina tudo o que você precisa para um trabalho conveniente, sem complicações desnecessárias, como uma nave espacial de verdade. Vamos utilizar para modificar como as informações são exibidas.
+
+Para instalar o tema Spaceship podemos seguir a documentação [Github Spaceship](https://github.com/spaceship-prompt/spaceship-prompt).
+
+Instalando o Spaceship.
+
+```bash
+$ git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+
+# Criar um link simbólico
+$ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+```
+
+Após a instalação, vamos abrir novamente o arquivo `~/.zshrc`.
+
+```bash
+$ code ~/.zshrc
+
+```
+
+Agora dentro do arquivo `~/.zshrc` vamos alterar o tema para o tema da Spaceship, para isso, sete o valor do ZSH_THEME para spaceship.
+
+```bash
+ZSH_THEME="spaceship"
+
+```
+
+Pronto agora o tema da Spaceship está instaldo e funcionando, enfim agora podemos configurar de acordo com o nosso gosto.
+
+No final do arquivo `~/.zshrc` vamos adicionar as seguintes configurações.
+
+```bash
+# Theming
+LS_COLORS=$LS_COLORS:'ow=01;34:' ; export LS_COLORS
+
+SPACESHIP_PROMPT_ORDER=(
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  hg            # Mercurial section (hg_branch  + hg_status)
+  exec_time     # Execution time
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+
+SPACESHIP_USER_SHOW="always" # Shows System user name before directory name
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+# SPACESHIP_PROMPT_SEPARATE_LINE=false # Make the prompt span across two lines
+# SPACESHIP_DIR_TRUNC=1 # Shows only the last directory folder name
+
+```
+
+Essas configurações são preferências minhas que gosto de utilizar em meu terminal, por isso fique à vontade para incluir/excluir qualquer opção. Vale ressaltar que o spaceship é totalmente customizável [Github spaceship doc options](https://github.com/spaceship-prompt/spaceship-prompt/blob/master/docs/options.md).
+
+---
+
 Feito com 💜 by Rafael Angonese
