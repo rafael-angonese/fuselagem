@@ -105,4 +105,44 @@ $ chsh -s $(which zsh)
 Substituindo assim o bash para o zsh
 
 ---
+
+## **🔮 Plugins**
+
+Para instalar plugins no Zsh vamos utilizar o Zinit.
+
+O Zinit é um gerenciador de plugins Zshell flexível e rápido que permitirá que você instale e remova plugins no Zsh com facilidade.
+
+Para instalar o Zinit podemos seguir a documentação [Github Zinit](https://github.com/zdharma/zinit).
+
+Instalando o Zinit.
+
+```bash
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+
+```
+
+Após essa instalação, vamos abrir o arquivo `~/.zshrc` com o editor de texto de sua preferência, eu utilizo o Visual Studio Code.
+
+```bash
+$ code ~/.zshrc
+
+```
+
+Abaixo da linha `### End of Zinit's installer chunk` que foi adicionada automaticamente no arquivo, vamo adicionar os seguintes plugins:
+
+```bash
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zdharma/fast-syntax-highlighting
+
+```
+
+- `zsh-users/zsh-autosuggestions:` Sugere comandos baseados no histórico de execução conforme você vai digitando.
+
+- `zsh-users/zsh-completions:` Adiciona milhares de completitions para ferramentas comuns como Yarn, Node, etc, para você precisar apenas apertar TAB para completar comandos.
+
+- `zdharma/fast-syntax-highlighting:` Adiciona syntax highlighting na hora da escrita de comandos que facilita principalmente em reconhecer comandos que foram digitados de forma incorreta.
+
+---
+
 Feito com 💜 by Rafael Angonese
