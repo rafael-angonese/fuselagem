@@ -72,4 +72,40 @@ $ yarn dev
 
 ---
 
+## 🌊 **Tailwind CSS**
+
+<details>
+
+<summary align='center'>Clique para visualizar</summary>
+
+TailwindCSS using PostCSS [`<https://tailwindcss.com/docs/installation/using-postcss>`](https://tailwindcss.com/docs/installation/using-postcss)
+
+```bash
+# instalar as dependências
+$ yarn add tailwindcss postcss autoprefixer -D
+
+# iniciar tailwindCSS com o PostCSS
+$ yarn tailwindcss init -p
+
+Created Tailwind CSS config file: tailwind.config.cjs
+Created PostCSS config file: postcss.config.cjs
+```
+
+Atualize o arquivo [tailwind.config.cjs](tailwind.config.cjs)
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+</details>
+
+---
+
 Feito com 💜 by Planegazers
