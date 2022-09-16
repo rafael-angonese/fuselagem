@@ -104,6 +104,14 @@ module.exports = {
 };
 ```
 
+Atualizer o arquivo [./src/index.css](./src/index.css)
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
 </details>
 
 ---
