@@ -11,6 +11,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [React Hook Form](https://react-hook-form.com/)
 
 ---
 
@@ -110,6 +112,87 @@ Atualizer o arquivo [./src/index.css](./src/index.css)
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
+
+</details>
+
+---
+
+## 🧶 **React Hook Form**
+
+<details>
+
+<summary align='center'>Clique para visualizar</summary>
+
+[React Hook Form](https://react-hook-form.com/)
+
+```bash
+# instalar as dependências
+$ yarn add react-hook-form
+
+# schema validation com Yup
+$ yarn add @hookform/resolvers yup
+
+```
+
+Configure o Yup [./src/lib/yup.ts](./src/lib/yup.ts)
+
+Usando
+
+```javascript
+import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import yup from "../../lib/yup";
+
+interface IFormInputs {
+  name: string;
+  age: number;
+}
+
+const INITIAL_FORM_STATE = {
+  name: "",
+  age: 0,
+};
+
+const FORM_VALIDATION = yup
+  .object({
+    name: yup.string().required(),
+    age: yup.number().positive().integer().required(),
+  })
+  .required();
+
+const ReactHookForm: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm <
+  IFormInputs >
+  {
+    defaultValues: INITIAL_FORM_STATE,
+    resolver: yupResolver(FORM_VALIDATION),
+  };
+  const onSubmit = (data: IFormInputs) => console.log(data);
+
+  return (
+    <>
+      <h1>Reack Hook Form</h1>
+
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input {...register("name")} />
+        <p>{errors.name?.message}</p>
+
+        <input {...register("age")} />
+        <p>{errors.age?.message}</p>
+
+        <input type="submit" />
+      </form>
+    </>
+  );
+};
+
+export default ReactHookForm;
 ```
 
 </details>
