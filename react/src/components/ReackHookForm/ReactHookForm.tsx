@@ -1,6 +1,6 @@
+import { yupResolver } from "@hookform/resolvers/yup";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
 import yup from "../../lib/yup";
 import InputText from "../Forms/InputText/InputeText";
 
@@ -76,6 +76,7 @@ const ReactHookForm: React.FC = () => {
             helperText={errors.email?.message}
             leftIcon={Lala}
             rightIcon={Lala}
+            isClearable
             required
           />
         </div>
