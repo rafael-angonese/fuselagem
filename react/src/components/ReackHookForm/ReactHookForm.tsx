@@ -62,13 +62,7 @@ const ReactHookForm: React.FC = () => {
       <h1>Reack Hook Form</h1>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("name")} />
-        <p>{errors.name?.message}</p>
-
-        <input {...register("age")} />
-        <p>{errors.age?.message}</p>
-
-        <div>
+        <div className="my-8">
           <InputText
             {...register("email")}
             label="E-mail"
@@ -101,9 +95,7 @@ const ReactHookForm: React.FC = () => {
         <Button gradientDuoTone="tealToLime">Enviar</Button>
         <Button gradientDuoTone="redToYellow">Enviar</Button>
 
-
         <Button gradientDuoTone="purpleToBlue">Enviar</Button>
-
       </form>
     </>
   );
