@@ -1,9 +1,9 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import React from "react";
 import { useForm } from "react-hook-form";
-import yup from "../../lib/yup";
-import Button from "../Button/Button";
-import InputText from "../Forms/InputText/InputeText";
+import yup from "../../../lib/yup";
+import Button from "../../Button/Button";
+import InputText from "../../Forms/InputText/InputeText";
 
 interface IFormInputs {
   name: string;
