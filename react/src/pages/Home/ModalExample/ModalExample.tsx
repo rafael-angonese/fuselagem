@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Button from "../../Button/Button";
-import Modal from "../../Modal/Modal";
-import ModalActions from "../../Modal/ModalActions/ModalActions";
-import ModalBody from "../../Modal/ModalBody/ModalBody";
-import ModalContent from "../../Modal/ModalContent/ModalContent";
-import ModalHeader from "../../Modal/ModalHeader/ModalHeader";
-import ModalTrigger from "../../Modal/ModalTrigger/ModalTrigger";
+import Button from "../../../components/Button/Button";
+import Modal from "../../../components/Modal/Modal";
+import ModalActions from "../../../components/Modal/ModalActions/ModalActions";
+import ModalBody from "../../../components/Modal/ModalBody/ModalBody";
+import ModalContent from "../../../components/Modal/ModalContent/ModalContent";
+import ModalHeader from "../../../components/Modal/ModalHeader/ModalHeader";
+import ModalTrigger from "../../../components/Modal/ModalTrigger/ModalTrigger";
 
 const ModalExample: React.FC = () => {
   const [open, setOpen] = useState(false);

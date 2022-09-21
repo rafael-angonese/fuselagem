@@ -1,12 +1,11 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import React from "react";
 import { useForm } from "react-hook-form";
+import FormControl from "../../../components/Forms/FormControl/FormControl";
+import FormErrorMessage from "../../../components/Forms/FormErrorMessage/FormErrorMessage";
+import FormLabel from "../../../components/Forms/FormLabel/FormLabel";
+import InputText from "../../../components/Forms/InputText/InputeText";
 import yup from "../../../lib/yup";
-import Button from "../../Button/Button";
-import FormControl from "../../Forms/FormControl/FormControl";
-import FormErrorMessage from "../../Forms/FormErrorMessage/FormErrorMessage";
-import FormLabel from "../../Forms/FormLabel/FormLabel";
-import InputText from "../../Forms/InputText/InputeText";
 
 interface IFormInputs {
   name: string;
@@ -87,28 +86,6 @@ const ReactHookForm: React.FC = () => {
             <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
           </FormControl>
         </div>
-
-        <Button color="default">Enviar</Button>
-        <Button color="primary">Enviar</Button>
-        <Button color="secondary">Enviar</Button>
-        <Button color="success">Enviar</Button>
-        <Button color="error">Enviar</Button>
-        <Button color="warning">Enviar</Button>
-        <Button isDisabled color="default">
-          Enviar
-        </Button>
-        <Button isLoading isDisabled color="default">
-          Enviar
-        </Button>
-
-        <Button gradientDuoTone="purpleToBlue">Enviar</Button>
-        <Button gradientDuoTone="cyanToBlue">Enviar</Button>
-        <Button gradientDuoTone="greenToBlue">Enviar</Button>
-        <Button gradientDuoTone="purpleToPink">Enviar</Button>
-        <Button gradientDuoTone="tealToLime">Enviar</Button>
-        <Button gradientDuoTone="redToYellow">Enviar</Button>
-
-        <Button gradientDuoTone="purpleToBlue">Enviar</Button>
       </form>
     </>
   );

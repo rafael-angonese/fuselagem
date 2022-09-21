@@ -1,13 +1,10 @@
-import ModalExample from "./components/Examples/ModalExample/ModalExample";
-import ReackHookForm from "./components/Examples/ReackHookForm/ReactHookForm";
+import HomePage from "./pages/Home/Home";
 
 function App() {
   return (
     <>
-      <div className=" h-screen w-full px-8">
-        <ReackHookForm />
-
-        {/* <ModalExample /> */}
+      <div className="h-screen w-full px-8">
+        <HomePage />
       </div>
     </>
   );
