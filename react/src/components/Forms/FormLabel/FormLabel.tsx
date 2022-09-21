@@ -21,7 +21,7 @@ const FormLabel: React.FC<FormLabelProps> = ({
         className={clsx(
           "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300",
           {
-            "text-red-700 dark:text-red-500": context && context.isInvalid,
+            "text-red-500 dark:text-red-400": context && context.isInvalid,
           },
           [classes]
         )}

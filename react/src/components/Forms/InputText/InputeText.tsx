@@ -86,7 +86,7 @@ const InputText = forwardRef<HTMLInputElement, InputProps>(
             className={clsx(
               "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:outline-4 placeholder:text-gray-400 focus:outline-blue-500 block w-full p-2.5",
               {
-                "border-red-500 text-red-900 placeholder:text-red-700 focus:ring-red-500 focus:outline-red-500":
+                "border-red-400 text-red-500 placeholder:text-red-500 focus:ring-red-500 focus:outline-red-500":
                   context && context.isInvalid,
               },
               { "pl-8": LeftIcon },
