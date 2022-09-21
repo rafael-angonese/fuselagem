@@ -26,10 +26,8 @@ const ButtonsExample: React.FC = () => {
 
       <h1 className="mt-8">Status</h1>
       <div className="space-x-2">
-        <Button isDisabled color="default">
-          Disabled
-        </Button>
-        <Button isLoading isDisabled color="default">
+        <Button isDisabled>Disabled</Button>
+        <Button isLoading isDisabled>
           Loading
         </Button>
       </div>
