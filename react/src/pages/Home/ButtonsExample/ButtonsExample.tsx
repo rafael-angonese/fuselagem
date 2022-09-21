@@ -14,14 +14,62 @@ const ButtonsExample: React.FC = () => {
         <Button color="warning">Enviar</Button>
       </div>
 
+      <h1 className="mt-8">Outlined</h1>
+      <div className="space-x-2">
+        <Button outlined color="default">
+          Enviar
+        </Button>
+        <Button outlined color="primary">
+          Enviar
+        </Button>
+        <Button outlined color="secondary">
+          Enviar
+        </Button>
+        <Button outlined color="success">
+          Enviar
+        </Button>
+        <Button outlined color="error">
+          Enviar
+        </Button>
+        <Button outlined color="warning">
+          Enviar
+        </Button>
+      </div>
+
       <h1 className="mt-8">Gridient Duo Tone</h1>
       <div className="space-x-2">
         <Button gradientDuoTone="purpleToBlue">Enviar</Button>
         <Button gradientDuoTone="cyanToBlue">Enviar</Button>
         <Button gradientDuoTone="greenToBlue">Enviar</Button>
         <Button gradientDuoTone="purpleToPink">Enviar</Button>
+        <Button gradientDuoTone="pinkToOrange">Enviar</Button>
         <Button gradientDuoTone="tealToLime">Enviar</Button>
         <Button gradientDuoTone="redToYellow">Enviar</Button>
+      </div>
+
+      <h1 className="mt-8">Outlined</h1>
+      <div className="space-x-2">
+        <Button outlined gradientDuoTone="purpleToBlue">
+          Enviar
+        </Button>
+        <Button outlined gradientDuoTone="cyanToBlue">
+          Enviar
+        </Button>
+        <Button outlined gradientDuoTone="greenToBlue">
+          Enviar
+        </Button>
+        <Button outlined gradientDuoTone="purpleToPink">
+          Enviar
+        </Button>
+        <Button outlined gradientDuoTone="pinkToOrange">
+          Enviar
+        </Button>
+        <Button outlined gradientDuoTone="tealToLime">
+          Enviar
+        </Button>
+        <Button outlined gradientDuoTone="redToYellow">
+          Enviar
+        </Button>
       </div>
 
       <h1 className="mt-8">Status</h1>

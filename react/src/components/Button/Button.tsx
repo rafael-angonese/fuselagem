@@ -111,40 +111,49 @@ const Button: React.FC<ButtonProps> = ({
               !outlined,
           },
           {
-            ["bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-blue-300 dark:focus:ring-blue-800"]:
+            ["relative inline-flex items-center justify-center p-0.5 overflow-hidden text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-blue-300 dark:focus:ring-blue-800"]:
               gradientDuoTone === GradientDuoToneColorsEnum.PURPLE_TO_BLUE &&
               outlined,
-            ["bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-cyan-300 dark:focus:ring-cyan-800"]:
+            ["relative inline-flex items-center justify-center p-0.5 overflow-hidden text-gray-900 group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-cyan-200 dark:focus:ring-cyan-800"]:
               gradientDuoTone === GradientDuoToneColorsEnum.CYAN_TO_BLUE &&
               outlined,
-            ["bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-green-200 dark:focus:ring-green-800"]:
+            ["relative inline-flex items-center justify-center p-0.5 overflow-hidden text-gray-900 group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-green-200 dark:focus:ring-green-800"]:
               gradientDuoTone === GradientDuoToneColorsEnum.GREEN_TO_BLUE &&
               outlined,
-            ["bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-purple-200 dark:focus:ring-purple-800"]:
+            ["relative inline-flex items-center justify-center p-0.5 overflow-hidden text-gray-900 group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-purple-200 dark:focus:ring-purple-800"]:
               gradientDuoTone === GradientDuoToneColorsEnum.PURPLE_TO_PINK &&
               outlined,
-            ["bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-pink-200 dark:focus:ring-pink-800"]:
+            ["relative inline-flex items-center justify-center p-0.5 overflow-hidden text-gray-900 group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-pink-200 dark:focus:ring-pink-800"]:
               gradientDuoTone === GradientDuoToneColorsEnum.PINK_TO_ORANGE &&
               outlined,
-            ["bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-lime-200 dark:focus:ring-teal-700"]:
+            ["relative inline-flex items-center justify-center p-0.5 overflow-hidden text-gray-900 group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 hover:text-white dark:text-white focus:ring-lime-200 dark:focus:ring-lime-800"]:
               gradientDuoTone === GradientDuoToneColorsEnum.TEAL_TO_LIME &&
               outlined,
-            ["bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-red-100 dark:focus:ring-red-400"]:
+            ["relative inline-flex items-center justify-center p-0.5 overflow-hidden text-gray-900 group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 hover:text-white dark:text-white focus:ring-red-100 dark:focus:ring-red-400"]:
               gradientDuoTone === GradientDuoToneColorsEnum.RED_TO_YELLOW &&
               outlined,
-          },
-          {
-            ["py-2 px-3 text-xs"]: size === SizesEnum.XS,
-            ["py-2 px-3 text-sm"]: size === SizesEnum.SM,
-            ["px-5 py-2.5 text-sm"]: size === SizesEnum.MD,
-            ["py-3 px-5 text-base"]: size === SizesEnum.LG,
-            ["py-6 px-6 text-base"]: size === SizesEnum.XL,
           },
           { "opacity-50 cursor-not-allowed": isDisabled },
           [classes]
         )}
       >
-        {isLoading && <LoadingIcon />} {children}
+        <div
+          className={clsx(
+            {
+              "relative transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0":
+                gradientDuoTone && outlined,
+            },
+            {
+              ["py-2 px-3 text-xs"]: size === SizesEnum.XS,
+              ["py-2 px-3 text-sm"]: size === SizesEnum.SM,
+              ["px-5 py-2.5 text-sm"]: size === SizesEnum.MD,
+              ["py-3 px-5 text-base"]: size === SizesEnum.LG,
+              ["py-6 px-6 text-base"]: size === SizesEnum.XL,
+            }
+          )}
+        >
+          {isLoading && <LoadingIcon />} {children}
+        </div>
       </button>
     </>
   );
