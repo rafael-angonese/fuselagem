@@ -1,6 +1,7 @@
 export default class Storage {
   static getItem(key: string) {
-    return JSON.parse(localStorage.getItem(key));
+    const data = localStorage.getItem(key);
+    return data ? JSON.parse(data) : null;
   }
 
   static removeItem(key: string) {

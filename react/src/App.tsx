@@ -7,7 +7,7 @@ function App() {
       <div className=" h-screen w-full px-8">
         <ReackHookForm />
 
-        <ModalExample />
+        {/* <ModalExample /> */}
       </div>
     </>
   );

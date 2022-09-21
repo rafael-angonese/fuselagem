@@ -1,23 +1,19 @@
 import {
-  ComponentProps,
   forwardRef,
   InputHTMLAttributes,
+  useContext,
   useImperativeHandle,
   useRef,
   useState,
 } from "react";
 import clsx from "../../../utils/clsx";
+import { FormControlContext } from "../FormControl/FormControl";
 import CloseIcon from "../../Icons/CloseIcon";
-import HelperText from "../HelperText/HelperText";
-import Label from "../Label/Label";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-  isInvalid?: boolean;
   isClearable?: boolean;
-  helperText?: string;
-  leftIcon?: React.FC<ComponentProps<"svg">>;
-  rightIcon?: React.FC<ComponentProps<"svg">>;
+  leftIcon?: React.ReactElement;
+  rightIcon?: React.ReactElement;
 }
 
 const simulateChangeEvent = (
@@ -34,18 +30,18 @@ const simulateChangeEvent = (
 const InputText = forwardRef<HTMLInputElement, InputProps>(
   (
     {
-      label,
-      helperText,
-      isInvalid,
       isClearable,
       leftIcon: LeftIcon,
       rightIcon: RightIcon,
+      className: classes,
       defaultValue,
       onChange,
       ...props
     },
     ref: React.Ref<HTMLInputElement | null>
   ) => {
+    const context = useContext(FormControlContext);
+
     const inputRef = useRef<HTMLInputElement & HTMLTextAreaElement>(null);
 
     useImperativeHandle(ref, () => inputRef.current);
@@ -75,46 +71,35 @@ const InputText = forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <>
-        {label && (
-          <Label
-            className={clsx(
-              `block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300`,
-              {
-                [`text-red-700 dark:text-red-500`]: isInvalid,
-              }
-            )}
-          >
-            {label}
-          </Label>
-        )}
-
         <div className="relative">
           {LeftIcon && (
             <div className="flex absolute inset-y-0 left-0 items-center pl-2 pointer-events-none">
-              <LeftIcon />
+              {LeftIcon}
             </div>
           )}
           <input
             {...props}
+            {...(context && { id: context.id })}
             ref={inputRef}
             onChange={changeHandler}
             type="text"
             className={clsx(
-              `bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:outline-4 placeholder:text-gray-400 focus:outline-blue-500 block w-full p-2.5`,
+              "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:outline-4 placeholder:text-gray-400 focus:outline-blue-500 block w-full p-2.5",
               {
-                [`border-red-500 text-red-900 placeholder:text-red-700 focus:ring-red-500 focus:outline-red-500`]:
-                  isInvalid,
-                [`pl-8`]: LeftIcon,
-              }
+                "border-red-500 text-red-900 placeholder:text-red-700 focus:ring-red-500 focus:outline-red-500":
+                  context && context.isInvalid,
+              },
+              { "pl-8": LeftIcon },
+              [classes]
             )}
           />
 
           {isClearable && Boolean(selfValue) && (
             <div
               className={clsx(
-                `flex absolute inset-y-0 right-0 items-center pr-2`,
+                "flex absolute inset-y-0 right-0 items-center pr-2",
                 {
-                  [`pr-8`]: RightIcon,
+                  "pr-8": RightIcon,
                 }
               )}
             >
@@ -131,11 +116,10 @@ const InputText = forwardRef<HTMLInputElement, InputProps>(
 
           {RightIcon && (
             <div className="flex absolute inset-y-0 right-0 items-center pr-2">
-              <RightIcon />
+              {RightIcon}
             </div>
           )}
         </div>
-        {helperText && <HelperText>{helperText}</HelperText>}
       </>
     );
   }

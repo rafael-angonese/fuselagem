@@ -3,6 +3,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import yup from "../../../lib/yup";
 import Button from "../../Button/Button";
+import FormControl from "../../Forms/FormControl/FormControl";
+import FormErrorMessage from "../../Forms/FormErrorMessage/FormErrorMessage";
+import FormLabel from "../../Forms/FormLabel/FormLabel";
 import InputText from "../../Forms/InputText/InputeText";
 
 interface IFormInputs {
@@ -55,24 +58,34 @@ const ReactHookForm: React.FC = () => {
   });
   const onSubmit = (data: IFormInputs) => console.log(data);
 
-  console.log(errors);
-
   return (
     <>
       <h1>Reack Hook Form</h1>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="my-8">
+        <div className="my-4">
+          <FormLabel>E-mail</FormLabel>
           <InputText
-            {...register("email")}
-            label="E-mail"
-            isInvalid={!!errors.email}
+            {...register("name")}
             placeholder="fuselagem@example.com"
-            helperText={errors.email?.message}
-            leftIcon={Lala}
-            rightIcon={Lala}
+            leftIcon={<Lala />}
+            rightIcon={<Lala />}
             isClearable
           />
+        </div>
+
+        <div className="my-4">
+          <FormControl isInvalid={!!errors.email}>
+            <FormLabel>E-mail</FormLabel>
+            <InputText
+              {...register("email")}
+              placeholder="fuselagem@example.com"
+              leftIcon={<Lala />}
+              rightIcon={<Lala />}
+              isClearable
+            />
+            <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
+          </FormControl>
         </div>
 
         <Button color="default">Enviar</Button>
