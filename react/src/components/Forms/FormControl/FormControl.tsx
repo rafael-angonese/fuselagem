@@ -1,4 +1,5 @@
-import React, { createContext, ReactNode, useId } from "react";
+import React, { createContext, HTMLAttributes, ReactNode, useId } from "react";
+import clsx from "../../../utils/clsx";
 
 export interface IFormControlContext {
   id: string;
@@ -11,7 +12,7 @@ export const FormControlContext = createContext<IFormControlContext | null>(
   null
 );
 
-interface FormControlProps {
+interface FormControlProps extends HTMLAttributes<HTMLDivElement> {
   isInvalid?: boolean;
   isDisabled?: boolean;
   isRequired?: boolean;
@@ -22,7 +23,9 @@ const FormControl: React.FC<FormControlProps> = ({
   isInvalid = false,
   isDisabled = false,
   isRequired = false,
+  className: classes,
   children,
+  ...props
 }) => {
   const uuid = useId();
 
@@ -36,7 +39,9 @@ const FormControl: React.FC<FormControlProps> = ({
           isRequired,
         }}
       >
-        {children}
+        <div {...props} className={clsx("", [classes])}>
+          {children}
+        </div>
       </FormControlContext.Provider>
     </>
   );
