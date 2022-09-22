@@ -12,7 +12,7 @@ const FormErrorMessage: React.FC<FormErrorMessageProps> = ({
   return (
     <>
       <span
-        className={clsx("mt-2 ml-2 text-sm text-red-500 dark:text-red-400", [
+        className={clsx("ml-2 text-sm text-red-500 dark:text-red-400", [
           classes,
         ])}
       >

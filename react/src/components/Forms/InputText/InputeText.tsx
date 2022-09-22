@@ -1,4 +1,4 @@
-import {
+import React, {
   forwardRef,
   InputHTMLAttributes,
   useContext,
@@ -78,8 +78,8 @@ const InputText = forwardRef<HTMLInputElement, InputProps>(
             </div>
           )}
           <input
-            {...props}
             {...(context && { id: context.id })}
+            {...props}
             ref={inputRef}
             onChange={changeHandler}
             type="text"
