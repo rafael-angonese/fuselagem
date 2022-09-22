@@ -16,13 +16,14 @@ const FormLabel: React.FC<FormLabelProps> = ({
   return (
     <>
       <label
-        {...props}
         {...(context && { htmlFor: context.id })}
+        {...props}
         className={clsx(
-          "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300",
+          "text-sm font-medium text-gray-500 dark:text-gray-300",
           {
             "text-red-500 dark:text-red-400": context && context.isInvalid,
           },
+          { "opacity-50 cursor-not-allowed": context && context.isDisabled },
           [classes]
         )}
       >
