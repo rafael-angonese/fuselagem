@@ -6,20 +6,22 @@ import FormControl from "../../../components/Forms/FormControl/FormControl";
 import FormErrorMessage from "../../../components/Forms/FormErrorMessage/FormErrorMessage";
 import FormLabel from "../../../components/Forms/FormLabel/FormLabel";
 import InputText from "../../../components/Forms/InputText/InputeText";
+import Radio from "../../../components/Radio/Radio";
+import RadioGroup from "../../../components/RadioGroup/RadioGroup";
 import Switch from "../../../components/Switch/Switch";
 import yup from "../../../lib/yup";
 
 interface IFormInputs {
   name: string;
   email: string;
-  age: number;
+  starter: string;
   airplane: boolean;
 }
 
 const INITIAL_FORM_STATE = {
   name: "",
   email: "",
-  age: 1,
+  starter: "bulbasaur",
   airplane: false,
 };
 
@@ -27,7 +29,7 @@ const FORM_VALIDATION = yup
   .object({
     // name: yup.string().required(),
     email: yup.string().email().required(),
-    // age: yup.number().positive().integer().required(),
+    starter: yup.string().required(),
     airplane: yup.boolean().required().oneOf([true]),
   })
   .required();
@@ -62,8 +64,6 @@ const ReactHookForm: React.FC = () => {
     resolver: yupResolver(FORM_VALIDATION),
   });
   const onSubmit = (data: IFormInputs) => console.log(data);
-
-  console.log(errors);
 
   return (
     <>
@@ -112,6 +112,26 @@ const ReactHookForm: React.FC = () => {
             <FormErrorMessage>{errors.airplane?.message}</FormErrorMessage>
           </FormControl>
         </div>
+
+        <FormControl className="my-4">
+          <FormLabel>Choose your starter</FormLabel>
+
+          <Controller
+            control={control}
+            name="starter"
+            render={({ field }) => (
+              <RadioGroup
+                value={field.value}
+                onValueChange={field.onChange}
+                className="space-y-2"
+              >
+                <Radio value="bulbasaur">Bulbasaur</Radio>
+                <Radio value="charmader">Charmader</Radio>
+                <Radio value="squirtle">Squirtle</Radio>
+              </RadioGroup>
+            )}
+          />
+        </FormControl>
 
         <Button>Submit</Button>
       </form>
