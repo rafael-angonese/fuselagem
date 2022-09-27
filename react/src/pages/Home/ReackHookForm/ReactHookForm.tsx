@@ -2,6 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
 import Button from "../../../components/Button/Button";
+import Checkbox from "../../../components/Checkbox/Checkbox";
 import FormControl from "../../../components/Forms/FormControl/FormControl";
 import FormErrorMessage from "../../../components/Forms/FormErrorMessage/FormErrorMessage";
 import FormLabel from "../../../components/Forms/FormLabel/FormLabel";
@@ -90,6 +91,13 @@ const ReactHookForm: React.FC = () => {
               isClearable
             />
             <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
+          </FormControl>
+        </div>
+
+        <div className="my-4">
+          Checkbox
+          <FormControl isInvalid={!!errors.email}>
+            <Checkbox>Aceitas?</Checkbox>
           </FormControl>
         </div>
 
