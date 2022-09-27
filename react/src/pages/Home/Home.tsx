@@ -1,4 +1,5 @@
 import React from "react";
+import Divider from "../../components/Divider/Divider";
 import ButtonsExample from "./ButtonsExample/ButtonsExample";
 import CheckboxExample from "./CheckboxExample/CheckboxExample";
 import ModalExample from "./ModalExample/ModalExample";
@@ -11,15 +12,22 @@ const HomePage: React.FC = () => {
     <>
       <ReactHookForm />
 
+      <Divider className="my-8" />
+
       <CheckboxExample />
+      <Divider className="my-8" />
 
       <RadioExample />
+      <Divider className="my-8" />
 
       <SwitchExample />
+      <Divider className="my-8" />
 
       <ButtonsExample />
+      <Divider className="my-8" />
 
       <ModalExample />
+      <Divider className="my-8" />
     </>
   );
 };
