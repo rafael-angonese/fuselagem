@@ -9,8 +9,19 @@ import FormLabel from "../../../components/Forms/FormLabel/FormLabel";
 import InputText from "../../../components/Forms/InputText/InputeText";
 import Radio from "../../../components/Radio/Radio";
 import RadioGroup from "../../../components/RadioGroup/RadioGroup";
+import Select from "../../../components/Select/Select";
 import Switch from "../../../components/Switch/Switch";
 import yup from "../../../lib/yup";
+
+const peoplesOptions = [
+  { id: 1, name: "Durward Reynolds", unavailable: false },
+  { id: 2, name: "Kenton Towne", unavailable: false },
+  { id: 3, name: "Therese Wunsch", unavailable: false },
+  { id: 4, name: "Benedict Kessler", unavailable: true },
+  { id: 5, name: "Katelyn Rohan", unavailable: false },
+];
+
+const lalaOptions = ["asdf", "asdfsaf", "sadfafd", "asdfsadfs"];
 
 interface IFormInputs {
   name: string;
@@ -139,6 +150,19 @@ const ReactHookForm: React.FC = () => {
               </RadioGroup>
             )}
           />
+        </FormControl>
+
+        <FormControl className="my-4" isInvalid={false}>
+          <Select
+            labelKey="name"
+            multiple
+            options={peoplesOptions}
+            placeholder="Selecione"
+          />
+        </FormControl>
+
+        <FormControl className="my-4" isInvalid={false}>
+          <Select multiple options={lalaOptions} placeholder="Selecione" />
         </FormControl>
 
         <Button>Submit</Button>
