@@ -3,6 +3,7 @@ import Divider from "../../components/Divider/Divider";
 import BadgeExample from "./BadgeExample/BadgeExample";
 import ButtonsExample from "./ButtonsExample/ButtonsExample";
 import CheckboxExample from "./CheckboxExample/CheckboxExample";
+import IconButtonExample from "./IconButtonExample/IconButtonExample";
 import ModalExample from "./ModalExample/ModalExample";
 import RadioExample from "./RadioExample/RadioExample";
 import ReactHookForm from "./ReackHookForm/ReactHookForm";
@@ -13,6 +14,9 @@ const HomePage: React.FC = () => {
     <>
       <ReactHookForm />
 
+      <Divider className="my-8" />
+
+      <IconButtonExample />
       <Divider className="my-8" />
 
       <BadgeExample />
