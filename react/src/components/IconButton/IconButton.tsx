@@ -65,7 +65,7 @@ const IconButton: React.FC<IconButtonProps> = ({
             ["p-3 text-lg"]: size === SizesEnum.LG,
             ["p-3.5 text-xl"]: size === SizesEnum.XL,
           },
-          { "rounded-full": rounded },
+          { "!rounded-full": rounded },
           [classes]
         )}
       >
