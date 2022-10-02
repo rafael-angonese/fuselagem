@@ -4,6 +4,7 @@ import BadgeExample from "./BadgeExample/BadgeExample";
 import ButtonsExample from "./ButtonsExample/ButtonsExample";
 import CheckboxExample from "./CheckboxExample/CheckboxExample";
 import IconButtonExample from "./IconButtonExample/IconButtonExample";
+import LinearProgressExample from "./LinearProgressExample/LinearProgressExample";
 import ModalExample from "./ModalExample/ModalExample";
 import PaginationExample from "./PaginationExample/PaginationExample";
 import RadioExample from "./RadioExample/RadioExample";
@@ -17,6 +18,9 @@ const HomePage: React.FC = () => {
       <Divider className="my-8" />
 
       <PaginationExample />
+      <Divider className="my-8" />
+
+      <LinearProgressExample />
       <Divider className="my-8" />
 
       <IconButtonExample />

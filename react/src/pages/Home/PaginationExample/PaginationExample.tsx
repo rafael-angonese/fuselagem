@@ -14,9 +14,6 @@ const PaginationExample: React.FC = () => {
         totalPages={totalPages}
         onPageChange={(page) => setPage(page)}
       />
-
-      <h1 className="mt-8">Colors</h1>
-      <div className="space-x-4 flex items-center"></div>
     </>
   );
 };
