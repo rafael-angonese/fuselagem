@@ -9,11 +9,15 @@ import React, {
 import clsx from "../../../utils/clsx";
 import { FormControlContext } from "../FormControl/FormControl";
 import CloseIcon from "../../Icons/CloseIcon";
+import { Sizes } from "../../../types/sizes";
+import { SizesEnum } from "../../../constants/sizes";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "size"> {
   isClearable?: boolean;
   leftIcon?: React.ReactElement;
   rightIcon?: React.ReactElement;
+  size?: Sizes;
+  mask?: (value: string) => string;
 }
 
 const simulateChangeEvent = (
@@ -31,16 +35,21 @@ const InputText = forwardRef<HTMLInputElement, InputProps>(
   (
     {
       isClearable,
+      disabled,
+      size = "md",
       leftIcon: LeftIcon,
       rightIcon: RightIcon,
       className: classes,
       defaultValue,
       onChange,
+      mask,
       ...props
     },
     ref: React.Ref<HTMLInputElement | null>
   ) => {
     const context = useContext(FormControlContext);
+
+    const isDisabled = context?.isDisabled || disabled;
 
     const inputRef = useRef<HTMLInputElement & HTMLTextAreaElement>(null);
 
@@ -49,6 +58,10 @@ const InputText = forwardRef<HTMLInputElement, InputProps>(
     const [selfValue, setSelfValue] = useState(defaultValue);
 
     const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (mask) {
+        event.target.value = mask(event.target.value);
+      }
+
       setSelfValue(event.target.value);
       onChange && onChange(event);
     };
@@ -80,6 +93,7 @@ const InputText = forwardRef<HTMLInputElement, InputProps>(
           <input
             {...(context && { id: context.id })}
             {...props}
+            disabled={isDisabled}
             ref={inputRef}
             onChange={changeHandler}
             type="text"
@@ -89,7 +103,16 @@ const InputText = forwardRef<HTMLInputElement, InputProps>(
                 "border-red-500 text-red-500 placeholder:text-red-500 focus:ring-red-500 focus:outline-red-500":
                   context && context.isInvalid,
               },
+              { "opacity-50 cursor-not-allowed": isDisabled },
               { "pl-8": LeftIcon },
+              {
+                // ["text-xs"]: size === SizesEnum.XS,
+                // ["text-sm"]: size === SizesEnum.SM,
+                ["p-2.5 text-base"]: size === SizesEnum.MD,
+                ["p-3 text-lg"]: size === SizesEnum.LG,
+                // ["text-base"]: size === SizesEnum.LG,
+                // ["text-base"]: size === SizesEnum.XL,
+              },
               [classes]
             )}
           />
