@@ -14,6 +14,8 @@ import isPresent from "../../utils/isPresent";
 
 interface SelectProps {
   options: any[];
+  value?: any;
+  onChange?: (value: any | any[]) => void;
   placeholder?: string;
   disabled?: boolean;
   className?: string;
@@ -28,6 +30,8 @@ interface SelectProps {
 const Select: React.FC<SelectProps> = ({
   color = "default",
   size = "md",
+  value,
+  onChange,
   className: classes,
   disabled,
   isClearable = true,
@@ -40,7 +44,9 @@ const Select: React.FC<SelectProps> = ({
 }) => {
   const context = useContext(FormControlContext);
 
-  const [selected, setSelected] = useState<any | null>(multiple ? [] : null);
+  const defaultValue = value ? value : multiple ? [] : null;
+
+  const [selected, setSelected] = useState<any | null>(defaultValue);
   const isDisabled = context?.isDisabled || disabled;
   const valueIsObject = labelKey ? true : false;
 
@@ -49,14 +55,26 @@ const Select: React.FC<SelectProps> = ({
     event.stopPropagation();
     event.nativeEvent.stopImmediatePropagation();
 
-    setSelected(multiple ? [] : null);
+    const clearableValue = multiple ? [] : null;
+
+    setSelected(clearableValue);
+    if (onChange) {
+      onChange(clearableValue);
+    }
+  };
+
+  const onChangedValue = (value: any) => {
+    setSelected(value);
+    if (onChange) {
+      onChange(value);
+    }
   };
 
   return (
     <>
       <Listbox
         value={selected}
-        onChange={setSelected}
+        onChange={onChangedValue}
         disabled={isDisabled}
         multiple={multiple}
         {...props}
