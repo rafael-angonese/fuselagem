@@ -4,10 +4,12 @@ import { FormControlContext } from "../FormControl/FormControl";
 
 interface FormLabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   children: ReactNode;
+  required?: boolean;
 }
 
 const FormLabel: React.FC<FormLabelProps> = ({
   children,
+  required = false,
   className: classes,
   ...props
 }) => {
@@ -28,6 +30,7 @@ const FormLabel: React.FC<FormLabelProps> = ({
         )}
       >
         {children}
+        {required && <span className="text-red-500">&nbsp;*</span>}
       </label>
     </>
   );
