@@ -10,12 +10,14 @@ interface LinearProgressProps {
   percentage?: number;
   className?: string;
   color?: NormalColorsType;
+  isLoading?: boolean;
   children?: ReactNode;
 }
 
 const LinearProgress: React.FC<LinearProgressProps> = ({
   color = "default",
   indeterminate = false,
+  isLoading = true,
   percentage = 100,
   className: classes,
   children,
@@ -25,6 +27,7 @@ const LinearProgress: React.FC<LinearProgressProps> = ({
       <div
         className={clsx(
           "w-full bg-gray-200 h-1 relative overflow-hidden rounded-full",
+          { hidden: !isLoading },
           { [styles.indeterminate]: indeterminate },
           [classes]
         )}
