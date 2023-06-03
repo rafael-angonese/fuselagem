@@ -1,0 +1,12 @@
+{
+  "name": "fuselagem",
+  "version": "0.0.0",
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.60",
+    "react": "^18.2.0",
+    "typescript": "^5.1.3"
+  }
+}

@@ -10,37 +10,31 @@ import PaginationExample from "./PaginationExample/PaginationExample";
 import RadioExample from "./RadioExample/RadioExample";
 import ReactHookForm from "./ReackHookForm/ReactHookForm";
 import SwitchExample from "./SwitchExample/SwitchExample";
+import { Button } from "fuselagem";
 
 const HomePage: React.FC = () => {
   return (
     <>
+      <Button>sdosJDDSAHD</Button>
+
       <ReactHookForm />
       <Divider className="my-8" />
-
       <PaginationExample />
       <Divider className="my-8" />
-
       <LinearProgressExample />
       <Divider className="my-8" />
-
       <IconButtonExample />
       <Divider className="my-8" />
-
       <BadgeExample />
       <Divider className="my-8" />
-
       <CheckboxExample />
       <Divider className="my-8" />
-
       <RadioExample />
       <Divider className="my-8" />
-
       <SwitchExample />
       <Divider className="my-8" />
-
       <ButtonsExample />
       <Divider className="my-8" />
-
       <ModalExample />
       <Divider className="my-8" />
     </>
