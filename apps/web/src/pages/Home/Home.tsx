@@ -10,7 +10,8 @@ import PaginationExample from "./PaginationExample/PaginationExample";
 import RadioExample from "./RadioExample/RadioExample";
 import ReactHookForm from "./ReackHookForm/ReactHookForm";
 import SwitchExample from "./SwitchExample/SwitchExample";
-import { Button } from "fuselagem";
+import { Button,  } from "fuselagem";
+import "fuselagem/styles.css";
 
 const HomePage: React.FC = () => {
   return (

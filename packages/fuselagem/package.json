@@ -1,15 +1,37 @@
 {
   "name": "fuselagem",
-  "version": "0.0.0",
+  "version": "10.0.0",
   "license": "MIT",
+  "description": "🚀 Beautiful and modern React UI library.",
+  "author": {
+    "name": "Rafael Angonese",
+    "email": "rafael.angonese09@gmail.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "tailwindcss",
+    "components",
+    "modern components",
+    "react components",
+    "react ui"
+  ],
   "sideEffects": [
     "**/*.css"
   ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist",
     "./styles.css": "./dist/index.css"
   },
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
