@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "fuselagem";
 import React from "react";
 
@@ -13,9 +11,7 @@ const ButtonPage: React.FC = () => {
 
       <h1 className="mt-8">Disabled</h1>
       <div>
-        <Button onClick={() => console.log("clicou")} disabled>
-          Disabled
-        </Button>
+        <Button disabled>Disabled</Button>
       </div>
 
       <h1 className="mt-8">Full Width</h1>

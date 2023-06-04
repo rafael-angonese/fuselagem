@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { ReactNode } from "react";
 
 interface DocsLayoutProps {
@@ -8,7 +9,7 @@ const DocsLayout: React.FC<DocsLayoutProps> = ({ children }) => {
   return (
     <>
       <div className="p-8">
-        <h1>Docs layout</h1>
+        <Link href={"/docs/components/button"}>Button</Link>
 
         {children}
       </div>
