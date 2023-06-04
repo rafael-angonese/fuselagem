@@ -49,7 +49,7 @@ const shadowVariants = cva("", {
 });
 
 const baseButtonVariants = cva(
-  "rounded-lg text-center font-medium focus:outline-none focus:ring-2",
+  "text-white rounded-lg text-center font-medium focus:outline-none focus:ring-2",
   {
     variants: {
       color: {

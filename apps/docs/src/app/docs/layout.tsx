@@ -8,8 +8,11 @@ interface DocsLayoutProps {
 const DocsLayout: React.FC<DocsLayoutProps> = ({ children }) => {
   return (
     <>
-      <div className="p-8">
-        <Link href={"/docs/components/button"}>Button</Link>
+      <div className="p-8 ">
+        <div className="flex gap-4">
+          <Link href={"/docs/components/button"}>Button</Link>
+          <Link href={"/docs/components/text"}>Text</Link>
+        </div>
 
         {children}
       </div>
