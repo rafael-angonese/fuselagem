@@ -3,5 +3,5 @@ import "./styles/globals.css";
 
 // components
 
-export * from "@/Components/Button/Button";
-export { default as Button } from "@/Components/Button/Button";
+export * from "@/components/Button/Button";
+export { default as Button } from "@/components/Button/Button";

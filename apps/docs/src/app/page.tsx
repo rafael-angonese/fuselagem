@@ -95,7 +95,6 @@ export default function Home() {
         </Button>
       </div>
 
-
       <h1 className="mt-8">Shadow</h1>
       <div className="space-x-2">
         <Button shadow rounded color="primary">
