@@ -1,9 +1,11 @@
 "use client";
-import { Button } from "fuselagem";
 
-export default function Home() {
+import { Button } from "fuselagem";
+import React from "react";
+
+const ButtonPage: React.FC = () => {
   return (
-    <main className="m-8">
+    <>
       <h1 className="mt-8">Default</h1>
       <div>
         <Button>Default</Button>
@@ -131,6 +133,8 @@ export default function Home() {
           Error
         </Button>
       </div>
-    </main>
+    </>
   );
-}
+};
+
+export default ButtonPage;
