@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Sidebar from "@/components/Sidebar/Sidebar";
 import React, { ReactNode } from "react";
 
 interface DocsLayoutProps {
@@ -8,13 +8,10 @@ interface DocsLayoutProps {
 const DocsLayout: React.FC<DocsLayoutProps> = ({ children }) => {
   return (
     <>
-      <div className="p-8 ">
-        <div className="flex gap-4">
-          <Link href={"/docs/components/button"}>Button</Link>
-          <Link href={"/docs/components/text"}>Text</Link>
-        </div>
+      <div className="flex">
+        <Sidebar />
 
-        {children}
+        <main className="flex-1 px-8 pb-8 overflow-auto">{children}</main>
       </div>
     </>
   );

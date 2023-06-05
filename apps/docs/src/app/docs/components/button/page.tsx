@@ -4,7 +4,7 @@ import React from "react";
 const ButtonPage: React.FC = () => {
   return (
     <>
-      <h1 className="mt-8">Default</h1>
+      <h1 className="">Default</h1>
       <div>
         <Button>Default</Button>
       </div>

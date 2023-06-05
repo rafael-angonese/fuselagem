@@ -4,7 +4,7 @@ import React from "react";
 const TextPage: React.FC = () => {
   return (
     <>
-      <div className="mt-8">
+      <div className="">
         <Text variant="h1">Textoooo</Text>
         <Text variant="h2">Textoooo</Text>
         <Text variant="h3">Textoooo</Text>
