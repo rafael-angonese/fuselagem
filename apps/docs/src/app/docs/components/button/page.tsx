@@ -7,10 +7,11 @@ import ButtonOutlined from "@/app/docs/components/button/outlined";
 import ButtonRounded from "@/app/docs/components/button/rounded";
 import ButtonShadow from "@/app/docs/components/button/shadow";
 import ButtonSizes from "@/app/docs/components/button/sizes";
+import PageComponentLayout from "@/components/PageComponentLayout/PageComponentLayout";
 
 export default async function ButtonPage() {
   return (
-    <div className="flex flex-col gap-12">
+    <PageComponentLayout>
       <ButtonImport />
 
       <ButtonDefault />
@@ -28,6 +29,6 @@ export default async function ButtonPage() {
       <ButtonRounded />
 
       <ButtonShadow />
-    </div>
+    </PageComponentLayout>
   );
 }

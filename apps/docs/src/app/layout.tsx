@@ -3,7 +3,9 @@ import { JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
-const font = JetBrains_Mono({ subsets: ["latin"] });
+const font = JetBrains_Mono({
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Fuselagem UI",
