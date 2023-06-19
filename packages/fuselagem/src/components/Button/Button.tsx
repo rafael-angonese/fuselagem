@@ -49,7 +49,7 @@ const shadowVariants = cva("", {
 });
 
 const baseButtonVariants = cva(
-  "text-white rounded-lg text-center font-medium focus:outline-none focus:ring-2",
+  "text-white rounded-lg w-fit text-center font-medium focus:outline-none focus:ring-2",
   {
     variants: {
       color: {
@@ -83,11 +83,11 @@ const baseButtonVariants = cva(
         true: "shadow-lg",
       },
       bordered: {
-        true: "w-full",
+        true: "",
       },
 
       ghost: {
-        true: "w-full",
+        true: "",
       },
     },
     compoundVariants: [
