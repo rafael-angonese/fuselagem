@@ -18,7 +18,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({ code }) => {
     <>
       <button
         onClick={handleCopyToClipboard}
-        className="absolute right-2 top-2  hover:opacity-80"
+        className="absolute right-2 top-6  hover:opacity-80"
       >
         {hasCopiedToClipboard ? (
           <Checks className="text-green-400" size={22} />
