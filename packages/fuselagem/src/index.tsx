@@ -14,3 +14,7 @@ export { default as Text } from "@/components/Text/Text";
 // Pagination
 export * from "@/components/Pagination/Pagination";
 export { default as Pagination } from "@/components/Pagination/Pagination";
+
+// Badge
+export * from "@/components/Badge/Badge";
+export { default as Badge } from "@/components/Badge/Badge";
