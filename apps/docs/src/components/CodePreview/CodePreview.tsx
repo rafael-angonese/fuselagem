@@ -9,7 +9,13 @@ const CodePreview: React.FC<CodePreviewProps> = ({ code }) => {
   return (
     <div className="relative">
       <CopyButton code={code} />
-      <Code lineNumbers theme="dracula-soft" lang="jsx">
+      <Code
+        lineNumbers
+        codeClassName="max-h-96 overflow-y-auto"
+        // title="testes"
+        theme="dracula-soft"
+        lang="jsx"
+      >
         {code}
       </Code>
     </div>
