@@ -27,19 +27,19 @@ export default function App() {
       </div>
 
       <div className="space-x-2">
-        <Button outlined rounded color="primary">
+        <Button variant="outlined" rounded color="primary">
           Primary
         </Button>
-        <Button outlined rounded color="secondary">
+        <Button variant="outlined" rounded color="secondary">
           Secondary
         </Button>
-        <Button outlined rounded color="success">
+        <Button variant="outlined" rounded color="success">
           Success
         </Button>
-        <Button outlined rounded color="warning">
+        <Button variant="outlined" rounded color="warning">
           Warning
         </Button>
-        <Button outlined rounded color="error">
+        <Button variant="outlined" rounded color="error">
           Error
         </Button>
       </div>
@@ -73,19 +73,19 @@ const ButtonRounded: React.FC = () => {
         </div>
 
         <div className="space-x-2">
-          <Button outlined rounded color="primary">
+          <Button variant="outlined" rounded color="primary">
             Primary
           </Button>
-          <Button outlined rounded color="secondary">
+          <Button variant="outlined" rounded color="secondary">
             Secondary
           </Button>
-          <Button outlined rounded color="success">
+          <Button variant="outlined" rounded color="success">
             Success
           </Button>
-          <Button outlined rounded color="warning">
+          <Button variant="outlined" rounded color="warning">
             Warning
           </Button>
-          <Button outlined rounded color="error">
+          <Button variant="outlined" rounded color="error">
             Error
           </Button>
         </div>

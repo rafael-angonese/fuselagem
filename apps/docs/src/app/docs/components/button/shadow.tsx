@@ -27,19 +27,19 @@ export default function App() {
       </div>
 
       <div className="space-x-2">
-        <Button shadow outlined rounded color="primary">
+        <Button shadow variant="outlined" rounded color="primary">
           Primary
         </Button>
-        <Button shadow outlined rounded color="secondary">
+        <Button shadow variant="outlined" rounded color="secondary">
           Secondary
         </Button>
-        <Button shadow outlined rounded color="success">
+        <Button shadow variant="outlined" rounded color="success">
           Success
         </Button>
-        <Button shadow outlined rounded color="warning">
+        <Button shadow variant="outlined" rounded color="warning">
           Warning
         </Button>
-        <Button shadow outlined rounded color="error">
+        <Button shadow variant="outlined" rounded color="error">
           Error
         </Button>
       </div>
@@ -73,19 +73,19 @@ const ButtonShadow: React.FC = () => {
         </div>
 
         <div className="space-x-2">
-          <Button shadow outlined rounded color="primary">
+          <Button shadow variant="outlined" rounded color="primary">
             Primary
           </Button>
-          <Button shadow outlined rounded color="secondary">
+          <Button shadow variant="outlined" rounded color="secondary">
             Secondary
           </Button>
-          <Button shadow outlined rounded color="success">
+          <Button shadow variant="outlined" rounded color="success">
             Success
           </Button>
-          <Button shadow outlined rounded color="warning">
+          <Button shadow variant="outlined" rounded color="warning">
             Warning
           </Button>
-          <Button shadow outlined rounded color="error">
+          <Button shadow variant="outlined" rounded color="error">
             Error
           </Button>
         </div>

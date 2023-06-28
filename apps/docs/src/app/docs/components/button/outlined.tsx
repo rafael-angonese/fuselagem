@@ -8,19 +8,19 @@ const code = `import { Button } from "fuselagem";
 export default function App() {
   return (
     <div className="space-x-2">
-      <Button outlined color="primary">
+      <Button variant="outlined" color="primary">
         Primary
       </Button>
-      <Button outlined color="secondary">
+      <Button variant="outlined" color="secondary">
         Secondary
       </Button>
-      <Button outlined color="success">
+      <Button variant="outlined" color="success">
         Success
       </Button>
-      <Button outlined color="warning">
+      <Button variant="outlined" color="warning">
         Warning
       </Button>
-      <Button outlined color="error">
+      <Button variant="outlined" color="error">
         Error
       </Button>
     </div>
@@ -34,19 +34,19 @@ const ButtonOutlined: React.FC = () => {
       <Text variant="h1">Outlined</Text>
 
       <div className="space-x-2">
-        <Button outlined color="primary">
+        <Button variant="outlined" color="primary">
           Primary
         </Button>
-        <Button outlined color="secondary">
+        <Button variant="outlined" color="secondary">
           Secondary
         </Button>
-        <Button outlined color="success">
+        <Button variant="outlined" color="success">
           Success
         </Button>
-        <Button outlined color="warning">
+        <Button variant="outlined" color="warning">
           Warning
         </Button>
-        <Button outlined color="error">
+        <Button variant="outlined" color="error">
           Error
         </Button>
       </div>

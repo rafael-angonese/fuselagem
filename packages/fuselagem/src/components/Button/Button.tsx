@@ -1,220 +1,174 @@
-import { cn } from "@/utils/cn";
-import { cva, VariantProps } from "class-variance-authority";
 import { ReactNode } from "react";
+import { VariantProps, tv } from "tailwind-variants";
 
-const solidVariants = cva("", {
+const buttonVariants = tv({
+  base: "text-white rounded-lg w-fit text-center font-medium focus:outline-none focus:ring-2",
   variants: {
     variant: {
-      primary:
+      solid: "",
+      outlined: "",
+      ghost: "",
+    },
+    color: {
+      primary: "",
+      secondary: "",
+      success: "",
+      warning: "",
+      error: "",
+    },
+    size: {
+      xs: "py-2 px-3 text-xs",
+      sm: "py-2 px-3 text-sm",
+      md: "px-5 py-2.5 text-base",
+      lg: "py-3 px-5 text-lg",
+      xl: "py-6 px-6 text-xl",
+    },
+    fullWidth: {
+      true: "w-full",
+    },
+    rounded: {
+      true: "rounded-full",
+    },
+    disabled: {
+      true: "opacity-50 !cursor-not-allowed",
+    },
+    shadow: {
+      true: "shadow-lg",
+    },
+  },
+  compoundVariants: [
+    // SOLID
+    {
+      variant: "solid",
+      color: "primary",
+      class:
         "bg-blue-400 hover:bg-blue-500 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",
-      secondary:
+    },
+    {
+      variant: "solid",
+      color: "secondary",
+      class:
         "bg-purple-400 hover:bg-purple-500 focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800",
-      success:
+    },
+    {
+      variant: "solid",
+      color: "success",
+      class:
         "bg-green-400 hover:bg-green-500 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800",
-      warning:
+    },
+    {
+      variant: "solid",
+      color: "warning",
+      class:
         "bg-yellow-400 hover:bg-yellow-500 focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800",
-      error:
+    },
+    {
+      variant: "solid",
+      color: "error",
+      class:
         "bg-red-400 hover:bg-red-500 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800",
     },
-  },
-});
 
-const outlineVariants = cva("", {
-  variants: {
-    variant: {
-      primary:
+    // OUTLINED
+    {
+      variant: "outlined",
+      color: "primary",
+      class:
         "text-blue-400 hover:text-white border border-blue-400 hover:bg-blue-500 focus:ring-blue-300 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800",
-      secondary:
+    },
+    {
+      variant: "outlined",
+      color: "secondary",
+      class:
         "text-purple-400 hover:text-white border border-purple-400 hover:bg-purple-500 focus:ring-purple-300 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900",
-      success:
+    },
+    {
+      variant: "outlined",
+      color: "success",
+      class:
         "text-green-400 hover:text-white border border-green-400 hover:bg-green-500 focus:ring-green-300 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800",
-      warning:
+    },
+    {
+      variant: "outlined",
+      color: "warning",
+      class:
         "text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-yellow-300 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900",
-      error:
+    },
+    {
+      variant: "outlined",
+      color: "error",
+      class:
         "text-red-400 hover:text-white border border-red-400 hover:bg-red-500 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900",
     },
-  },
-});
 
-const shadowVariants = cva("", {
-  variants: {
-    variant: {
-      primary: "shadow-blue-400/50",
-      secondary: "shadow-purple-400/50",
-      success: "shadow-green-400/50",
-      warning: "shadow-yellow-400/50",
-      error: "shadow-red-400/50",
-    },
-  },
-});
-
-const baseButtonVariants = cva(
-  "text-white rounded-lg w-fit text-center font-medium focus:outline-none focus:ring-2",
-  {
-    variants: {
-      color: {
-        primary: "",
-        secondary: "",
-        success: "",
-        warning: "",
-        error: "",
-      },
-      size: {
-        xs: "py-2 px-3 text-xs",
-        sm: "py-2 px-3 text-sm",
-        md: "px-5 py-2.5 text-base",
-        lg: "py-3 px-5 text-lg",
-        xl: "py-6 px-6 text-xl",
-      },
-      fullWidth: {
-        true: "w-full",
-      },
-      rounded: {
-        true: "rounded-full",
-      },
-      disabled: {
-        true: "opacity-50 cursor-not-allowed",
-      },
-      outlined: {
-        true: "",
-        false: "",
-      },
-      shadow: {
-        true: "shadow-lg",
-      },
-      bordered: {
-        true: "",
-      },
-
-      ghost: {
-        true: "",
-      },
-    },
-    compoundVariants: [
-      // OUTLINED
-      {
-        color: "primary",
-        outlined: true,
-        className: outlineVariants({ variant: "primary" }),
-      },
-      {
-        color: "secondary",
-        outlined: true,
-        className: outlineVariants({ variant: "secondary" }),
-      },
-      {
-        color: "success",
-        outlined: true,
-        className: outlineVariants({ variant: "success" }),
-      },
-      {
-        color: "warning",
-        outlined: true,
-        className: outlineVariants({ variant: "warning" }),
-      },
-      {
-        color: "error",
-        outlined: true,
-        className: outlineVariants({ variant: "error" }),
-      },
-
-      // SOLID
-      {
-        color: "primary",
-        outlined: false,
-        className: solidVariants({ variant: "primary" }),
-      },
-      {
-        color: "secondary",
-        outlined: false,
-        className: solidVariants({ variant: "secondary" }),
-      },
-      {
-        color: "success",
-        outlined: false,
-        className: solidVariants({ variant: "success" }),
-      },
-      {
-        color: "warning",
-        outlined: false,
-        className: solidVariants({ variant: "warning" }),
-      },
-      {
-        color: "error",
-        outlined: false,
-        className: solidVariants({ variant: "error" }),
-      },
-
-      // SHADOW
-      {
-        color: "primary",
-        shadow: true,
-        className: shadowVariants({ variant: "primary" }),
-      },
-      {
-        color: "secondary",
-        shadow: true,
-        className: shadowVariants({ variant: "secondary" }),
-      },
-      {
-        color: "success",
-        shadow: true,
-        className: shadowVariants({ variant: "success" }),
-      },
-      {
-        color: "warning",
-        shadow: true,
-        className: shadowVariants({ variant: "warning" }),
-      },
-      {
-        color: "error",
-        shadow: true,
-        className: shadowVariants({ variant: "error" }),
-      },
-    ],
-    defaultVariants: {
+    // SHADOW
+    {
+      shadow: true,
       color: "primary",
-      size: "md",
-      outlined: false,
+      class: "shadow-blue-400/50",
     },
-  }
-);
+    {
+      shadow: true,
+      color: "secondary",
+      class: "shadow-purple-400/50",
+    },
+    {
+      shadow: true,
+      color: "success",
+      class: "shadow-green-400/50",
+    },
+    {
+      shadow: true,
+      color: "warning",
+      class: "shadow-yellow-400/50",
+    },
+    {
+      shadow: true,
+      color: "error",
+      class: "shadow-red-400/50",
+    },
+  ],
+  defaultVariants: {
+    variant: "solid",
+    color: "primary",
+    size: "md",
+  },
+});
+
+type ButtonVariants = VariantProps<typeof buttonVariants>;
 
 export interface ButtonProps
   extends Omit<
       React.ButtonHTMLAttributes<HTMLButtonElement>,
       "color" | "disabled" | "size"
     >,
-    VariantProps<typeof baseButtonVariants> {
+    ButtonVariants {
   children: ReactNode;
 }
 
 const Button: React.FC<ButtonProps> = ({
+  variant,
   color,
   size,
   disabled,
   fullWidth,
   rounded,
   shadow,
-  outlined,
   children,
   className: classes,
   ...props
 }) => {
   return (
     <button
-      className={cn(
-        baseButtonVariants({
-          color,
-          rounded,
-          disabled,
-          size,
-          outlined,
-          shadow,
-          fullWidth,
-        }),
-        classes
-      )}
+      className={buttonVariants({
+        variant,
+        color,
+        rounded,
+        disabled: disabled ? true : false,
+        size,
+        shadow,
+        fullWidth,
+      })}
       disabled={disabled ? true : false}
       {...props}
     >
