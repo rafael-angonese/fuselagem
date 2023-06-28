@@ -1,8 +1,8 @@
-import { cn } from "@/utils/cn";
-import { VariantProps, cva } from "class-variance-authority";
-import React, { ReactNode } from "react";
+import React from "react";
+import { VariantProps, tv } from "tailwind-variants";
 
-const baseTextVariants = cva("text-white", {
+const baseTextVariants = tv({
+  base: "text-white",
   variants: {
     variant: {
       h1: "text-5xl font-bold",
@@ -38,10 +38,12 @@ const baseTextVariants = cva("text-white", {
   },
 });
 
-export interface TextProps
+type TextVariants = VariantProps<typeof baseTextVariants>;
+
+interface TextProps
   extends Omit<React.HTMLAttributes<HTMLElement>, "color">,
-    VariantProps<typeof baseTextVariants> {
-  children?: ReactNode;
+    TextVariants {
+  children?: React.ReactNode;
 }
 
 const Text: React.FC<TextProps> = ({
@@ -57,14 +59,12 @@ const Text: React.FC<TextProps> = ({
   return (
     <>
       <Component
-        className={cn(
-          baseTextVariants({
-            variant,
-            fontWeight,
-            color,
-          }),
-          classes
-        )}
+        className={baseTextVariants({
+          variant,
+          fontWeight,
+          color,
+          class: classes,
+        })}
         {...props}
       >
         {children}
