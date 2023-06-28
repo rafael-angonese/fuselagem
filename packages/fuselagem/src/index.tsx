@@ -18,3 +18,7 @@ export { default as Pagination } from "@/components/Pagination/Pagination";
 // Badge
 export * from "@/components/Badge/Badge";
 export { default as Badge } from "@/components/Badge/Badge";
+
+// LinearProgress
+export * from "@/components/LinearProgress/LinearProgress";
+export { default as LinearProgress } from "@/components/LinearProgress/LinearProgress";
