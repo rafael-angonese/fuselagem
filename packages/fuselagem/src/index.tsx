@@ -22,3 +22,7 @@ export { default as Badge } from "@/components/Badge/Badge";
 // LinearProgress
 export * from "@/components/LinearProgress/LinearProgress";
 export { default as LinearProgress } from "@/components/LinearProgress/LinearProgress";
+
+// InputText
+export * from "@/components/InputText/InputText";
+export { default as InputText } from "@/components/InputText/InputText";
