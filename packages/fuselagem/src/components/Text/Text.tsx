@@ -2,7 +2,7 @@ import React from "react";
 import { VariantProps, tv } from "tailwind-variants";
 
 const baseTextVariants = tv({
-  base: "text-white",
+  base: "text-slate-700 dark:text-white",
   variants: {
     variant: {
       h1: "text-5xl font-bold",
