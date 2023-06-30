@@ -26,3 +26,7 @@ export { default as LinearProgress } from "@/components/LinearProgress/LinearPro
 // InputText
 export * from "@/components/InputText/InputText";
 export { default as InputText } from "@/components/InputText/InputText";
+
+// FormLabel
+export * from "@/components/FormLabel/FormLabel";
+export { default as FormLabel } from "@/components/FormLabel/FormLabel";
