@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { VariantProps, tv } from "tailwind-variants";
 
 const inputTextVariants = tv({
@@ -12,10 +12,6 @@ const inputTextVariants = tv({
     ],
   },
   variants: {
-    variant: {
-      solid: "",
-      outlined: "",
-    },
     size: {
       xs: {
         input: "p-2.5 text-base",
@@ -54,7 +50,7 @@ const inputTextVariants = tv({
     },
   },
   defaultVariants: {
-    variant: "solid",
+    size: "md",
   },
 });
 
@@ -70,19 +66,19 @@ export interface InputTextProps
 }
 
 const InputText: React.FC<InputTextProps> = ({
-  variant,
   disabled,
   isInvalid,
   size,
+  fullWidth,
   className: classes,
   leftContent,
   rightContent,
   ...props
 }) => {
   const { wrapper, input } = inputTextVariants({
-    variant,
     disabled,
     isInvalid,
+    fullWidth,
     size,
   });
 

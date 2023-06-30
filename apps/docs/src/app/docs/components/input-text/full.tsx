@@ -8,23 +8,22 @@ const code = `import { InputText } from "fuselagem";
 export default function App() {
   return (
     <>
-      <InputText placeholder="Enter your text" />
+      <InputText fullWidth placeholder="Enter your text" />
     </>
   )
 }
 `;
 
-const InputTextVariants: React.FC = () => {
+const InputTextFull: React.FC = () => {
   return (
     <ComponentLayout>
-      <Text variant="h1">Variants</Text>
+      <Text variant="h1">Full Width</Text>
 
-      <InputText variant="outlined" placeholder="Enter your text" />
-      <InputText variant="outlined" placeholder=" "  />
+      <InputText fullWidth placeholder="Enter your text" />
 
       <CodePreview code={code} />
     </ComponentLayout>
   );
 };
 
-export default InputTextVariants;
+export default InputTextFull;
