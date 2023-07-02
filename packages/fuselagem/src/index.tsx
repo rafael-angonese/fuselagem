@@ -34,3 +34,7 @@ export { default as FormLabel } from "@/components/FormLabel/FormLabel";
 // TextArea
 export * from "@/components/TextArea/TextArea";
 export { default as TextArea } from "@/components/TextArea/TextArea";
+
+// Avatar
+export * from "@/components/Avatar/Avatar";
+export { default as Avatar } from "@/components/Avatar/Avatar";
