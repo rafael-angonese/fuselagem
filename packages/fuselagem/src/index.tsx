@@ -30,3 +30,7 @@ export { default as InputText } from "@/components/InputText/InputText";
 // FormLabel
 export * from "@/components/FormLabel/FormLabel";
 export { default as FormLabel } from "@/components/FormLabel/FormLabel";
+
+// TextArea
+export * from "@/components/TextArea/TextArea";
+export { default as TextArea } from "@/components/TextArea/TextArea";
