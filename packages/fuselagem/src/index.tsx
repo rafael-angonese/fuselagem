@@ -42,3 +42,7 @@ export { default as Avatar } from "@/components/Avatar/Avatar";
 // Checkbox
 export * from "@/components/Checkbox/Checkbox";
 export { default as Checkbox } from "@/components/Checkbox/Checkbox";
+
+// Radio
+export * from "@/components/Radio/Radio";
+export { default as Radio } from "@/components/Radio/Radio";
