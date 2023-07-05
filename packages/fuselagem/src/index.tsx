@@ -46,3 +46,7 @@ export { default as Checkbox } from "@/components/Checkbox/Checkbox";
 // Radio
 export * from "@/components/Radio/Radio";
 export { default as Radio } from "@/components/Radio/Radio";
+
+// Tooltip
+export * from "@/components/Tooltip/Tooltip";
+export { default as Tooltip } from "@/components/Tooltip/Tooltip";
