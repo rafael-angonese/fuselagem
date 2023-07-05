@@ -38,3 +38,7 @@ export { default as TextArea } from "@/components/TextArea/TextArea";
 // Avatar
 export * from "@/components/Avatar/Avatar";
 export { default as Avatar } from "@/components/Avatar/Avatar";
+
+// Checkbox
+export * from "@/components/Checkbox/Checkbox";
+export { default as Checkbox } from "@/components/Checkbox/Checkbox";
