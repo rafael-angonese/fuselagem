@@ -50,3 +50,7 @@ export { default as Radio } from "@/components/Radio/Radio";
 // Tooltip
 export * from "@/components/Tooltip/Tooltip";
 export { default as Tooltip } from "@/components/Tooltip/Tooltip";
+
+// Switch
+export * from "@/components/Switch/Switch";
+export { default as Switch } from "@/components/Switch/Switch";
