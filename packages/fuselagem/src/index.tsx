@@ -60,3 +60,7 @@ export { default as Divider } from "@/components/Divider/Divider";
 // Table
 export * from "@/components/Table";
 // export { default as Table } from "@/components/Table/Table";
+
+// Skeleton
+export * from "@/components/Skeleton/Skeleton";
+export { default as Skeleton } from "@/components/Skeleton/Skeleton";
