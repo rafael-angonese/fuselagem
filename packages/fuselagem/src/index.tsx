@@ -56,3 +56,7 @@ export { default as Switch } from "@/components/Switch/Switch";
 // Divider
 export * from "@/components/Divider/Divider";
 export { default as Divider } from "@/components/Divider/Divider";
+
+// Table
+export * from "@/components/Table";
+// export { default as Table } from "@/components/Table/Table";
