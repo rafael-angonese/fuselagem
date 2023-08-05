@@ -10,9 +10,9 @@ function Root({ children }: RootProps) {
   return (
     <>
       <div className="card relative flex w-[400px] rounded-2xl p-1/2 overflow-hidden cursor-pointer">
-        <div className="border animate_border"></div>
+        <div className="border animate_border overflow-hidden"></div>
 
-        <div className="p-8 w-full shadow-[inset_0px_0px_0px_1px_rgb(50,50,50)] relative rounded-[inherit] p-[1rem 0.75rem] flex flex-col items-center text-center">
+        <div className="p-8 w-full shadow-[inset_0px_0px_0px_1px_rgb(255,255,255)] dark:shadow-[inset_0px_0px_0px_1px_rgb(50,50,50)] relative rounded-[inherit] flex flex-col items-center text-center">
           {children}
         </div>
       </div>
@@ -28,8 +28,8 @@ function Icon({ children }: IconProps) {
   return (
     <>
       <div className="relative">
-        <div className="absolute -inset-1/3 aspect-[1/1] bg-red-500 blur-[140px]"></div>
-        <div className="relative w-[84px] aspect-[1/1] bg-black rounded-[100%] border-[1px] border-gray-500 flex justify-center items-center">
+        <div className="absolute -inset-1/4 aspect-[1/1] bg-red-500 blur-[140px]"></div>
+        <div className="relative w-[84px] aspect-[1/1] bg-white dark:bg-black rounded-[100%] border-[1px] border-gray-500 flex justify-center items-center">
           {children}
         </div>
       </div>
