@@ -64,3 +64,11 @@ export * from "@/components/Table";
 // Skeleton
 export * from "@/components/Skeleton/Skeleton";
 export { default as Skeleton } from "@/components/Skeleton/Skeleton";
+
+// Grid
+export * from "@/components/Grid/Grid";
+export { default as Grid } from "@/components/Grid/Grid";
+
+// GridItem
+export * from "@/components/GridItem/GridItem";
+export { default as GridItem } from "@/components/GridItem/GridItem";
