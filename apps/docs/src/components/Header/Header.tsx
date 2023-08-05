@@ -1,4 +1,5 @@
 import DarkModeButton from "@/components/Header/DarkModeButton/DarkModeButton";
+import GithubButton from "@/components/Header/GithubButton/GithubButton";
 import Link from "next/link";
 import React from "react";
 
@@ -17,8 +18,8 @@ const Header: React.FC = () => {
             <Link href={"/docs"}>Docs</Link>
             <Link href={"/docs/components"}>Components</Link>
           </div>
-          <div className="text-base flex gap-2">
-            <span>Github</span>
+          <div className="text-base flex items-center gap-3">
+            <GithubButton />
             <DarkModeButton />
           </div>
         </nav>
