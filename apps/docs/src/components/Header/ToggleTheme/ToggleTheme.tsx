@@ -1,18 +1,28 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import React, { useEffect, useRef, useState } from "react";
 
 import "./styles.css";
-
-const darkSide = new Audio("./sounds/vadar_breathing.mp3");
-const lightSide = new Audio("./sounds/yoda_use_the_force.mp3");
+// const darkSide = new Audio("./sounds/vadar_breathing.mp3");
+// const lightSide = new Audio("./sounds/yoda_use_the_force.mp3");
 
 const ToggleTheme: React.FC = () => {
   const [mounted, setMounted] = useState(false);
-
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
+
+  const darkSide = useRef<HTMLAudioElement | undefined>(
+    typeof Audio !== "undefined"
+      ? new Audio("./sounds/vadar_breathing.mp3")
+      : undefined
+  );
+
+  const lightSide = useRef<HTMLAudioElement | undefined>(
+    typeof Audio !== "undefined"
+      ? new Audio("./sounds/vadar_breathing.mp3")
+      : undefined
+  );
 
   useEffect(() => {
     setMounted(true);
@@ -34,14 +44,19 @@ const ToggleTheme: React.FC = () => {
         onClick={() => {
           if (currentTheme === "dark") {
             setTheme("light");
-            darkSide.pause();
-            lightSide.play();
-            darkSide.currentTime = 0;
+
+            if (darkSide.current && lightSide.current) {
+              darkSide.current.pause();
+              lightSide.current.play();
+              darkSide.current.currentTime = 0;
+            }
           } else {
             setTheme("dark");
-            lightSide.pause();
-            darkSide.play();
-            lightSide.currentTime = 0;
+            if (darkSide.current && lightSide.current) {
+              lightSide.current.pause();
+              darkSide.current.play();
+              lightSide.current.currentTime = 0;
+            }
           }
         }}
         title="Toggle Dark Mode"
