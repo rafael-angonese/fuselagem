@@ -1,20 +1,29 @@
+import { Button, InputText } from "fuselagem";
+import { Search } from "lucide-react";
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <main className="mt-12">
-      <div className="flex justify-between">
-        <div className="w-[40%]">
-          <div className="max-w-fit">
-            <h1 className="font-extrabold text-transparent sm:text-6xl text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
-              Prepare-se para concretizar suas ideias criativas.
-            </h1>
+    <main>
+      <div className="flex flex-col text-center max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
+          Prepare-se para concretizar suas ideias criativas.
+        </h1>
 
-            <span className="mt-2 flex text-zinc-500 sm:text-2xl text-xl">
-              Crie mundos com letras e números.
-            </span>
-          </div>
+        <span className="mt-2 text-zinc-500 sm:text-2xl text-xl">
+          Crie mundos com letras e números.
+        </span>
+
+        <div className="flex justify-center space-x-6 mt-10">
+          <Link href={"/docs"}>
+            <Button>Get started</Button>
+          </Link>
+
+          <InputText
+            leftContent={<Search size={20} />}
+            placeholder="Quick search"
+          />
         </div>
-
-        <div className="w-[60%]"></div>
       </div>
     </main>
   );
