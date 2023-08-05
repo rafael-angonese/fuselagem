@@ -35,3 +35,9 @@
     background: #151417;
   }
 }
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-black text-black dark:text-zinc-300;
+  }
+}

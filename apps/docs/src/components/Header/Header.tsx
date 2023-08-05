@@ -1,4 +1,4 @@
-import ToggleTheme from "@/components/Header/ToggleTheme";
+import ToggleTheme from "@/components/Header/ToggleTheme/ToggleTheme";
 import Link from "next/link";
 import React from "react";
 
