@@ -36,10 +36,12 @@ const ToggleTheme: React.FC = () => {
             setTheme("light");
             darkSide.pause();
             lightSide.play();
+            darkSide.currentTime = 0;
           } else {
             setTheme("dark");
             lightSide.pause();
             darkSide.play();
+            lightSide.currentTime = 0;
           }
         }}
         title="Toggle Dark Mode"
