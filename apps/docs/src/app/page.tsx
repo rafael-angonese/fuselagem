@@ -1,3 +1,4 @@
+import Card from "@/components/Card/Card";
 import { Button, InputText } from "fuselagem";
 import { Search } from "lucide-react";
 import Link from "next/link";
@@ -10,7 +11,7 @@ export default function Home() {
           Prepare-se para concretizar suas ideias criativas.
         </h1>
 
-        <span className="mt-2 text-zinc-500 sm:text-2xl text-xl">
+        <span className="mt-6 text-zinc-500 sm:text-2xl text-xl">
           Crie mundos com letras e números.
         </span>
 
@@ -23,6 +24,11 @@ export default function Home() {
             leftContent={<Search size={20} />}
             placeholder="Quick search"
           />
+        </div>
+
+        <div className="mt-10 flex gap-8">
+          <Card />
+          <Card />
         </div>
       </div>
     </main>
