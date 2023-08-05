@@ -7,7 +7,7 @@ import "./styles.css";
 // const darkSide = new Audio("./sounds/vadar_breathing.mp3");
 // const lightSide = new Audio("./sounds/yoda_use_the_force.mp3");
 
-const ToggleTheme: React.FC = () => {
+const DarkModeButton: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
@@ -362,4 +362,4 @@ const ToggleTheme: React.FC = () => {
   );
 };
 
-export default ToggleTheme;
+export default DarkModeButton;

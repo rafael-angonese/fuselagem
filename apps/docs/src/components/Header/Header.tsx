@@ -1,4 +1,4 @@
-import ToggleTheme from "@/components/Header/ToggleTheme/ToggleTheme";
+import DarkModeButton from "@/components/Header/DarkModeButton/DarkModeButton";
 import Link from "next/link";
 import React from "react";
 
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
           </div>
           <div className="text-base flex gap-2">
             <span>Github</span>
-            <ToggleTheme />
+            <DarkModeButton />
           </div>
         </nav>
       </header>
