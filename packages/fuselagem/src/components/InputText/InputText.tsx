@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ComponentProps } from "react";
 import { VariantProps, tv } from "tailwind-variants";
 
 const inputTextVariants = tv({
@@ -57,7 +57,7 @@ const inputTextVariants = tv({
 type InputTextVariants = VariantProps<typeof inputTextVariants>;
 
 export interface InputTextProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "color" | "size">,
+  extends Omit<ComponentProps<"input">, "color" | "size">,
     InputTextVariants {
   disabled?: boolean;
   isInvalid?: boolean;
@@ -70,9 +70,9 @@ const InputText: React.FC<InputTextProps> = ({
   isInvalid,
   size,
   fullWidth,
-  className: classes,
   leftContent,
   rightContent,
+  className,
   ...props
 }) => {
   const { wrapper, input } = inputTextVariants({
@@ -90,7 +90,7 @@ const InputText: React.FC<InputTextProps> = ({
         </div>
       )}
       <input
-        className={input({ class: classes })}
+        className={input({ className })}
         data-left-content={leftContent ? true : false}
         data-right-content={rightContent ? true : false}
         disabled={disabled}

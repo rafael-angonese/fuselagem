@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ComponentProps, ReactNode } from "react";
 import { VariantProps, tv } from "tailwind-variants";
 
 const buttonVariants = tv({
@@ -138,10 +138,7 @@ const buttonVariants = tv({
 type ButtonVariants = VariantProps<typeof buttonVariants>;
 
 export interface ButtonProps
-  extends Omit<
-      React.ButtonHTMLAttributes<HTMLButtonElement>,
-      "color" | "disabled" | "size"
-    >,
+  extends Omit<ComponentProps<"button">, "color" | "disabled" | "size">,
     ButtonVariants {
   children: ReactNode;
 }
@@ -155,7 +152,7 @@ const Button: React.FC<ButtonProps> = ({
   rounded,
   shadow,
   children,
-  className: classes,
+  className,
   ...props
 }) => {
   return (
@@ -168,6 +165,7 @@ const Button: React.FC<ButtonProps> = ({
         size,
         shadow,
         fullWidth,
+        className,
       })}
       disabled={disabled ? true : false}
       {...props}

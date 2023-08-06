@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
+    <main className="px-4 sm:px-6">
       <div className="flex flex-col text-center max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
           Prepare-se para concretizar suas ideias criativas.
@@ -23,15 +23,17 @@ export default function Home() {
           Crie mundos com letras e números.
         </span>
 
-        <div className="flex justify-center space-x-6 mt-10">
-          <Link href={"/docs"}>
-            <Button>Get started</Button>
+        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center mt-10">
+          <Link href={"/docs"} className="w-full sm:w-auto">
+            <Button className="w-full">Get started</Button>
           </Link>
 
-          <InputText
-            leftContent={<Search size={20} />}
-            placeholder="Quick search"
-          />
+          <div className="hidden sm:flex">
+            <InputText
+              leftContent={<Search size={20} />}
+              placeholder="Quick search"
+            />
+          </div>
         </div>
       </div>
 
@@ -39,7 +41,7 @@ export default function Home() {
         <h1 className="text-center text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">
           A experiência que você deseja
         </h1>
-        <div className=" my-10 flex justify-center flex-wrap gap-8">
+        <div className="my-10 flex justify-center flex-wrap gap-8">
           <Card.Root>
             <Card.Icon>
               <Copy size={30} />

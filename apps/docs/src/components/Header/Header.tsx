@@ -10,15 +10,15 @@ const Header: React.FC = () => {
         <nav className="container mx-auto flex justify-between items-center">
           <Link
             href={"/"}
-            className="font-extrabold text-transparent sm:text-2xl text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+            className="font-extrabold text-transparent text-xl sm:text-2xl lg:text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
           >
             FuselagemUI
           </Link>
-          <div className="text-base flex gap-8">
+          <div className="text-base hidden sm:flex gap-8">
             <Link href={"/docs"}>Docs</Link>
             <Link href={"/docs/components"}>Components</Link>
           </div>
-          <div className="text-base flex items-center gap-3">
+          <div className="text-base flex items-center gap-3 hidden sm:flex">
             <GithubButton />
             <DarkModeButton />
           </div>
