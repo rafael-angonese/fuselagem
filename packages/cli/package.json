@@ -1,0 +1,23 @@
+{
+  "name": "fuselagem-ui",
+  "version": "1.0.0",
+  "description": "Add fuselagem-ui components to your apps.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Rafael Angonese",
+    "url": "https://github.com/rafael-angonese"
+  },
+  "keywords": [
+    "components",
+    "ui",
+    "tailwindcss",
+    "fuselagem-ui"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./src/index.ts"
+  },
+  "license": "MIT"
+}
