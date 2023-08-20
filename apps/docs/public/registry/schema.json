@@ -10,15 +10,9 @@
         },
         "css": {
           "type": "string"
-        },
-        "baseColor": {
-          "type": "string"
-        },
-        "cssVariables": {
-          "type": "boolean"
         }
       },
-      "required": ["config", "css", "baseColor", "cssVariables"]
+      "required": ["config", "css"]
     },
     "rsc": {
       "type": "boolean"
@@ -29,14 +23,11 @@
     "aliases": {
       "type": "object",
       "properties": {
-        "utils": {
-          "type": "string"
-        },
         "components": {
           "type": "string"
         }
       },
-      "required": ["utils", "components"]
+      "required": ["components"]
     }
   },
   "required": ["tailwind", "rsc", "aliases"]
