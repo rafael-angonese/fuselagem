@@ -151,17 +151,13 @@ export async function promptForConfig(
 
   const config = rawConfigSchema.parse({
     $schema: "https://www.fuselagem.com/registry/schema.json",
-    // style: options.style,
     tailwind: {
       config: options.tailwindConfig,
       css: options.tailwindCss,
-      // baseColor: options.tailwindBaseColor,
-      // cssVariables: options.tailwindCssVariables,
     },
     rsc: options.rsc,
     tsx: options.typescript,
     aliases: {
-      // utils: options.utils,
       components: options.components,
     },
   });

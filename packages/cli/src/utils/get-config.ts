@@ -19,7 +19,7 @@ const explorer = cosmiconfig("components", {
 
 export const rawConfigSchema = z
   .object({
-    // $schema: z.string().optional(),
+    $schema: z.string().optional(),
     // style: z.string(),
     rsc: z.coerce.boolean().default(false),
     tsx: z.coerce.boolean().default(true),
