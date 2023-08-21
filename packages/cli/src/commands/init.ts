@@ -150,7 +150,8 @@ export async function promptForConfig(
   ]);
 
   const config = rawConfigSchema.parse({
-    $schema: "https://www.fuselagem.com/registry/schema.json",
+    // $schema: "https://www.fuselagem.com/registry/schema.json",
+    $schema: "http://localhost:3000/registry/schema.json",
     tailwind: {
       config: options.tailwindConfig,
       css: options.tailwindCss,
