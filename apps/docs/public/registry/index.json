@@ -1,5 +1,16 @@
 [
   {
+    "name": "linear-progress",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/linear-progress/linear-progress.tsx",
+      "ui/linear-progress/styles.css"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "badge",
     "dependencies": [
       ""
@@ -76,6 +87,76 @@
     ],
     "files": [
       "ui/input-text.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "pagination",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/pagination.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "radio",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/radio.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "skeleton",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/skeleton.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "switch",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/switch.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "text",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/text.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "textarea",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/textarea.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "tooltip",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/tooltip.tsx"
     ],
     "type": "components:ui"
   }

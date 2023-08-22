@@ -1,0 +1,17 @@
+{
+  "name": "linear-progress",
+  "dependencies": [
+    ""
+  ],
+  "files": [
+    {
+      "name": "linear-progress.tsx",
+      "content": "import React from \"react\";\nimport { VariantProps, tv } from \"tailwind-variants\";\n\nimport \"./styles.css\";\n\nconst linearProgressVariants = tv({\n  slots: {\n    wrapper: \"w-full bg-gray-600 relative overflow-hidden rounded-full\",\n    container: \"h-full rounded-full\",\n    content: \"flex items-center justify-end h-full pr-2 text-xs text-white\",\n  },\n  variants: {\n    color: {\n      primary: {\n        container: \"bg-blue-400 dark:bg-blue-600\",\n      },\n      secondary: {\n        container: \"bg-purple-400 dark:bg-purple-600\",\n      },\n      success: {\n        container: \"bg-green-400 dark:bg-green-600\",\n      },\n      error: {\n        container: \"bg-red-400 dark:bg-red-600\",\n      },\n      warning: {\n        container: \"bg-yellow-400 dark:bg-yellow-600\",\n      },\n    },\n    size: {\n      xs: {\n        wrapper: \"h-1\",\n      },\n      sm: {\n        wrapper: \"h-2\",\n      },\n      md: {\n        wrapper: \"h-3\",\n      },\n      lg: {\n        wrapper: \"h-4\",\n      },\n      xl: {\n        wrapper: \"h-5\",\n      },\n    },\n    indeterminate: {\n      true: {\n        wrapper: \"indeterminate\",\n        container: \"progressbar absolute top-0\",\n      },\n    },\n  },\n  defaultVariants: {\n    color: \"primary\",\n    indeterminate: false,\n    size: \"md\",\n  },\n});\n\ntype LinearProgressVariants = VariantProps<typeof linearProgressVariants>;\n\ninterface LinearProgressProps extends LinearProgressVariants {\n  children?: React.ReactNode;\n  percentage?: number;\n}\n\nconst LinearProgress: React.FC<LinearProgressProps> = ({\n  children,\n  color,\n  size,\n  indeterminate,\n  percentage = 100,\n  ...props\n}) => {\n  const { wrapper, container, content } = linearProgressVariants({\n    color,\n    size,\n    indeterminate,\n  });\n\n  return (\n    <>\n      <div className={wrapper()}>\n        <div\n          className={container()}\n          style={{ width: `${percentage}%` }}\n          role=\"progressbar\"\n          aria-valuenow={percentage}\n          aria-valuemin={0}\n          aria-valuemax={100}\n        >\n          <span className={content()}>{children}</span>\n        </div>\n      </div>\n    </>\n  );\n};\n\nLinearProgress.displayName = \"LinearProgress\";\n\nexport { LinearProgress, linearProgressVariants };\n"
+    },
+    {
+      "name": "styles.css",
+      "content": "@keyframes progress-indeterminate {\n  0% {\n    width: 30%;\n    left: -40%;\n  }\n  60% {\n    left: 100%;\n    width: 100%;\n  }\n  to {\n    left: 100%;\n    width: 0;\n  }\n}\n\n.progressbar {\n  transition: width 0.25s ease;\n}\n.indeterminate .progressbar {\n  animation: progress-indeterminate 1.4s ease infinite;\n}\n"
+    }
+  ],
+  "type": "components:ui"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "skeleton",
+  "dependencies": [
+    ""
+  ],
+  "files": [
+    {
+      "name": "skeleton.tsx",
+      "content": "import React, { ComponentProps } from \"react\";\nimport { VariantProps, tv } from \"tailwind-variants\";\n\nconst skeletonVariants = tv({\n  base: \"animate-pulse rounded-md bg-gray-200\",\n  variants: {},\n});\n\ntype SkeletonVariants = VariantProps<typeof skeletonVariants>;\n\ninterface SkeletonProps extends ComponentProps<\"div\">, SkeletonVariants {}\n\nconst Skeleton: React.FC<SkeletonProps> = ({ className, ...props }) => {\n  return <div className={skeletonVariants({ className })} {...props} />;\n};\n\nSkeleton.displayName = \"Skeleton\";\n\nexport { Skeleton, skeletonVariants };\n"
+    }
+  ],
+  "type": "components:ui"
+}
