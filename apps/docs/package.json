@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:registry": "ts-node --esm --project ./tsconfig.scripts.json ./src/scripts/build-registry.ts"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.10",
@@ -24,6 +25,7 @@
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rimraf": "^5.0.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   }
