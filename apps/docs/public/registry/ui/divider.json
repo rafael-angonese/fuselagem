@@ -1,0 +1,13 @@
+{
+  "name": "divider",
+  "dependencies": [
+    ""
+  ],
+  "files": [
+    {
+      "name": "divider.tsx",
+      "content": "import { ComponentProps } from \"react\";\nimport { VariantProps, tv } from \"tailwind-variants\";\n\nconst dividerVariants = tv({\n  base: \"\",\n  variants: {\n    orientation: {\n      vertical: \"border-l border-gray-300 h-full\",\n      horizontal: \"border-t border-gray-300\",\n    },\n    color: {\n      primary: \"border-blue-500\",\n      secondary: \"border-purple-500\",\n      success: \"border-green-500\",\n      warning: \"border-yellow-500\",\n      error: \"border-red-500\",\n    },\n    size: {\n      xs: \"\",\n      sm: \"\",\n      md: \"\",\n      lg: \"\",\n      xl: \"\",\n    },\n  },\n  compoundVariants: [],\n  defaultVariants: {\n    orientation: \"horizontal\",\n    color: \"primary\",\n    size: \"md\",\n  },\n});\n\ntype DividerVariants = VariantProps<typeof dividerVariants>;\n\nexport interface DividerProps\n  extends Omit<ComponentProps<\"hr\">, \"color\">,\n    DividerVariants {}\n\nconst Divider: React.FC<DividerProps> = ({\n  color,\n  size,\n  orientation,\n  className: classes,\n  ...props\n}) => {\n  return (\n    <hr\n      className={dividerVariants({\n        color,\n        size,\n        orientation,\n        class: classes,\n      })}\n      {...props}\n    />\n  );\n};\n\nDivider.displayName = \"Divider\";\n\nexport { Divider, dividerVariants };\n"
+    }
+  ],
+  "type": "components:ui"
+}

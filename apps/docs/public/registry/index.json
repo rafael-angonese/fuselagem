@@ -1,11 +1,81 @@
 [
   {
+    "name": "badge",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/badge.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "button",
     "dependencies": [
       ""
     ],
     "files": [
       "ui/button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "checkbox",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/checkbox.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "divider",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/divider.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "form-label",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/form-label.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "grid-item",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/grid-item.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "grid",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/grid.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "input-text",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/input-text.tsx"
     ],
     "type": "components:ui"
   }
