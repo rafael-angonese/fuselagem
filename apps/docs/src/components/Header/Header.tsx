@@ -18,7 +18,7 @@ const Header: React.FC = () => {
             <Link href={"/docs"}>Docs</Link>
             <Link href={"/docs/components"}>Components</Link>
           </div>
-          <div className="text-base flex items-center gap-3 hidden sm:flex">
+          <div className="text-base items-center gap-3 flex">
             <GithubButton />
             <DarkModeButton />
           </div>
