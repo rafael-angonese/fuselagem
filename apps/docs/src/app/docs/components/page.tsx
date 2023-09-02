@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 
 // import { Container } from './styles';
@@ -6,7 +5,7 @@ import React from "react";
 const ComponentsPage: React.FC = () => {
   return (
     <>
-    <h1>sdfsdaff</h1>
+      <h1>sdfsdaff</h1>
     </>
   );
 };

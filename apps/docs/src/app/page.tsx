@@ -1,6 +1,6 @@
 import { Card } from "@/components/Card/Card";
 import { InputText } from "fuselagem";
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/registry/ui/Button";
 import {
   Atom,
   Code,

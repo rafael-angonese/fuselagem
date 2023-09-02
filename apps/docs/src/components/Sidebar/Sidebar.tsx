@@ -14,9 +14,7 @@ const Sidebar: React.FC = () => {
           </ActiveLink>
           <ActiveLink href={"/docs/components/table"}>Table</ActiveLink>
           <ActiveLink href={"/docs/components/badge"}>Badge</ActiveLink>
-          <ActiveLink href={"/docs/components/input-text"}>
-            InputText
-          </ActiveLink>
+          <ActiveLink href={"/docs/components/input"}>Input</ActiveLink>
           <ActiveLink href={"/docs/components/textarea"}>Textarea</ActiveLink>
           <ActiveLink href={"/docs/components/checkbox"}>Checkbox</ActiveLink>
           <ActiveLink href={"/docs/components/radio"}>Radio</ActiveLink>
