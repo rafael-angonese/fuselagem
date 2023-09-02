@@ -1,27 +1,67 @@
-import LinearProgressColors from "@/app/docs/components/linear-progress/colors";
-import LinearProgressDefault from "@/app/docs/components/linear-progress/default";
-import LinearProgressImport from "@/app/docs/components/linear-progress/import";
-import LinearProgressIndeterminate from "@/app/docs/components/linear-progress/indeterminate";
-import LinearProgressPercentage from "@/app/docs/components/linear-progress/percentage";
-import LinearProgressSizes from "@/app/docs/components/linear-progress/sizes";
+import ComponentLayout from "@/components/ComponentLayout/ComponentLayout";
 import PageComponentLayout from "@/components/PageComponentLayout/PageComponentLayout";
+import { LinearProgress } from "@/registry/ui/LinearProgress";
+import { Text } from "@/registry/ui/text";
 import React from "react";
 
 const LinearProgressPage: React.FC = () => {
   return (
     <>
       <PageComponentLayout>
-        <LinearProgressImport />
+        <ComponentLayout>
+          <Text variant="h1">Default</Text>
 
-        <LinearProgressDefault />
+          <LinearProgress />
+        </ComponentLayout>
 
-        <LinearProgressIndeterminate />
+        <ComponentLayout>
+          <Text variant="h1">Indeterminate</Text>
 
-        <LinearProgressColors />
+          <LinearProgress size="xs" indeterminate />
+        </ComponentLayout>
 
-        <LinearProgressSizes />
+        <ComponentLayout>
+          <Text variant="h1">Colors</Text>
 
-        <LinearProgressPercentage />
+          <div className="space-y-4">
+            <LinearProgress percentage={50} color="primary" />
+            <LinearProgress percentage={30} color="secondary" />
+            <LinearProgress percentage={70} color="success" />
+            <LinearProgress percentage={90} color="warning" />
+            <LinearProgress percentage={10} color="error" />
+          </div>
+        </ComponentLayout>
+
+        <ComponentLayout>
+          <Text variant="h1">Sizes</Text>
+
+          <div className="space-y-4">
+            <LinearProgress percentage={30} size="xs" />
+            <LinearProgress percentage={32} size="sm" />
+            <LinearProgress percentage={34} size="md" />
+            <LinearProgress percentage={36} size="lg" />
+            <LinearProgress percentage={38} size="xl" />
+          </div>
+        </ComponentLayout>
+
+        <ComponentLayout>
+          <Text variant="h1">Percentage</Text>
+
+          <div className="space-y-4">
+            <LinearProgress size="xl" percentage={15}>
+              15%
+            </LinearProgress>
+            <LinearProgress size="xl" percentage={35}>
+              35%
+            </LinearProgress>
+            <LinearProgress size="xl" percentage={55}>
+              55%
+            </LinearProgress>
+            <LinearProgress size="xl" percentage={75}>
+              75%
+            </LinearProgress>
+          </div>
+        </ComponentLayout>
       </PageComponentLayout>
     </>
   );

@@ -60,7 +60,7 @@ const linearProgressVariants = tv({
 
 type LinearProgressVariants = VariantProps<typeof linearProgressVariants>;
 
-interface LinearProgressProps extends LinearProgressVariants {
+export interface LinearProgressProps extends LinearProgressVariants {
   children?: React.ReactNode;
   percentage?: number;
 }
@@ -71,7 +71,6 @@ const LinearProgress: React.FC<LinearProgressProps> = ({
   size,
   indeterminate,
   percentage = 100,
-  ...props
 }) => {
   const { wrapper, container, content } = linearProgressVariants({
     color,
