@@ -1,21 +1,61 @@
-import DividerColors from "@/app/docs/components/divider/colors";
-import DividerDefault from "@/app/docs/components/divider/default";
-import DividerImport from "@/app/docs/components/divider/import";
-import DividerOrientation from "@/app/docs/components/divider/orintation";
+import ComponentLayout from "@/components/ComponentLayout/ComponentLayout";
 import PageComponentLayout from "@/components/PageComponentLayout/PageComponentLayout";
+import { Divider } from "@/registry/ui/Divider";
+import { Text } from "@/registry/ui/text";
 import React from "react";
 
 const TooltipPage: React.FC = () => {
   return (
     <>
       <PageComponentLayout>
-        <DividerImport />
+        <ComponentLayout>
+          <Text variant="h1">Orientation</Text>
 
-        <DividerDefault />
+          <div className="space-y-10">
+            <div className="space-y-1">
+              <p className="text-small">Horizontal</p>
+              <Divider orientation="horizontal" />
+              <p className="text-small">Horizontal</p>
+            </div>
 
-        <DividerOrientation />
+            <div className="flex space-x-4 h-56">
+              <div>Vertical</div>
+              <Divider orientation="vertical" />
+              <div>Vertical</div>
+            </div>
+          </div>
+        </ComponentLayout>
 
-        <DividerColors />
+        <ComponentLayout>
+          <Text variant="h1">Colors</Text>
+
+          <div className="space-y-2">
+            <div>
+              <p>Primary.</p>
+              <Divider color="primary" />
+            </div>
+
+            <div>
+              <p>Secondary.</p>
+              <Divider color="secondary" />
+            </div>
+
+            <div>
+              <p>Success.</p>
+              <Divider color="success" />
+            </div>
+
+            <div>
+              <p>Warning.</p>
+              <Divider color="warning" />
+            </div>
+
+            <div>
+              <p>Error.</p>
+              <Divider color="error" />
+            </div>
+          </div>
+        </ComponentLayout>
       </PageComponentLayout>
     </>
   );
