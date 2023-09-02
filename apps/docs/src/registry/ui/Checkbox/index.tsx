@@ -20,7 +20,7 @@ const checkboxVariants = tv({
       "before:top-2/4 before:left-2/4 before:block",
       "before:-translate-y-2/4 before:-translate-x-2/4",
       "before:opacity-0 before:transition-opacity",
-      "hover:before:opacity-10",
+      "hover:before:opacity-10 dark:hover:before:opacity-20",
     ],
     indicator: "flex items-center justify-center text-current",
     icon: "",
