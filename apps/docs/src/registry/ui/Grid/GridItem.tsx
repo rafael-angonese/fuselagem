@@ -78,36 +78,31 @@ const gridVariants = tv({
   },
 });
 
-type GridVariants = VariantProps<typeof gridVariants>;
+export interface GridItemProps
+  extends ComponentProps<"div">,
+    VariantProps<typeof gridVariants> {}
 
-interface GridProps extends ComponentProps<"div">, GridVariants {}
-
-const GridItem: React.FC<GridProps> = ({
+const GridItem: React.FC<GridItemProps> = ({
   xs = 12,
   sm = 12,
   md = 12,
   lg = 12,
   xl = 12,
   className,
-  children,
   ...props
 }) => {
   return (
-    <>
-      <div
-        className={gridVariants({
-          xs,
-          sm,
-          md,
-          lg,
-          xl,
-          className,
-        })}
-        {...props}
-      >
-        {children}
-      </div>
-    </>
+    <div
+      className={gridVariants({
+        xs,
+        sm,
+        md,
+        lg,
+        xl,
+        className,
+      })}
+      {...props}
+    />
   );
 };
 
