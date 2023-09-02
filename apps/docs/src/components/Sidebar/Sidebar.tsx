@@ -25,9 +25,7 @@ const Sidebar: React.FC = () => {
           <ActiveLink href={"/docs/components/select"}>Select</ActiveLink>
           <ActiveLink href={"/docs/components/modal"}>Modal</ActiveLink>
           <ActiveLink href={"/docs/components/switch"}>Switch</ActiveLink>
-          <ActiveLink href={"/docs/components/form-label"}>
-            Form Label
-          </ActiveLink>
+          <ActiveLink href={"/docs/components/label"}>Label</ActiveLink>
           <ActiveLink href={"/docs/components/input-date"}>
             Input Date
           </ActiveLink>
