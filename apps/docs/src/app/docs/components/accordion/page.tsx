@@ -5,7 +5,7 @@ import { Accordion } from "@/registry/ui/Accordion";
 import { Text } from "@/registry/ui/text";
 import React from "react";
 
-const TooltipPage: React.FC = () => {
+export default async function TooltipPage() {
   return (
     <>
       <PageComponentLayout>
@@ -48,6 +48,4 @@ const TooltipPage: React.FC = () => {
       </PageComponentLayout>
     </>
   );
-};
-
-export default TooltipPage;
+}
