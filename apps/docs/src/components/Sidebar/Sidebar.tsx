@@ -7,6 +7,7 @@ const Sidebar: React.FC = () => {
       <div className="fixed h-[80vh] w-64 overflow-y-auto">
         <ul className="flex flex-col gap-4 list-disc list-inside">
           <ActiveLink href={"/docs/components/accordion"}>Accordion</ActiveLink>
+          <ActiveLink href={"/docs/components/alert-dialog"}>Alert Dialog</ActiveLink>
           <ActiveLink href={"/docs/components/avatar"}>Avatar</ActiveLink>
           <ActiveLink href={"/docs/components/badge"}>Badge</ActiveLink>
           <ActiveLink href={"/docs/components/button"}>Button</ActiveLink>
