@@ -20,7 +20,7 @@ export default async function TooltipPage() {
     <>
       <PageComponentLayout>
         <ComponentLayout>
-          <Text variant="h1">Accordion</Text>
+          <Text variant="h1">Alert Dialog</Text>
 
           <div className="">
             <AlertDialog>

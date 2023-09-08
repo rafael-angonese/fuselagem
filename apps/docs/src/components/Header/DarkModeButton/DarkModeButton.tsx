@@ -14,13 +14,13 @@ const DarkModeButton: React.FC = () => {
 
   const darkSide = useRef<HTMLAudioElement | undefined>(
     typeof Audio !== "undefined"
-      ? new Audio("./sounds/vadar_breathing.mp3")
+      ? new Audio("/sounds/vadar_breathing.mp3")
       : undefined
   );
 
   const lightSide = useRef<HTMLAudioElement | undefined>(
     typeof Audio !== "undefined"
-      ? new Audio("./sounds/yoda_use_the_force.mp3")
+      ? new Audio("/sounds/yoda_use_the_force.mp3")
       : undefined
   );
 
