@@ -7,7 +7,9 @@ const Sidebar: React.FC = () => {
       <div className="fixed h-[80vh] w-64 overflow-y-auto">
         <ul className="flex flex-col gap-4 list-disc list-inside">
           <ActiveLink href={"/docs/components/accordion"}>Accordion</ActiveLink>
-          <ActiveLink href={"/docs/components/alert-dialog"}>Alert Dialog</ActiveLink>
+          <ActiveLink href={"/docs/components/alert-dialog"}>
+            Alert Dialog
+          </ActiveLink>
           <ActiveLink href={"/docs/components/avatar"}>Avatar</ActiveLink>
           <ActiveLink href={"/docs/components/badge"}>Badge</ActiveLink>
           <ActiveLink href={"/docs/components/button"}>Button</ActiveLink>
@@ -17,7 +19,9 @@ const Sidebar: React.FC = () => {
           <ActiveLink href={"/docs/components/dialog"}>Dialog</ActiveLink>
           <ActiveLink href={"/docs/components/divider"}>Divider</ActiveLink>
           <ActiveLink href={"/docs/components/grid"}>Grid</ActiveLink>
-          <ActiveLink href={"/docs/components/hover-card"}>Hover Card</ActiveLink>
+          <ActiveLink href={"/docs/components/hover-card"}>
+            Hover Card
+          </ActiveLink>
           <ActiveLink href={"/docs/components/input"}>Input</ActiveLink>
           <ActiveLink href={"/docs/components/label"}>Label</ActiveLink>
           <ActiveLink href={"/docs/components/linear-progress"}>
@@ -26,6 +30,7 @@ const Sidebar: React.FC = () => {
           <ActiveLink href={"/docs/components/pagination"}>
             Pagination
           </ActiveLink>
+          <ActiveLink href={"/docs/components/popover"}>Popover</ActiveLink>
           <ActiveLink href={"/docs/components/radio"}>Radio</ActiveLink>
           <ActiveLink href={"/docs/components/skeleton"}>Skeleton</ActiveLink>
           <ActiveLink href={"/docs/components/switch"}>Switch</ActiveLink>
