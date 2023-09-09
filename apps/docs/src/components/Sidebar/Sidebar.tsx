@@ -21,6 +21,7 @@ const Sidebar: React.FC = () => {
           </ActiveLink>
           <ActiveLink href={"/docs/components/dialog"}>Dialog</ActiveLink>
           <ActiveLink href={"/docs/components/divider"}>Divider</ActiveLink>
+          <ActiveLink href={"/docs/components/dropdown-menu"}>Dropdown Menu</ActiveLink>
           <ActiveLink href={"/docs/components/grid"}>Grid</ActiveLink>
           <ActiveLink href={"/docs/components/hover-card"}>
             Hover Card
