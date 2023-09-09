@@ -29,6 +29,7 @@ const Sidebar: React.FC = () => {
           <ActiveLink href={"/docs/components/skeleton"}>Skeleton</ActiveLink>
           <ActiveLink href={"/docs/components/switch"}>Switch</ActiveLink>
           <ActiveLink href={"/docs/components/table"}>Table</ActiveLink>
+          <ActiveLink href={"/docs/components/tabs"}>Tabs</ActiveLink>
           <ActiveLink href={"/docs/components/text"}>Text</ActiveLink>
           <ActiveLink href={"/docs/components/textarea"}>Textarea</ActiveLink>
           <ActiveLink href={"/docs/components/tooltip"}>Tooltip</ActiveLink>
