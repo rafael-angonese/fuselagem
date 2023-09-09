@@ -34,6 +34,9 @@ const Sidebar: React.FC = () => {
             Linear Progress
           </ActiveLink>
           <ActiveLink href={"/docs/components/menubar"}>Menubar</ActiveLink>
+          <ActiveLink href={"/docs/components/navigation-menu"}>
+            Navigation Menu
+          </ActiveLink>
           <ActiveLink href={"/docs/components/pagination"}>
             Pagination
           </ActiveLink>
