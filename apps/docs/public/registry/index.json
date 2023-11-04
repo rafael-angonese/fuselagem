@@ -1,5 +1,55 @@
 [
   {
+    "name": "accordion",
+    "dependencies": [
+      "@radix-ui/react-accordion"
+    ],
+    "files": [
+      "ui/accordion.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "alert-dialog",
+    "dependencies": [
+      "@radix-ui/react-alert-dialog"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "ui/alert-dialog.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "avatar",
+    "dependencies": [
+      "@radix-ui/react-avatar"
+    ],
+    "files": [
+      "ui/avatar.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "badge",
+    "files": [
+      "ui/badge.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "button",
+    "dependencies": [
+      "@radix-ui/react-slot"
+    ],
+    "files": [
+      "ui/button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "linear-progress",
     "dependencies": [
       ""
