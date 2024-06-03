@@ -1,6 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { Button } from '../components/ui/button/button';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -34,6 +35,8 @@ import Card from '../components/Card.astro';
 			</defs>
 		</svg>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+
+		<Button client:visible>Chora boy</Button>
 
 		<span class="text-4xl font-bold !text-red-500">asfdsa</span>
 		<p class="instructions">
