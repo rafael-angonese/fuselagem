@@ -428,28 +428,6 @@
           "path": "/docs/components/user.mdx"
         }
       ]
-    },
-    {
-      "key": "api-references",
-      "title": "API References",
-      "defaultOpen": true,
-      "keywords": "api references, nextui, api",
-      "routes": [
-        {
-          "key": "cli-api",
-          "title": "NextUI CLI",
-          "keywords": "api references, nextui, api, cli",
-          "path": "/docs/api-references/cli-api.mdx",
-          "updated": true
-        },
-        {
-          "key": "nextui-provider",
-          "title": "NextUI Provider",
-          "keywords": "api references, nextui, api, nextui provider",
-          "path": "/docs/api-references/nextui-provider.mdx",
-          "updated": true
-        }
-      ]
     }
   ],
   "mobileRoutes": [
