@@ -1,0 +1,139 @@
+
+> @nextui-org/docs@2.0.0 build
+> contentlayer build && next build
+
+Generated 66 documents in .contentlayer
+TypeError: The "code" argument must be of type number. Received an instance of Object
+    at process.set [as exitCode] (node:internal/bootstrap/node:123:9)
+    at Cli.runExit (/home/rafa/workspaces/ui/fuselagem/apps/motion/node_modules/.pnpm/clipanion@3.2.1_typanion@3.14.0/node_modules/clipanion/lib/advanced/Cli.js:232:26)
+    at run (file:///home/rafa/workspaces/ui/fuselagem/apps/motion/node_modules/.pnpm/@contentlayer+cli@0.3.4_esbuild@0.18.20/node_modules/@contentlayer/cli/src/index.ts:39:3)
+    at main (/home/rafa/workspaces/ui/fuselagem/apps/motion/node_modules/.pnpm/contentlayer@0.3.4_esbuild@0.18.20/node_modules/contentlayer/bin/cli.cjs:5:3) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+   Creating an optimized production build...
+Generated 66 documents in .contentlayer
+ ⚠ Compiled with warnings
+
+./node_modules/.pnpm/framer-motion@11.3.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/framer-motion/dist/es/render/dom/utils/filter-props.mjs
+Module not found: Can't resolve '@emotion/is-prop-valid' in '/home/rafa/workspaces/ui/fuselagem/apps/motion/node_modules/.pnpm/framer-motion@11.3.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/framer-motion/dist/es/render/dom/utils'
+
+Import trace for requested module:
+./node_modules/.pnpm/framer-motion@11.3.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/framer-motion/dist/es/render/dom/utils/filter-props.mjs
+./node_modules/.pnpm/framer-motion@11.3.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/framer-motion/dist/es/index.mjs
+./components/marketing/a11y-otb.tsx
+
+./node_modules/.pnpm/framer-motion@11.3.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/framer-motion/dist/es/render/dom/utils/filter-props.mjs
+Module not found: Can't resolve '@emotion/is-prop-valid' in '/home/rafa/workspaces/ui/fuselagem/apps/motion/node_modules/.pnpm/framer-motion@11.3.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/framer-motion/dist/es/render/dom/utils'
+
+Import trace for requested module:
+./node_modules/.pnpm/framer-motion@11.3.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/framer-motion/dist/es/render/dom/utils/filter-props.mjs
+./node_modules/.pnpm/framer-motion@11.3.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/framer-motion/dist/es/index.mjs
+./components/marketing/a11y-otb.tsx
+
+   Skipping validation of types
+   Skipping linting
+   Collecting page data...
+   Generating static pages (0/96)...
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+
+ ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+If you do not provide a visible label, you must specify an aria-label or aria-labelledby attribute for accessibility
+ ⚠ Entire page /examples/perf deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /examples/perf
+   Generating static pages (24/96)
+
+   Generating static pages (48/96)
+
+   Generating static pages (72/96)
+
+ ✓ Generating static pages (96/96)
+   Finalizing page optimization...
+
+Route (app)                                     Size     First Load JS
+┌ ○ /                                           14.7 kB         990 kB
+├ ○ /_not-found                                 884 B          80.5 kB
+├ ● /docs/[[...slug]]                           7.61 kB         907 kB
+├   ├ /docs/api-references/cli-api
+├   ├ /docs/api-references/nextui-provider
+├   ├ /docs/components/accordion
+├   └ [+63 more paths]
+├ ○ /examples/autocomplete/async-filtering      1.54 kB         191 kB
+├ ○ /examples/autocomplete/async-items-loading  2.93 kB         191 kB
+├ ○ /examples/autocomplete/fully-controlled     2.02 kB         190 kB
+├ ○ /examples/demo                              6.92 kB         136 kB
+├ ○ /examples/modal/placement                   10.8 kB         156 kB
+├ ○ /examples/navbar/bordered                   800 B           151 kB
+├ ○ /examples/navbar/controlled-menu            1.94 kB         152 kB
+├ ○ /examples/navbar/custom-active-item         902 B           151 kB
+├ ○ /examples/navbar/disable-menu-animation     1.95 kB         152 kB
+├ ○ /examples/navbar/disabled-blur              806 B           151 kB
+├ ○ /examples/navbar/hide-on-scroll             806 B           151 kB
+├ ○ /examples/navbar/static                     799 B           151 kB
+├ ○ /examples/navbar/usage                      789 B           151 kB
+├ ○ /examples/navbar/with-avatar                3.88 kB         187 kB
+├ ○ /examples/navbar/with-dropdown-menu         2.57 kB         186 kB
+├ ○ /examples/navbar/with-menu                  1.94 kB         152 kB
+├ ○ /examples/navbar/with-search-input          5.79 kB         213 kB
+├ ○ /examples/perf                              9.31 kB         246 kB
+├ ○ /examples/select/async-items-loading        6.61 kB         179 kB
+├ ○ /examples/table/async-pagination            8.75 kB         157 kB
+├ ○ /examples/table/custom-styles               3.56 kB         248 kB
+├ ○ /examples/table/infinite-pagination         4.55 kB         148 kB
+├ ○ /examples/table/load-more                   1.01 kB         179 kB
+├ ○ /examples/table/sorting                     3.46 kB         147 kB
+├ ○ /examples/table/use-case                    3.43 kB         248 kB
+└ ○ /feed.xml                                   0 B                0 B
++ First Load JS shared by all                   79.7 kB
+  ├ chunks/1362-9d78944b0bd107e9.js             26.6 kB
+  ├ chunks/d3f34c3f-2368b31b8bc616fa.js         50.8 kB
+  ├ chunks/main-app-3e4f2d37160e0722.js         228 B
+  └ chunks/webpack-4bcd74b75d14cb29.js          1.96 kB
+
+
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+
+
+> @nextui-org/docs@2.0.0 postbuild
+> next-sitemap
+
+✨ [next-sitemap] Loading next-sitemap config: file:///home/rafa/workspaces/ui/fuselagem/apps/motion/next-sitemap.config.js
+✅ [next-sitemap] Generation completed
+┌───────────────┬────────┐
+│    (index)    │ Values │
+├───────────────┼────────┤
+│ indexSitemaps │   1    │
+│   sitemaps    │   1    │
+└───────────────┴────────┘
+-----------------------------------------------------
+ SITEMAP INDICES 
+-----------------------------------------------------
+
+   ○ https://nextui.org/sitemap.xml
+
+
+-----------------------------------------------------
+ SITEMAPS 
+-----------------------------------------------------
+
+   ○ https://nextui.org/sitemap-0.xml
+
+
