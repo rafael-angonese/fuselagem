@@ -75,9 +75,8 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
   const {focusProps, isFocusVisible} = useFocusRing();
 
   const docsPaths = [
-    "/docs/guide/introduction",
-    "/docs/guide/installation",
-    "/docs/guide/upgrade-to-v2",
+    "/docs/getting-started/introduction",
+    "/docs/getting-started/installation",
   ];
 
   const searchButton = (
@@ -146,8 +145,8 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
               className={navLinkClasses}
               color="foreground"
               data-active={includes(docsPaths, pathname)}
-              href="/docs/guide/introduction"
-              onClick={() => handlePressNavbarItem("Docs", "/docs/guide/introduction")}
+              href="/docs/getting-started/introduction"
+              onClick={() => handlePressNavbarItem("Docs", "/docs/getting-started/introduction")}
             >
               Docs
             </NextLink>
@@ -157,8 +156,8 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
               className={navLinkClasses}
               color="foreground"
               data-active={includes(pathname, "components")}
-              href="/docs/components/avatar"
-              onClick={() => handlePressNavbarItem("Components", "/docs/components/avatar")}
+              href="/docs/components/background-gradient"
+              onClick={() => handlePressNavbarItem("Components", "/docs/components/background-gradient")}
             >
               Components
             </NextLink>
