@@ -1,18 +1,25 @@
 ---
 title: "Background Gradient"
-description: "Accordion display a list of high-level options that can expand/collapse to reveal more information."
+description: "An animated gradient that sits at the background of a card, button or anything."
 ---
 
-import {backgroundGradientContent} from "@/content/components/background-gradient";
+import { backgroundGradientContent } from "@/content/components/background-gradient";
 
 # Background Gradient
 
-Accordion display a list of high-level options that can expand/collapse to reveal more information.
+An animated gradient that sits at the background of a card, button or anything.
 
 ---
-
 
 ## Usage
 
 <CodeDemo title="Usage" files={backgroundGradientContent.usage} />
 
+### Props
+
+| Attribute          | Type              | Description                                                | Default     |
+| ------------------ | ----------------- | ---------------------------------------------------------- | ----------- |
+| children           | `React.ReactNode` | The content to be rendered within the gradient background. | `undefined` |
+| className          | `string`          | The CSS class to be applied to the inner div.              | `undefined` |
+| containerClassName | `string`          | The CSS class to be applied to the outermost div.          | `undefined` |
+| animate            | `string`          | Color of the avatars                                       | `true`      |
