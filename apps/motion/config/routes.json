@@ -470,24 +470,6 @@
           "title": "Components",
           "keywords": "components, nextui",
           "path": "/docs/components/avatar"
-        },
-        {
-          "key": "blog",
-          "title": "Blog",
-          "keywords": "blog, nextui, news, updates",
-          "path": "/blog"
-        },
-        {
-          "key": "figma",
-          "title": "Figma",
-          "keywords": "figma, nextui, design, ui kit",
-          "path": "/figma"
-        },
-        {
-          "key": "roadmap",
-          "title": "Roadmap",
-          "keywords": "roadmap, nextui",
-          "path": "#"
         }
       ]
     }

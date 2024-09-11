@@ -163,46 +163,6 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
               Components
             </NextLink>
           </NavbarItem>
-          <NavbarItem>
-            <NextLink
-              className={navLinkClasses}
-              color="foreground"
-              data-active={includes(pathname, "blog")}
-              href="/blog"
-              onClick={() => handlePressNavbarItem("Blog", "/blog")}
-            >
-              Blog
-            </NextLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NextLink
-              className={navLinkClasses}
-              color="foreground"
-              data-active={includes(pathname, "figma")}
-              href="/figma"
-              onClick={() => handlePressNavbarItem("Figma", "/figma")}
-            >
-              Figma
-            </NextLink>
-          </NavbarItem>
-          <NavbarItem>
-            <FbRoadmapLink className={navLinkClasses} />
-          </NavbarItem>
-          {/* <NavbarItem>
-            <Chip
-              as={NextLink}
-              className="hover:bg-default-100 border-default-200/80 dark:border-default-100/80 transition-colors cursor-pointer"
-              color="secondary"
-              href="/blog/v2.2.0"
-              variant="dot"
-              onClick={() => handlePressNavbarItem("Introducing v2.2.0", "/blog/v2.2.0")}
-            >
-              Introducing v2.2.0&nbsp;
-              <span aria-label="rocket emoji" role="img">
-                🚀
-              </span>
-            </Chip>
-          </NavbarItem> */}
         </ul>
       </NavbarContent>
 
@@ -244,21 +204,6 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
-        {/* <NavbarItem className="hidden sm:flex">
-          <Chip
-            as={NextLink}
-            className="bg-default-100/50 hover:bg-default-100 border-default-200/80 dark:border-default-100/80 transition-colors cursor-pointer"
-            color="default"
-            href="/blog/v2.4.0"
-            variant="dot"
-            onClick={() => handlePressNavbarItem("New version v2.4.0", "/blog/v2.4.0")}
-          >
-            New version v2.4.0&nbsp;
-            <span aria-label="emoji" role="img">
-              🚀
-            </span>
-          </Chip>
-        </NavbarItem> */}
         <NavbarItem className="hidden sm:flex">
           <Link
             isExternal
@@ -272,21 +217,6 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchButton}</NavbarItem>
-        <NavbarItem className="hidden md:flex">
-          <Button
-            isExternal
-            as={Link}
-            className="group text-sm font-normal text-default-600 bg-default-400/20 dark:bg-default-500/20"
-            href={siteConfig.links.sponsor}
-            startContent={
-              <HeartFilledIcon className="text-danger group-data-[hover=true]:animate-heartbeat" />
-            }
-            variant="flat"
-            onPress={() => handlePressNavbarItem("Sponsor", siteConfig.links.sponsor)}
-          >
-            Sponsor
-          </Button>
-        </NavbarItem>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="hidden sm:flex lg:hidden ml-4"
