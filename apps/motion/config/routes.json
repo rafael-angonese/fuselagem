@@ -21,6 +21,26 @@
       ]
     },
     {
+      "key": "motion",
+      "title": "Motion components",
+      "defaultOpen": true,
+      "keywords": "motion components, guide, start",
+      "routes": [
+        {
+          "key": "background-gradient",
+          "title": "Background Gradient",
+          "keywords": "background-gradient",
+          "path": "/docs/components/background-gradient.mdx"
+        },
+        {
+          "key": "installation",
+          "title": "Installation",
+          "keywords": "installation, start",
+          "path": "/docs/getting-started/installation.mdx"
+        }
+      ]
+    },
+    {
       "key": "guide",
       "title": "Guide",
       "defaultOpen": true,

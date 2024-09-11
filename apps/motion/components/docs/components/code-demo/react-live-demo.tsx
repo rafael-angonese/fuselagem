@@ -4,6 +4,8 @@ import {clsx} from "@nextui-org/shared-utils";
 import * as Components from "@nextui-org/react";
 import * as intlDateUtils from "@internationalized/date";
 import * as reactAriaI18n from "@react-aria/i18n";
+import * as motion from "framer-motion";
+import * as tailwindVariants from "tailwind-variants";
 
 import {BgGridContainer} from "@/components/bg-grid-container";
 import {GradientBox, GradientBoxProps} from "@/components/gradient-box";
@@ -23,6 +25,8 @@ export const scope = {
   ...Components,
   ...intlDateUtils,
   ...reactAriaI18n,
+  ...motion,
+  ...tailwindVariants,
 } as Record<string, unknown>;
 
 export const ReactLiveDemo: React.FC<ReactLiveDemoProps> = ({
