@@ -1,0 +1,34 @@
+---
+title: "TypewriterEffect"
+description: "Text generates as if it is being typed on the screen."
+---
+
+import { typewriterEffectContent } from "@/content/components/typewriter-effect";
+
+# TypewriterEffect
+
+Text generates as if it is being typed on the screen.
+
+---
+
+## Usage
+
+<CodeDemoMotion title="Usage" codeString={typewriterEffectContent.usage["/App.jsx"]}>
+  <TypewriterEffectDemo />
+</CodeDemoMotion>
+
+## Code
+
+<CodeTest className="jsx">
+  {typewriterEffectContent.usage["/TypewriterEffect.jsx"]}
+</CodeTest>
+
+## Props
+
+| Attribute          | Type              | Description                                                | Default     |
+| ------------------ | ----------------- | ---------------------------------------------------------- | ----------- |
+| children           | `React.ReactNode` | The content to be rendered within the gradient background. | `undefined` |
+| className          | `string`          | The CSS class to be applied to the inner div.              | `undefined` |
+| containerClassName | `string`          | The CSS class to be applied to the outermost div.          | `undefined` |
+| animate            | `string`          | Color of the avatars                                       | `true`      |
+```

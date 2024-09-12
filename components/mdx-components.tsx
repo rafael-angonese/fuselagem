@@ -1,20 +1,23 @@
 /* eslint-disable react/display-name */
-import {clsx} from "@nextui-org/shared-utils";
 import * as Components from "@nextui-org/react";
-import {Language} from "prism-react-renderer";
+import { clsx } from "@nextui-org/shared-utils";
 import NextImage from "next/image";
+import { Language } from "prism-react-renderer";
 
-import {ThemeSwitch} from "./theme-switch";
+import { ThemeSwitch } from "./theme-switch";
 
-import {Sandpack} from "@/components/sandpack";
-import {CarbonAd} from "@/components/ads/carbon-ad";
-import * as DocsComponents from "@/components/docs/components";
+import { CarbonAd } from "@/components/ads/carbon-ad";
 import * as BlogComponents from "@/components/blog/components";
-import {Codeblock} from "@/components/docs/components";
-import {VirtualAnchor, virtualAnchorEncode} from "@/components/virtual-anchor";
-import {trackEvent} from "@/utils/va";
+import { CustomButton } from "@/components/demos";
+import * as DocsComponents from "@/components/docs/components";
+import { Codeblock } from "@/components/docs/components";
+import { Sandpack } from "@/components/sandpack";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect/typewriter-effect";
+import { VirtualAnchor, virtualAnchorEncode } from "@/components/virtual-anchor";
+import { trackEvent } from "@/utils/va";
+import { TypewriterEffectDemo } from "@/components/demos/typewriter-effect-demo/typewriter-effect-demo";
 
-const Table: React.FC<{children?: React.ReactNode}> = ({children}) => {
+const Table: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
     <div className="overflow-x-auto overflow-y-hidden">
       <table className="border-collapse border-spacing-0 w-full">{children}</table>
@@ -22,7 +25,7 @@ const Table: React.FC<{children?: React.ReactNode}> = ({children}) => {
   );
 };
 
-const Thead: React.FC<{children?: React.ReactNode}> = ({children}) => {
+const Thead: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
     <thead
       className={clsx(
@@ -41,11 +44,11 @@ const Thead: React.FC<{children?: React.ReactNode}> = ({children}) => {
     </thead>
   );
 };
-const Trow: React.FC<{children?: React.ReactNode}> = ({children}) => {
+const Trow: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return <tr>{children}</tr>;
 };
 
-const Tcol: React.FC<{children?: React.ReactNode}> = ({children}) => {
+const Tcol: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
     <td className="text-sm p-2 max-w-[200px] overflow-auto whitespace-normal break-normal">
       {children}
@@ -83,7 +86,7 @@ const LinkedHeading: React.FC<LinkedHeadingProps> = ({
 
   return (
     <Component
-      className={clsx({"linked-heading": linked}, linked ? {} : className)}
+      className={clsx({ "linked-heading": linked }, linked ? {} : className)}
       data-id={id}
       data-level={level}
       data-name={props.children}
@@ -95,7 +98,7 @@ const LinkedHeading: React.FC<LinkedHeadingProps> = ({
   );
 };
 
-const List: React.FC<{children?: React.ReactNode}> = ({children}) => {
+const List: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
     <ul className="list-disc flex flex-col gap-2 ml-4 mt-2 [&>li>strong]:text-pink-500 dark:[&>li>strong]:text-cyan-600">
       {children}
@@ -103,7 +106,7 @@ const List: React.FC<{children?: React.ReactNode}> = ({children}) => {
   );
 };
 
-const InlineCode = ({children}: {children?: React.ReactNode}) => {
+const InlineCode = ({ children }: { children?: React.ReactNode }) => {
   return (
     <Components.Code className="font-normal text-default-700 bg-default-200/50 dark:bg-default-100/60 px-2 py-0.5">
       {children}
@@ -111,7 +114,7 @@ const InlineCode = ({children}: {children?: React.ReactNode}) => {
   );
 };
 
-const Code = ({
+export const Code = ({
   className,
   children,
   meta,
@@ -157,7 +160,7 @@ const Code = ({
   );
 };
 
-const Link = ({href, children}: {href?: string; children?: React.ReactNode}) => {
+const Link = ({ href, children }: { href?: string; children?: React.ReactNode }) => {
   const isExternal = href?.startsWith("http");
 
   const handlePress = () => {
@@ -181,6 +184,11 @@ const Link = ({href, children}: {href?: string; children?: React.ReactNode}) => 
 };
 
 export const MDXComponents = {
+  /**
+  * Demo components
+  */
+  CodeTest: Code,
+  TypewriterEffectDemo,
   /**
    * Next.js components
    */
@@ -226,7 +234,7 @@ export const MDXComponents = {
   kbd: (props: React.HTMLAttributes<HTMLElement>) => (
     <Components.Kbd {...props} className="py-0.5 px-1.5" />
   ),
-  Steps: ({...props}) => (
+  Steps: ({ ...props }) => (
     <div
       className="[&>h3]:step [&>h3>a]:pt-0.5 [&>h4]:step [&>h4>a]:pt-0.5 mb-12 ml-4 relative border-l border-default-100 pl-[1.625rem] [counter-reset:step]"
       {...props}

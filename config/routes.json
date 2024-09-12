@@ -31,6 +31,12 @@
           "title": "Background Gradient",
           "keywords": "background-gradient",
           "path": "/docs/components/background-gradient.mdx"
+        },
+        {
+          "key": "typewriter-effect",
+          "title": "Typewriter Effect",
+          "keywords": "typewriter-effect",
+          "path": "/docs/components/typewriter-effect.mdx"
         }
       ]
     }
