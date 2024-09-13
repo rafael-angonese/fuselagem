@@ -26,7 +26,6 @@ import { FC, ReactNode, useEffect, useRef, useState } from "react";
 import { LargeLogo, SmallLogo, ThemeSwitch } from "@/components";
 import { useCmdkStore } from "@/components/cmdk";
 import { DocsSidebar } from "@/components/docs/sidebar";
-import { FbRoadmapLink } from "@/components/featurebase/fb-roadmap-link";
 import { GithubIcon, HeartFilledIcon, SearchLinearIcon } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import { Route } from "@/libs/docs/page";

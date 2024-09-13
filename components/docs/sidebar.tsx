@@ -30,7 +30,6 @@ import {TreeKeyboardDelegate} from "@/utils/tree-keyboard-delegate";
 import {trackEvent} from "@/utils/va";
 import {FbFeedbackButton} from "@/components/featurebase/fb-feedback-button";
 import {FbChangelogButton} from "@/components/featurebase/fb-changelog-button";
-import {FbRoadmapLink} from "@/components/featurebase/fb-roadmap-link";
 import {openFeedbackWidget} from "@/utils/featurebase";
 import emitter from "@/libs/emitter";
 
@@ -121,8 +120,6 @@ function TreeItem<T>(props: TreeItemProps<T>) {
   const {focusProps, isFocused, isFocusVisible} = useFocusRing();
 
   const renderFeaturebaseComponent = (key: string) => {
-    if (key === "roadmap")
-      return <FbRoadmapLink className={cn} innerClassName="opacity-80 dark:opacity-60" />;
     if (key === "changelog")
       return (
         <NextUILink as={Link} className={cn} color="foreground" href="#">

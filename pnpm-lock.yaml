@@ -11,12 +11,6 @@ importers:
       '@codesandbox/sandpack-react':
         specifier: ^2.6.4
         version: 2.18.0(@lezer/common@1.2.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@iconify/icons-solar':
-        specifier: ^1.2.3
-        version: 1.2.3
-      '@iconify/react':
-        specifier: ^4.1.1
-        version: 4.1.1(react@18.3.1)
       '@internationalized/date':
         specifier: ^3.5.4
         version: 3.5.4
@@ -122,6 +116,9 @@ importers:
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
+      lucide-react:
+        specifier: ^0.441.0
+        version: 0.441.0(react@18.3.1)
       marked:
         specifier: ^5.1.0
         version: 5.1.2
@@ -161,9 +158,6 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
-      react-icons:
-        specifier: ^4.10.1
-        version: 4.12.0(react@18.3.1)
       react-live:
         specifier: ^2.3.0
         version: 2.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -851,17 +845,6 @@ packages:
   '@humanwhocodes/retry@0.3.0':
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
-
-  '@iconify/icons-solar@1.2.3':
-    resolution: {integrity: sha512-dots93IzoaOrJ8aUD2YGZ4+Jy+yf5D87CmzSeBkEi/m+WX1klvHqWuw5kyZvVroLOlaIaJXb5nZVaDnhc8XJyQ==}
-
-  '@iconify/react@4.1.1':
-    resolution: {integrity: sha512-jed14EjvKjee8mc0eoscGxlg7mSQRkwQG3iX3cPBCO7UlOjz0DtlvTqxqEcHUJGh+z1VJ31Yhu5B9PxfO0zbdg==}
-    peerDependencies:
-      react: '>=16'
-
-  '@iconify/types@2.0.0':
-    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
   '@internationalized/date@3.5.4':
     resolution: {integrity: sha512-qoVJVro+O0rBaw+8HPjUB1iH8Ihf8oziEnqMnvhJUSuVIrHOuZ6eNLHNvzXJKUvAtaDiqMnRlg8Z2mgh09BlUw==}
@@ -4127,6 +4110,11 @@ packages:
     resolution: {integrity: sha512-Qv32eSV1RSCfhY3fpPE2GNZ8jgM9X7rdAfemLWqTUxwiyIC4jJ6Sy0fZ8H+oLWevO6i4/bizg7c8d8i6bxrzbA==}
     engines: {node: 20 || >=22}
 
+  lucide-react@0.441.0:
+    resolution: {integrity: sha512-0vfExYtvSDhkC2lqg0zYVW1Uu9GsI4knuV9GP9by5z0Xhc4Zi5RejTxfz9LsjRmCyWVzHCJvxGKZWcRyvQCWVg==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
+
   lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
@@ -4781,11 +4769,6 @@ packages:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
       react: ^18.3.1
-
-  react-icons@4.12.0:
-    resolution: {integrity: sha512-IBaDuHiShdZqmfc/TwHu6+d6k2ltNCf3AszxNmjJc1KUfXdEeRJOKyNvLmAHaarhzGmTSVygNdyu8/opXv2gaw==}
-    peerDependencies:
-      react: '*'
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -6360,17 +6343,6 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.3.0': {}
-
-  '@iconify/icons-solar@1.2.3':
-    dependencies:
-      '@iconify/types': 2.0.0
-
-  '@iconify/react@4.1.1(react@18.3.1)':
-    dependencies:
-      '@iconify/types': 2.0.0
-      react: 18.3.1
-
-  '@iconify/types@2.0.0': {}
 
   '@internationalized/date@3.5.4':
     dependencies:
@@ -10816,6 +10788,10 @@ snapshots:
 
   lru-cache@11.0.0: {}
 
+  lucide-react@0.441.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
   lz-string@1.5.0: {}
 
   magic-string@0.25.9:
@@ -11753,10 +11729,6 @@ snapshots:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
-
-  react-icons@4.12.0(react@18.3.1):
-    dependencies:
-      react: 18.3.1
 
   react-is@16.13.1: {}
 
