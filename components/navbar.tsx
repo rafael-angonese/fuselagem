@@ -23,13 +23,14 @@ import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import { FC, ReactNode, useEffect, useRef, useState } from "react";
 
-import { LargeLogo, SmallLogo, ThemeSwitch } from "@/components";
+import { ThemeSwitch } from "@/components";
 import { useCmdkStore } from "@/components/cmdk";
 import { DocsSidebar } from "@/components/docs/sidebar";
 import { GithubIcon, HeartFilledIcon, SearchLinearIcon } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import { Route } from "@/libs/docs/page";
 import { trackEvent } from "@/utils/va";
+import { FuselagemUILogo } from "@/components/fuselagem-ui-logo";
 
 export interface NavbarProps {
   routes: Route[];
@@ -134,8 +135,7 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
             href="/"
             onClick={() => handlePressNavbarItem("Home", "/")}
           >
-            <SmallLogo className="w-6 h-6 md:hidden" />
-            <LargeLogo className="h-5 md:h-6" />
+            <FuselagemUILogo className="text-sm sm:text-xl lg:text-3xl" />
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start items-center">

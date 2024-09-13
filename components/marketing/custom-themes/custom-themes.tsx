@@ -11,17 +11,17 @@ import {shopCartStyles} from "./styles";
 
 import {title, subtitle, titleWrapper, sectionWrapper} from "@/components/primitives";
 import {PaletteIcon, MagicIcon, GamingConsoleIcon, StarIcon} from "@/components/icons";
-import {NextUILogo, CodeWindow} from "@/components";
+import {CodeWindow} from "@/components";
 import landingContent from "@/content/landing";
 import {useIsMobile} from "@/hooks/use-media-query";
+import { PlaneTakeoff } from "lucide-react";
 
 const themesTabs = (isMobile: boolean) => [
   {
     id: "nextui",
     title: () => <p className="group-data-[selected=true]:text-primary">NextUI</p>,
     icon: () => (
-      <NextUILogo
-        small
+      <PlaneTakeoff
         className="text-default-400 group-data-[selected=true]:text-primary"
         size={isMobile ? 34 : 44}
       />
