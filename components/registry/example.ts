@@ -1,7 +1,18 @@
 import { Registry } from "@/components/registry/schema";
 import React from "react";
 
-export const example: Registry = {
+const ui: Registry = {
+  "typewriter-effect": {
+    name: "typewriter-effect",
+    files: [{
+      name: "TypewriterEffect.tsx",
+      file: "components/ui/typewriter-effect/typewriter-effect.tsx"
+    }],
+  },
+
+}
+
+const example: Registry = {
     "typewriter-effect-demo": {
       name: "typewriter-effect-demo",
       files: [{
@@ -15,4 +26,9 @@ export const example: Registry = {
 
 }
 
-export type ComponentName = keyof typeof example;
+export const registry: Registry = {
+  ...ui,
+  ...example,
+};
+
+export type ComponentName = keyof (typeof ui & typeof example);

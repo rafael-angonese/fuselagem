@@ -3,7 +3,7 @@ import path from "path";
 import { u } from "unist-builder";
 import { visit } from "unist-util-visit";
 
-import { example } from '../components/registry/example';
+import { registry } from '../components/registry/example';
 import { UnistTree, UnistNode } from "../types/unist";
 
 
@@ -19,7 +19,7 @@ export function rehypeComponent() {
         }
 
         try {
-          const component = example[name];
+          const component = registry[name];
           const src = component.files[0].file;
 
           // Read the source file.

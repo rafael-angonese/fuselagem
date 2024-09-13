@@ -1,4 +1,4 @@
-import { ComponentName, example } from '@/components/registry/example';
+import { ComponentName, registry } from '@/components/registry/example';
 import React from 'react';
 
 interface RenderPreviewProps {
@@ -7,7 +7,7 @@ interface RenderPreviewProps {
 
 export const RenderPreview: React.FC<RenderPreviewProps> = ({ name }) => {
     const Preview = React.useMemo(() => {
-        const Component = example[name]?.component
+        const Component = registry[name]?.component
     
         if (!Component) {
           return (
