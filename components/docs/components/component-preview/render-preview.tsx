@@ -1,5 +1,6 @@
 import { ComponentName, registry } from '@/components/registry/example';
-import { Button, Spinner } from '@nextui-org/react';
+import { Button } from '@nextui-org/react';
+import { RotateCcw } from 'lucide-react';
 import React, { Suspense } from 'react';
 
 interface RenderPreviewProps {
@@ -31,15 +32,17 @@ export const RenderPreview: React.FC<RenderPreviewProps> = ({ name }) => {
     <div className='relative flex flex-col items-center justify-center' key={key}>
       <Button
         onClick={() => setKey((prev) => prev + 1)}
-        className="absolute right-0 top-0 z-10 ml-4 flex items-center rounded-lg px-3 py-1"
-        variant="ghost"
+        className="absolute right-0 top-0 z-10 ml-2 flex items-center rounded-lg "
+        variant="bordered"
+        size='sm'
+        isIconOnly
       >
-        <Spinner className="mr-2 size-4 animate-spin" />
+        <RotateCcw className='h-4 w-4' />
       </Button>
       <Suspense
         fallback={
           <div className="flex items-center text-sm text-muted-foreground">
-            <Spinner className="mr-2 size-4 animate-spin" />
+            <RotateCcw className="mr-2 size-4 animate-spin" />
             Loading...
           </div>
         }
