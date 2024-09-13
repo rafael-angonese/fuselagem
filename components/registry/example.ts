@@ -9,7 +9,13 @@ const ui: Registry = {
       file: "components/ui/typewriter-effect/typewriter-effect.tsx"
     }],
   },
-
+  "background-gradient": {
+    name: "background-gradient",
+    files: [{
+      name: "BackgroundGradient.tsx",
+      file: "components/ui/background-gradient/background-gradient.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -23,7 +29,16 @@ const example: Registry = {
         () => import("@/components/demos/typewriter-effect-demo/typewriter-effect-demo"),
       ),
     },
-
+    "background-gradient-demo": {
+      name: "background-gradient-demo",
+      files: [{
+        name: "TypewriterEffectDemo.tsx",
+        file: "components/demos/background-gradient-demo/background-gradient-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/background-gradient-demo/background-gradient-demo"),
+      ),
+    },
 }
 
 export const registry: Registry = {
