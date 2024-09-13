@@ -1,4 +1,4 @@
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect/typewriter-effect";
 
 export function TypewriterEffectDemo() {
   const words = [

@@ -1,4 +1,4 @@
-import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { BackgroundGradient } from "@/components/ui/background-gradient/background-gradient";
 import Image from "next/image";
 
 export function BackgroundGradientDemo() {
