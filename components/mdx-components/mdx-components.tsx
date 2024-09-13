@@ -4,19 +4,18 @@ import { clsx } from "@nextui-org/shared-utils";
 import NextImage from "next/image";
 import { Language } from "prism-react-renderer";
 
-import { ThemeSwitch } from "./theme-switch";
+import { ThemeSwitch } from "../theme-switch";
 
 import { CarbonAd } from "@/components/ads/carbon-ad";
 import * as BlogComponents from "@/components/blog/components";
-import { CustomButton } from "@/components/demos";
+import { TypewriterEffectDemo } from "@/components/demos/typewriter-effect-demo/typewriter-effect-demo";
 import * as DocsComponents from "@/components/docs/components";
 import { Codeblock } from "@/components/docs/components";
+import { ComponentPreview } from "@/components/docs/components/component-preview/component-preview";
 import { Sandpack } from "@/components/sandpack";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect/typewriter-effect";
 import { VirtualAnchor, virtualAnchorEncode } from "@/components/virtual-anchor";
 import { trackEvent } from "@/utils/va";
-import { TypewriterEffectDemo } from "@/components/demos/typewriter-effect-demo/typewriter-effect-demo";
-import { ComponentPreview } from "@/components/docs/components/component-preview/component-preview";
+import { CodeDemoMotion } from "@/components/docs/components/code-demo-motion";
 
 const Table: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
@@ -188,9 +187,9 @@ export const MDXComponents = {
   /**
   * Demo components
   */
-  CodeTest: Code,
   TypewriterEffectDemo,
   ComponentPreview,
+  CodeDemoMotion,
   /**
    * Next.js components
    */

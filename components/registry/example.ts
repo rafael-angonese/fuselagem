@@ -6,7 +6,7 @@ export const example: Registry = {
       name: "typewriter-effect-demo",
       files: [{
         name: "TypewriterEffectDemo.tsx",
-        file: "@/components/demos/typewriter-effect-demo/typewriter-effect-demo.tsx"
+        file: "components/demos/typewriter-effect-demo/typewriter-effect-demo.tsx"
       }],
       component: React.lazy(
         () => import("@/components/demos/typewriter-effect-demo/typewriter-effect-demo"),

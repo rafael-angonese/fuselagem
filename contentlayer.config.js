@@ -3,6 +3,7 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import {visit} from "unist-util-visit";
 import pluginCodeBlock from "./plugins/codeBlock";
+import { rehypeComponent } from "./libs/rehype-component";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -85,6 +86,7 @@ export default makeSource({
     remarkPlugins: [remarkGfm, pluginCodeBlock],
     rehypePlugins: [
       rehypeSlug,
+      rehypeComponent,
       () => (tree) => {
         visit(tree, "element", (node) => {
           if (node.tagName === "code" && node.data && node.data.meta) {

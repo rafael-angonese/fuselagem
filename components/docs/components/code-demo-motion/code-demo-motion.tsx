@@ -10,7 +10,7 @@ import WindowResizer, { WindowResizerProps } from "./window-resizer";
 
 import { BgGridContainer } from "@/components/bg-grid-container";
 import { GradientBoxProps } from "@/components/gradient-box";
-import { Code } from "@/components/mdx-components";
+import { Code } from "@/components/mdx-components/mdx-components";
 
 const DynamicReactLiveDemo = dynamic(
   () => import("./react-live-demo").then((m) => m.ReactLiveDemo),

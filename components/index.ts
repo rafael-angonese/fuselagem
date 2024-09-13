@@ -5,6 +5,7 @@ export * from "./code-window";
 export * from "./gradient-box";
 export * from "./copy-button";
 export * from "./demo-code-modal";
-export * from "./mdx-components";
+// export * from "./mdx-components";
+export * from "./mdx-components/mdx-components";
 export * from "./virtual-anchor";
 export * from "./bg-grid-container";
