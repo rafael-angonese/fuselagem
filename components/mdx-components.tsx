@@ -16,6 +16,7 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect/typewriter-e
 import { VirtualAnchor, virtualAnchorEncode } from "@/components/virtual-anchor";
 import { trackEvent } from "@/utils/va";
 import { TypewriterEffectDemo } from "@/components/demos/typewriter-effect-demo/typewriter-effect-demo";
+import { ComponentPreview } from "@/components/docs/components/component-preview/component-preview";
 
 const Table: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
@@ -189,6 +190,7 @@ export const MDXComponents = {
   */
   CodeTest: Code,
   TypewriterEffectDemo,
+  ComponentPreview,
   /**
    * Next.js components
    */
