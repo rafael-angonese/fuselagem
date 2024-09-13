@@ -31,3 +31,5 @@ export function TypewriterEffectDemo() {
     </div>
   );
 }
+
+export default TypewriterEffectDemo;
