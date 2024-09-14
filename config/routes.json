@@ -37,6 +37,12 @@
           "title": "Typewriter Effect",
           "keywords": "typewriter-effect",
           "path": "/docs/components/typewriter-effect.mdx"
+        },
+        {
+          "key": "grid-pattern",
+          "title": "Grid Pattern",
+          "keywords": "grid-pattern",
+          "path": "/docs/components/grid-pattern.mdx"
         }
       ]
     }

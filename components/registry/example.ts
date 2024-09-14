@@ -16,6 +16,13 @@ const ui: Registry = {
       file: "components/ui/background-gradient/background-gradient.tsx"
     }],
   },
+  "grid-pattern": {
+    name: "grid-pattern",
+    files: [{
+      name: "TypewriterEffect.tsx",
+      file: "components/ui/grid-pattern/grid-pattern.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -37,6 +44,36 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/background-gradient-demo/background-gradient-demo"),
+      ),
+    },
+    "grid-pattern-demo": {
+      name: "grid-pattern-demo",
+      files: [{
+        name: "GridPatternDemo.tsx",
+        file: "components/demos/grid-pattern/grid-pattern.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/grid-pattern/grid-pattern"),
+      ),
+    },
+    "grid-pattern-dashed-demo": {
+      name: "grid-pattern-dashed-demo",
+      files: [{
+        name: "GridPatternDashedDemo.tsx",
+        file: "components/demos/grid-pattern/grid-pattern-dashed.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/grid-pattern/grid-pattern-dashed"),
+      ),
+    },
+    "grid-pattern-linear-gradient-demo": {
+      name: "grid-pattern-linear-gradient-demo",
+      files: [{
+        name: "GridPatternLinearGradientDemo.tsx",
+        file: "components/demos/grid-pattern/grid-pattern-linear-gradient.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/grid-pattern/grid-pattern-linear-gradient"),
       ),
     },
 }
