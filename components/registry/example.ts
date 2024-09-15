@@ -37,6 +37,13 @@ const ui: Registry = {
       file: "components/ui/sparkles-text/sparkles-text.tsx"
     }],
   },
+  "animated-shiny-text": {
+    name: "animated-shiny-text",
+    files: [{
+      name: "SparklesText.tsx",
+      file: "components/ui/animated-shiny-text/animated-shiny-text.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -108,6 +115,16 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/sparkles-text/sparkles-text-demo"),
+      ),
+    },
+    "animated-shiny-text-demo": {
+      name: "animated-shiny-text-demo",
+      files: [{
+        name: "SparklesTextDemo.tsx",
+        file: "components/demos/animated-shiny-text/animated-shiny-text-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/animated-shiny-text/animated-shiny-text-demo"),
       ),
     },
 }

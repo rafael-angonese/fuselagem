@@ -55,6 +55,12 @@
           "title": "Sparkles Text",
           "keywords": "sparkles-text",
           "path": "/docs/components/sparkles-text.mdx"
+        },
+        {
+          "key": "animated-shiny-text",
+          "title": "Animated Shiny Text",
+          "keywords": "animated-shiny-text",
+          "path": "/docs/components/animated-shiny-text.mdx"
         }
       ]
     }

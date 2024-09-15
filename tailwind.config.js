@@ -321,6 +321,14 @@ module.exports = {
             "offset-distance": "100%",
           },
         },
+        "shimmer-ui": {
+          "0%, 90%, 100%": {
+            "background-position": "calc(-100% - var(--shimmer-width)) 0",
+          },
+          "30%, 60%": {
+            "background-position": "calc(100% + var(--shimmer-width)) 0",
+          },
+        },
       },
       animation: {
         heartbeat: "heartbeat 1s ease-in-out infinite",
@@ -329,6 +337,7 @@ module.exports = {
         "expand-opacity": "expand-opacity 6s linear infinite both",
         "text-gradient": "text-gradient 4s linear 0s infinite normal forwards running",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        "shimmer-ui": "shimmer-ui 8s infinite",
       },
     },
   },
