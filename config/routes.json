@@ -43,6 +43,12 @@
           "title": "Grid Pattern",
           "keywords": "grid-pattern",
           "path": "/docs/components/grid-pattern.mdx"
+        },
+        {
+          "key": "border-beam",
+          "title": "Border Beam",
+          "keywords": "border-beam",
+          "path": "/docs/components/border-beam.mdx"
         }
       ]
     }

@@ -23,6 +23,13 @@ const ui: Registry = {
       file: "components/ui/grid-pattern/grid-pattern.tsx"
     }],
   },
+  "border-beam": {
+    name: "border-beam",
+    files: [{
+      name: "BorderBeam.tsx",
+      file: "components/ui/border-beam/border-beam.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -74,6 +81,16 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/grid-pattern/grid-pattern-linear-gradient"),
+      ),
+    },
+    "border-beam-demo": {
+      name: "border-beam-demo",
+      files: [{
+        name: "BorderBeamDemo.tsx",
+        file: "components/demos/border-beam/border-beam-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/border-beam/border-beam-demo"),
       ),
     },
 }

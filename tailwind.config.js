@@ -1,8 +1,8 @@
-const {nextui} = require("@nextui-org/theme/plugin");
-const {commonColors} = require("@nextui-org/theme/colors");
+const { nextui } = require("@nextui-org/theme/plugin");
+const { commonColors } = require("@nextui-org/theme/colors");
 const svgToDataUri = require("mini-svg-data-uri");
 const plugin = require("tailwindcss/plugin");
-const {default: flattenColorPalette} = require("tailwindcss/lib/util/flattenColorPalette");
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 // get tailwindcss default config
 const defaultTheme = require("tailwindcss/defaultTheme");
@@ -271,9 +271,9 @@ module.exports = {
       }),
       keyframes: {
         heartbeat: {
-          "0%": {transform: "scale(1)"},
-          "50%": {transform: "scale(1.2)"},
-          "100%": {transform: "scale(1)"},
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.2)" },
+          "100%": { transform: "scale(1)" },
         },
         levitate: {
           "0%": {
@@ -293,9 +293,9 @@ module.exports = {
           },
         },
         expand: {
-          "0%": {transform: "scale(1)"},
-          "50%": {transform: "scale(1.2)"},
-          "100%": {transform: "scale(1)"},
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.2)" },
+          "100%": { transform: "scale(1)" },
         },
         "expand-opacity": {
           "0%": {
@@ -316,6 +316,11 @@ module.exports = {
             backgroundPosition: "-200% center",
           },
         },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
       },
       animation: {
         heartbeat: "heartbeat 1s ease-in-out infinite",
@@ -323,6 +328,7 @@ module.exports = {
         expand: "expand 6s ease-out infinite both",
         "expand-opacity": "expand-opacity 6s linear infinite both",
         "text-gradient": "text-gradient 4s linear 0s infinite normal forwards running",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
     },
   },
@@ -370,7 +376,7 @@ module.exports = {
       },
     }),
     require("@tailwindcss/typography"),
-    plugin(function ({matchUtilities, theme}) {
+    plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
           "bg-grid": (value) => ({
@@ -379,7 +385,7 @@ module.exports = {
             )}")`,
           }),
         },
-        {values: flattenColorPalette(theme("backgroundColor")), type: "color"},
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" },
       );
     }),
   ],
