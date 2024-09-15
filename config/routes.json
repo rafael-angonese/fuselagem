@@ -49,6 +49,12 @@
           "title": "Border Beam",
           "keywords": "border-beam",
           "path": "/docs/components/border-beam.mdx"
+        },
+        {
+          "key": "sparkles-text",
+          "title": "Sparkles Text",
+          "keywords": "sparkles-text",
+          "path": "/docs/components/sparkles-text.mdx"
         }
       ]
     }

@@ -30,6 +30,13 @@ const ui: Registry = {
       file: "components/ui/border-beam/border-beam.tsx"
     }],
   },
+  "sparkles-text": {
+    name: "sparkles-text",
+    files: [{
+      name: "SparklesText.tsx",
+      file: "components/ui/sparkles-text/sparkles-text.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -91,6 +98,16 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/border-beam/border-beam-demo"),
+      ),
+    },
+    "sparkles-text-demo": {
+      name: "sparkles-text-demo",
+      files: [{
+        name: "SparklesTextDemo.tsx",
+        file: "components/demos/sparkles-text/sparkles-text-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/sparkles-text/sparkles-text-demo"),
       ),
     },
 }
