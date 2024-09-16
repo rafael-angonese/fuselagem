@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "lucide-react";
 import { cnBase } from "tailwind-variants";
 
 
-export default async function AnimatedShinyTextDemo() {
+export default function AnimatedShinyTextDemo() {
   return (
       <div className="z-10 flex min-h-[16rem] items-center justify-center">
         <div

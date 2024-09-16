@@ -329,6 +329,11 @@ module.exports = {
             "background-position": "calc(100% + var(--shimmer-width)) 0",
           },
         },
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
       },
       animation: {
         heartbeat: "heartbeat 1s ease-in-out infinite",
@@ -338,6 +343,7 @@ module.exports = {
         "text-gradient": "text-gradient 4s linear 0s infinite normal forwards running",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         "shimmer-ui": "shimmer-ui 8s infinite",
+        gradient: "gradient 8s linear infinite",
       },
     },
   },

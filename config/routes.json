@@ -61,6 +61,12 @@
           "title": "Animated Shiny Text",
           "keywords": "animated-shiny-text",
           "path": "/docs/components/animated-shiny-text.mdx"
+        },
+        {
+          "key": "animated-gradient-text",
+          "title": "Animated Gradient Text",
+          "keywords": "animated-gradient-text",
+          "path": "/docs/components/animated-gradient-text.mdx"
         }
       ]
     }

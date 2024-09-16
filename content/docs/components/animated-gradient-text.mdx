@@ -1,0 +1,49 @@
+---
+title: "Animated Gradient Text"
+description: "An animated gradient background which transitions between colors for text."
+---
+
+# Animated Gradient Text
+
+An animated gradient background which transitions between colors for text.
+
+---
+
+## Usage
+
+<ComponentPreview name="animated-gradient-text-demo" />
+
+## Code
+
+<ComponentPreview showPreview={false} name="animated-gradient-text" />
+
+### Update `tailwind.config.js`
+
+Add the following animations to your `tailwind.config.js` file.
+
+```js {5-17}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
+      },
+      animation: {
+        gradient: "gradient 8s linear infinite",
+      },
+    },
+  },
+};
+```
+
+## Props
+
+| Attribute | Type              | Description                             | Default     |
+| --------- | ----------------- | --------------------------------------- | ----------- |
+| children  | `React.ReactNode` | The children passed into the component. | `undefined` |
+| className | `string`          | The class name to be applied.           | `undefined` |
