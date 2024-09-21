@@ -28,9 +28,6 @@ import {getRoutePaths} from "./utils";
 import {Route} from "@/libs/docs/page";
 import {TreeKeyboardDelegate} from "@/utils/tree-keyboard-delegate";
 import {trackEvent} from "@/utils/va";
-import {FbFeedbackButton} from "@/components/featurebase/fb-feedback-button";
-import {FbChangelogButton} from "@/components/featurebase/fb-changelog-button";
-import {openFeedbackWidget} from "@/utils/featurebase";
 import emitter from "@/libs/emitter";
 
 export interface Props<T> extends Omit<ItemProps<T>, "title">, Route {
@@ -119,21 +116,6 @@ function TreeItem<T>(props: TreeItemProps<T>) {
 
   const {focusProps, isFocused, isFocusVisible} = useFocusRing();
 
-  const renderFeaturebaseComponent = (key: string) => {
-    if (key === "changelog")
-      return (
-        <NextUILink as={Link} className={cn} color="foreground" href="#">
-          <FbChangelogButton />
-        </NextUILink>
-      );
-
-    return (
-      <NextUILink as={Link} className={cn} color="foreground" href="#" onClick={openFeedbackWidget}>
-        <FbFeedbackButton />
-      </NextUILink>
-    );
-  };
-
   const renderComponent = () => {
     if (hasChildNodes) {
       return (
@@ -146,10 +128,6 @@ function TreeItem<T>(props: TreeItemProps<T>) {
           />
         </span>
       );
-    }
-
-    if (typeof key === "string" && ["changelog", "feedback", "roadmap"].includes(key)) {
-      return renderFeaturebaseComponent(key);
     }
 
     return (
