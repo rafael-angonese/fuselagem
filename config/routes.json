@@ -21,6 +21,38 @@
       ]
     },
     {
+      "key": "frameworks",
+      "title": "Frameworks",
+      "defaultOpen": true,
+      "keywords": "frameworks, nextjs + nextui, vite + nextui, remix + nextui, astro + nextui",
+      "routes": [
+        {
+          "key": "nextjs",
+          "title": "Next.js",
+          "keywords": "nextjs, nextui, next.js",
+          "path": "/docs/frameworks/nextjs.mdx"
+        },
+        {
+          "key": "vite",
+          "title": "Vite",
+          "keywords": "vite, nextui",
+          "path": "/docs/frameworks/vite.mdx"
+        },
+        {
+          "key": "remix",
+          "title": "Remix",
+          "keywords": "remix, nextui",
+          "path": "/docs/frameworks/remix.mdx"
+        },
+        {
+          "key": "astro",
+          "title": "Astro",
+          "keywords": "astro, nextui",
+          "path": "/docs/frameworks/astro.mdx"
+        }
+      ]
+    },
+    {
       "key": "components",
       "title": "Components",
       "defaultOpen": true,
@@ -67,6 +99,12 @@
           "title": "Animated Gradient Text",
           "keywords": "animated-gradient-text",
           "path": "/docs/components/animated-gradient-text.mdx"
+        },
+        {
+          "key": "animated-beam",
+          "title": "Animated Beam",
+          "keywords": "animated-beam",
+          "path": "/docs/components/animated-beam.mdx"
         }
       ]
     }

@@ -1,0 +1,69 @@
+---
+title: Next.js
+description: How to use Fuselagem UI with Next.js
+---
+
+# Next.js
+
+
+Requirements:
+
+- [Next.js 12](https://nextjs.org/) or later
+- [React 18](https://reactjs.org/) or later
+- [Tailwind CSS 3.4](https://tailwindcss.com/docs/guides/nextjs) or later
+- [Framer Motion 11](https://www.framer.com/motion/) or later
+
+------
+
+## Installation
+
+<Steps>
+
+#### Create project
+
+<PackageManagers
+  commands={{
+    npm: "npm create vite@latest",
+    yarn: "yarn create vite",
+    pnpm: "pnpm create vite",
+    bun: "bun create vite"
+  }}
+/>
+
+#### Add Tailwind and its configuration
+
+Install `tailwindcss` and its peer dependencies, then generate your `tailwind.config.js` and `postcss.config.js` files:
+
+```codeBlock bash
+npm install -D tailwindcss postcss autoprefixer
+ 
+npx tailwindcss init -p
+```
+
+#### Install Dependencies
+
+<PackageManagers
+  commands={{
+    npm: "npm install",
+    yarn: "yarn",
+    pnpm: "pnpm install",
+    bun: "bun install"
+  }}
+/>
+
+#### Start the Application
+
+<PackageManagers
+  commands={{
+    npm: "npm run dev",
+    yarn: "yarn dev",
+    pnpm: "pnpm dev",
+    bun: "bun dev"
+  }}
+/>
+
+#### Open in Browser
+
+Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+</Steps>
