@@ -9,7 +9,6 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "contentlayer build && tsc --noEmit",
-    "preinstall": "node preinstall.js",
     "update:search-meta": "tsx scripts/update-search-meta.ts",
     "postbuild": "next-sitemap"
   },
