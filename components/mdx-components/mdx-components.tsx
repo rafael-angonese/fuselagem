@@ -6,7 +6,6 @@ import { Language } from "prism-react-renderer";
 
 import { ThemeSwitch } from "../theme-switch";
 
-import { CarbonAd } from "@/components/ads/carbon-ad";
 import * as BlogComponents from "@/components/blog/components";
 import { TypewriterEffectDemo } from "@/components/demos/typewriter-effect-demo/typewriter-effect-demo";
 import * as DocsComponents from "@/components/docs/components";
@@ -225,7 +224,6 @@ export const MDXComponents = {
   thead: Thead,
   tr: Trow,
   td: Tcol,
-  CarbonAd,
   code: Code,
   ul: List,
   a: (props: React.HTMLAttributes<HTMLAnchorElement>) => <Link {...props} />,
