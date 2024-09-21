@@ -19,7 +19,7 @@ const ui: Registry = {
   "grid-pattern": {
     name: "grid-pattern",
     files: [{
-      name: "TypewriterEffect.tsx",
+      name: "GridPattern.tsx",
       file: "components/ui/grid-pattern/grid-pattern.tsx"
     }],
   },
@@ -40,15 +40,22 @@ const ui: Registry = {
   "animated-shiny-text": {
     name: "animated-shiny-text",
     files: [{
-      name: "SparklesText.tsx",
+      name: "AnimatedShinyText.tsx",
       file: "components/ui/animated-shiny-text/animated-shiny-text.tsx"
     }],
   },
   "animated-gradient-text": {
     name: "animated-gradient-text",
     files: [{
-      name: "SparklesText.tsx",
+      name: "AnimatedGradientText.tsx",
       file: "components/ui/animated-gradient-text/animated-gradient-text.tsx"
+    }],
+  },
+  "animated-beam": {
+    name: "animated-beam",
+    files: [{
+      name: "AnimatedBeam.tsx",
+      file: "components/ui/animated-beam/animated-beam.tsx"
     }],
   },
 }
@@ -127,7 +134,7 @@ const example: Registry = {
     "animated-shiny-text-demo": {
       name: "animated-shiny-text-demo",
       files: [{
-        name: "SparklesTextDemo.tsx",
+        name: "AnimatedShinyTextDemo.tsx",
         file: "components/demos/animated-shiny-text/animated-shiny-text-demo.tsx"
       }],
       component: React.lazy(
@@ -137,11 +144,61 @@ const example: Registry = {
     "animated-gradient-text-demo": {
       name: "animated-gradient-text-demo",
       files: [{
-        name: "SparklesTextDemo.tsx",
+        name: "AnimatedGradientTextDemo.tsx",
         file: "components/demos/animated-gradient-text/animated-gradient-text-demo.tsx"
       }],
       component: React.lazy(
         () => import("@/components/demos/animated-gradient-text/animated-gradient-text-demo"),
+      ),
+    },
+    "animated-beam-demo": {
+      name: "animated-beam-demo",
+      files: [{
+        name: "AnimatedBeam.tsx",
+        file: "components/demos/animated-beam/animated-beam-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/animated-beam/animated-beam-demo"),
+      ),
+    },
+    "animated-beam-unidirectional-demo": {
+      name: "animated-beam-unidirectional-demo",
+      files: [{
+        name: "AnimatedBeam.tsx",
+        file: "components/demos/animated-beam/animated-beam-unidirectional-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/animated-beam/animated-beam-unidirectional-demo"),
+      ),
+    },
+    "animated-beam-bidirectional-demo": {
+      name: "animated-beam-bidirectional-demo",
+      files: [{
+        name: "AnimatedBeam.tsx",
+        file: "components/demos/animated-beam/animated-beam-bidirectional-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/animated-beam/animated-beam-bidirectional-demo"),
+      ),
+    },
+    "animated-beam-multiple-inputs-demo": {
+      name: "animated-beam-multiple-inputs-demo",
+      files: [{
+        name: "AnimatedBeam.tsx",
+        file: "components/demos/animated-beam/animated-beam-multiple-inputs-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/animated-beam/animated-beam-multiple-inputs-demo"),
+      ),
+    },
+    "animated-beam-multiple-outputs-demo": {
+      name: "animated-beam-multiple-outputs-demo",
+      files: [{
+        name: "AnimatedBeam.tsx",
+        file: "components/demos/animated-beam/animated-beam-multiple-outputs-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/animated-beam/animated-beam-multiple-outputs-demo"),
       ),
     },
 }
