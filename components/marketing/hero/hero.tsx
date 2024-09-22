@@ -10,6 +10,7 @@ import {FloatingComponents} from "./floating-components";
 import {GithubIcon} from "@/components/icons";
 import {title, subtitle} from "@/components/primitives";
 import {trackEvent} from "@/utils/va";
+import SparklesText from "@/components/ui/sparkles-text/sparkles-text";
 
 const BgLooper = dynamic(() => import("./bg-looper").then((mod) => mod.BgLooper), {
   ssr: false,
@@ -46,9 +47,9 @@ export const Hero = () => {
         <div className="text-center leading-8 md:leading-10 md:text-left">
           <div className="inline-block">
             <h1 className={title()}>Make&nbsp;</h1>
-            <h1 className={title({color: "violet"})}>beautiful&nbsp;</h1>
+            <SparklesText sparklesCount={8} className={title({ className: "text-pink-600"})} text="beautiful" />
           </div>
-          <h1 className={title()}>websites regardless of your design experience.</h1>
+          <h1 className={title()}>&nbsp;websites regardless of your design experience.</h1>
         </div>
         <h2 className={subtitle({fullWidth: true, class: "text-center md:text-left"})}>
           Beautiful, fast and modern React UI library.

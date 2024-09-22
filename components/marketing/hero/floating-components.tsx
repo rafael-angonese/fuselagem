@@ -1,28 +1,30 @@
 import {
   Button,
-  Tooltip,
-  Input,
-  Image,
   Card,
   CardBody,
   CardFooter,
-  Switch,
-  Spinner,
+  Image,
+  Input,
   Pagination,
+  Spinner,
+  Switch,
+  Tooltip,
 } from "@nextui-org/react";
-import {MoonFilledIcon, SunFilledIcon} from "@nextui-org/shared-icons";
-import {useTheme} from "next-themes";
+import { MoonFilledIcon, SunFilledIcon } from "@nextui-org/shared-icons";
+import { useTheme } from "next-themes";
 import NextImage from "next/image";
 
-import {FloatingTabs} from "./floating-tabs";
+import { FloatingTabs } from "./floating-tabs";
 
-import {UserTwitterCard} from "@/components/demos/user-twitter-card";
-import {useIsMounted} from "@/hooks/use-is-mounted";
-import {useMediaQuery} from "@/hooks/use-media-query";
+import { UserTwitterCard } from "@/components/demos/user-twitter-card";
+import { BackgroundGradient } from "@/components/ui/background-gradient/background-gradient";
+import { BorderBeam } from "@/components/ui/border-beam/border-beam";
+import { useIsMounted } from "@/hooks/use-is-mounted";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { PlaneTakeoff } from "lucide-react";
 
 export const FloatingComponents: React.FC<{}> = () => {
-  const {theme, setTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const isMounted = useIsMounted();
   const isSelected = theme === "dark" && isMounted;
@@ -56,25 +58,27 @@ export const FloatingComponents: React.FC<{}> = () => {
           label="Input"
           labelPlacement="outside"
           variant="bordered"
-          onClear={() => {}}
+          onClear={() => { }}
         />
 
         <Card
           isFooterBlurred
-          className="absolute -top-[260px] right-[100px] h-[120px] animate-[levitate_12s_ease_infinite_1s] z-0 max-w-fit"
+          className="absolute p-1 -top-[260px] right-[100px] animate-[levitate_12s_ease_infinite_1s] z-0 max-w-fit"
         >
-          <Image
-            alt="Professional camera"
-            as={NextImage}
-            className="object-cover -translate-y-12 h-[100%]"
-            height={180}
-            src="/images/card-example-6.webp"
-            width={120}
-          />
-          <CardFooter className="before:bg-black/10 border-white/20 border-1 overflow-hidden justify-between py-2 absolute before:rounded-xl rounded-xl bottom-1 w-[calc(100%_-_8px)] shadow-lg ml-1 z-10">
+            <Image
+              alt="Professional camera"
+              as={NextImage}
+              className="object-cover"
+              height={180}
+              src="/images/hero-card.webp"
+              width={120}
+            />
+          <CardFooter className="before:bg-black/10 border-white/20 border-1 overflow-hidden justify-between py-2 absolute before:rounded-xl rounded-xl bottom-1 w-[calc(100%_-_8px)] shadow-lg z-10">
             <p className="text-xs font-semibold text-white/80">Camera</p>
             <p className="text-xs font-semibold text-white/80">$525</p>
           </CardFooter>
+
+          <BorderBeam size={100} duration={6} delay={9} />
         </Card>
 
         <FloatingTabs />
@@ -137,7 +141,7 @@ export const FloatingComponents: React.FC<{}> = () => {
         <Card
           isFooterBlurred
           className="absolute right-[60px] top-[100px] animate-[levitate_12s_ease_infinite_1s] z-0 max-w-fit"
-        >
+          >
           <Image
             alt="Woman listing to music"
             as={NextImage}
@@ -146,6 +150,7 @@ export const FloatingComponents: React.FC<{}> = () => {
             src="/images/hero-card.webp"
             width={200}
           />
+
           <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
             <p className="text-tiny text-white/80">Available soon.</p>
             <Button

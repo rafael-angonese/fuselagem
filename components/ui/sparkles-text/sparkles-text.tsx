@@ -103,7 +103,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
 
   return (
     <div
-      className={cnBase("text-6xl font-bold", className)}
+      className={cnBase("text-6xl font-bold text-pink-600", className)}
       {...props}
       style={
         {
@@ -116,7 +116,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
         {sparkles.map((sparkle) => (
           <Sparkle key={sparkle.id} {...sparkle} />
         ))}
-        <strong className="text-pink-600">{text}</strong>
+        <strong>{text}</strong>
       </span>
     </div>
   );

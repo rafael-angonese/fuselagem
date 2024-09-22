@@ -16,14 +16,14 @@ export default async function Home() {
       <section className="flex flex-col items-center justify-center">
         <Hero />
         <FeaturesGrid features={landingContent.topFeatures} />
-        <CustomThemes />
-        <A11yOtb />
-        <DarkMode />
-        <Customization />
-        <LastButNotLeast />
+        {/* <CustomThemes /> */}
+        {/* <A11yOtb /> */}
+        {/* <DarkMode /> */}
+        {/* <Customization /> */}
+        {/* <LastButNotLeast /> */}
         {/* <Spacer y={24} /> */}
-        <InstallBanner />
-        <Community />
+        {/* <InstallBanner /> */}
+        {/* <Community /> */}
         {/* <Spacer y={24} /> */}
       </section>
     </main>
