@@ -17,7 +17,7 @@ import NextImage from "next/image";
 import { FloatingTabs } from "./floating-tabs";
 
 import { UserTwitterCard } from "@/components/demos/user-twitter-card";
-import { BackgroundGradient } from "@/components/ui/background-gradient/background-gradient";
+import AnimatedShinyText from "@/components/ui/animated-shiny-text/animated-shiny-text";
 import { BorderBeam } from "@/components/ui/border-beam/border-beam";
 import { useIsMounted } from "@/hooks/use-is-mounted";
 import { useMediaQuery } from "@/hooks/use-media-query";
@@ -65,14 +65,14 @@ export const FloatingComponents: React.FC<{}> = () => {
           isFooterBlurred
           className="absolute p-1 -top-[260px] right-[100px] animate-[levitate_12s_ease_infinite_1s] z-0 max-w-fit"
         >
-            <Image
-              alt="Professional camera"
-              as={NextImage}
-              className="object-cover"
-              height={180}
-              src="/images/hero-card.webp"
-              width={120}
-            />
+          <Image
+            alt="Professional camera"
+            as={NextImage}
+            className="object-cover"
+            height={180}
+            src="/images/hero-card.webp"
+            width={120}
+          />
           <CardFooter className="before:bg-black/10 border-white/20 border-1 overflow-hidden justify-between py-2 absolute before:rounded-xl rounded-xl bottom-1 w-[calc(100%_-_8px)] shadow-lg z-10">
             <p className="text-xs font-semibold text-white/80">Camera</p>
             <p className="text-xs font-semibold text-white/80">$525</p>
@@ -107,27 +107,13 @@ export const FloatingComponents: React.FC<{}> = () => {
           />
         </div>
 
-        {isMounted && (
-          <Tooltip
-            className="text-sm animate-[levitate_14s_ease_infinite]"
-            color="secondary"
-            content="Developers love Next.js"
-            isOpen={!isTablet}
-            placement="top"
-            style={{
-              zIndex: 39,
-            }}
-          >
-            <Button
-              className="absolute left-[200px] top-[160px] max-w-fit animate-[levitate_14s_ease_infinite_0.5s]"
-              color="secondary"
-              size="sm"
-              variant="flat"
-            >
-              Tooltip
-            </Button>
-          </Tooltip>
-        )}
+        <div className="absolute left-[40px] top-[140px] max-w-fit animate-[levitate_14s_ease_infinite_0.5s]">
+          <Button variant="bordered" className="dark:bg-neutral-900">
+            <AnimatedShinyText shimmerWidth={700} className="text-default-400/70 dark:text-default-400/70 bg-gradient-to-r from-transparent !via-pink-500 !dark:via-pink-500 via-50% to-transparent">
+              ✨ Developers love Fuselagem UI
+            </AnimatedShinyText>
+          </Button>
+        </div>
 
         <Card
           className="absolute right-[10px] top-[30px] animate-[levitate_16s_ease_infinite] z-10 max-w-fit border-none"
@@ -141,7 +127,7 @@ export const FloatingComponents: React.FC<{}> = () => {
         <Card
           isFooterBlurred
           className="absolute right-[60px] top-[100px] animate-[levitate_12s_ease_infinite_1s] z-0 max-w-fit"
-          >
+        >
           <Image
             alt="Woman listing to music"
             as={NextImage}
