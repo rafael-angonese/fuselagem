@@ -29,21 +29,6 @@ export const Hero = () => {
   return (
     <section className="flex relative overflow-hidden lg:overflow-visible w-full flex-nowrap justify-between items-center h-[calc(100vh_-_64px)] 2xl:h-[calc(84vh_-_64px)]">
       <div className="flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10">
-        <div className="w-full flex justify-center md:hidden">
-          <Chip
-            as={NextLink}
-            className="bg-default-100/50 hover:bg-default-100 border-default-200/80 dark:border-default-100/80 transition-colors cursor-pointer"
-            color="default"
-            href="/blog/v2.3.0"
-            variant="dot"
-            onClick={() => handlePressAnnouncement("New version v2.4.0", "/blog/v2.4.0")}
-          >
-            New version v2.4.0&nbsp;
-            <span aria-label="emoji" role="img">
-              🚀
-            </span>
-          </Chip>
-        </div>
         <div className="text-center leading-8 md:leading-10 md:text-left">
           <div className="inline-block">
             <h1 className={title()}>Make&nbsp;</h1>
@@ -65,7 +50,7 @@ export const Hero = () => {
                 strokeWidth={2}
               />
             }
-            href="/docs/guide/introduction"
+            href="/docs"
             radius="full"
             size="lg"
             onPress={() => {
@@ -73,34 +58,18 @@ export const Hero = () => {
                 name: "Get Started",
                 action: "click",
                 category: "landing-page",
-                data: "/docs/guide/introduction",
+                data: "/docs",
               });
             }}
           >
-            Get Started
+            Documentation
           </Button>
-          <Snippet
-            className="w-full rounded-full hidden md:flex sm:w-auto"
-            copyButtonProps={{
-              radius: "full",
-            }}
-            onCopy={() => {
-              trackEvent("Hero - Copy Install Command", {
-                name: "Copy",
-                action: "click",
-                category: "landing-page",
-                data: "npx nextui-cli@latest init",
-              });
-            }}
-          >
-            npx nextui-cli@latest init
-          </Snippet>
           <Button
             fullWidth
             isExternal
             as={Link}
-            className="w-full md:hidden"
-            href="https://github.com/nextui-org/nextui"
+            className="w-full md:h-11 md:w-auto"
+            href="https://github.com/rafael-angonese/fuselagem"
             radius="full"
             size="lg"
             startContent={<GithubIcon />}
@@ -110,7 +79,7 @@ export const Hero = () => {
                 name: "Github",
                 action: "click",
                 category: "landing-page",
-                data: "https://github.com/nextui-org/nextui",
+                data: "https://github.com/rafael-angonese/fuselagem",
               });
             }}
           >
