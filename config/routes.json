@@ -83,6 +83,12 @@
           "path": "/docs/components/border-beam.mdx"
         },
         {
+          "key": "shine-border",
+          "title": "Shine Border",
+          "keywords": "shine-border",
+          "path": "/docs/components/shine-border.mdx"
+        },
+        {
           "key": "sparkles-text",
           "title": "Sparkles Text",
           "keywords": "sparkles-text",

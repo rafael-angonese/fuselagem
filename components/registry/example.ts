@@ -58,6 +58,13 @@ const ui: Registry = {
       file: "components/ui/animated-beam/animated-beam.tsx"
     }],
   },
+  "shine-border": {
+    name: "shine-border",
+    files: [{
+      name: "ShineBorder.tsx",
+      file: "components/ui/shine-border/shine-border.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -199,6 +206,26 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/animated-beam/animated-beam-multiple-outputs-demo"),
+      ),
+    },
+    "shine-border-demo": {
+      name: "shine-border-demo",
+      files: [{
+        name: "ShineBorder.tsx",
+        file: "components/demos/shine-border/shine-border-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/shine-border/shine-border-demo"),
+      ),
+    },
+    "shine-border-button-demo": {
+      name: "shine-border-button-demo",
+      files: [{
+        name: "ShineBorderButton.tsx",
+        file: "components/demos/shine-border/shine-border-button-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/shine-border/shine-border-button-demo"),
       ),
     },
 }

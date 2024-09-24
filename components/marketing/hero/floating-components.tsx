@@ -4,11 +4,9 @@ import {
   CardBody,
   CardFooter,
   Image,
-  Input,
   Pagination,
   Spinner,
-  Switch,
-  Tooltip,
+  Switch
 } from "@nextui-org/react";
 import { MoonFilledIcon, SunFilledIcon } from "@nextui-org/shared-icons";
 import { useTheme } from "next-themes";
@@ -19,6 +17,7 @@ import { FloatingTabs } from "./floating-tabs";
 import { UserTwitterCard } from "@/components/demos/user-twitter-card";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text/animated-shiny-text";
 import { BorderBeam } from "@/components/ui/border-beam/border-beam";
+import { ShineBorder } from "@/components/ui/shine-border/shine-border";
 import { useIsMounted } from "@/hooks/use-is-mounted";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { PlaneTakeoff } from "lucide-react";
@@ -51,15 +50,14 @@ export const FloatingComponents: React.FC<{}> = () => {
           onChange={onChange}
         />
 
-        <Input
-          className="absolute -top-[130px] -right-[120px] animate-[levitate_10s_ease_infinite] w-[200px]"
-          color="secondary"
-          defaultValue="NextUI"
-          label="Input"
-          labelPlacement="outside"
-          variant="bordered"
-          onClear={() => { }}
-        />
+        <div className="absolute -top-[130px] -right-[120px] animate-[levitate_10s_ease_infinite]">
+          <ShineBorder
+            className="text-center text-xl"
+            color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+          >
+            Fuselagem UI
+          </ShineBorder>
+        </div>
 
         <Card
           isFooterBlurred

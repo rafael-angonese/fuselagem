@@ -1,0 +1,59 @@
+---
+title: "Shine Border"
+description: "Shine border is an animated background border effect."
+---
+
+# Shine Border
+
+Shine border is an animated background border effect.
+
+---
+
+## Usage
+
+<ComponentPreview name="shine-border-demo" />
+
+## Code
+
+<ComponentPreview showPreview={false} name="border-beam" />
+
+### Update `tailwind.config.js`
+
+Add the following animations to your `tailwind.config.js` file.
+
+```js {6-16}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
+      },
+    },
+  },
+};
+```
+## Shine Border Button
+
+<ComponentPreview name="shine-border-button-demo" />
+
+## Props
+
+| Attribute    | Type        | Description                                                                    | Default   |
+| ------------ | ----------- | ------------------------------------------------------------------------------ | --------- |
+| className    | `string`    | The class name to be applied to the component.                                 |           |
+| duration     | `number`    | Defines the animation duration to be applied on the shining border in seconds. | `14`      |
+| color        | `string`    | Defines the color of the border.                                               | `#FFFFFF` |
+| borderRadius | `number`    | Defines the radius of the border.                                              | `8px`     |
+| borderWidth  | `number`    | Defines the width of the border.                                               | `1px`     |
+| children     | `ReactNode` | Contains react node elements.                                                  | `{}`      |
