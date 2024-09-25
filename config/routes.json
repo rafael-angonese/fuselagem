@@ -123,6 +123,12 @@
           "title": "Scratch To Reveal",
           "keywords": "scratch-to-reveal",
           "path": "/docs/components/scratch-to-reveal.mdx"
+        },
+        {
+          "key": "scroll-progress",
+          "title": "Scroll Progress",
+          "keywords": "scroll-progress",
+          "path": "/docs/components/scroll-progress.mdx"
         }
       ]
     }

@@ -79,6 +79,13 @@ const ui: Registry = {
       file: "components/ui/scratch-to-reveal/scratch-to-reveal.tsx"
     }],
   },
+  "scroll-progress": {
+    name: "scroll-progress",
+    files: [{
+      name: "ScrollProgress.tsx",
+      file: "components/ui/scroll-progress/scroll-progress.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -260,6 +267,16 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/scratch-to-reveal/scratch-to-reveal-demo"),
+      ),
+    },
+    "scroll-progress-demo": {
+      name: "scroll-progress-demo",
+      files: [{
+        name: "ScratchToRevealDemo.tsx",
+        file: "components/demos/scroll-progress/scroll-progress-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/scroll-progress/scroll-progress-demo"),
       ),
     },
 }
