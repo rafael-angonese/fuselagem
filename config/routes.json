@@ -117,6 +117,12 @@
           "title": "Shiny Button",
           "keywords": "shiny-button",
           "path": "/docs/components/shiny-button.mdx"
+        },
+        {
+          "key": "scratch-to-reveal",
+          "title": "Scratch To Reveal",
+          "keywords": "scratch-to-reveal",
+          "path": "/docs/components/scratch-to-reveal.mdx"
         }
       ]
     }

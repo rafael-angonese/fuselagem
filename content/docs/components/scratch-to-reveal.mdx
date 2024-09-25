@@ -1,0 +1,29 @@
+---
+title: "Scratch To Reveal"
+description: "The ScratchToReveal component creates an interactive scratch-off effect with customizable dimensions and animations, revealing hidden content beneath."
+---
+
+# Scratch To Reveal
+
+The ScratchToReveal component creates an interactive scratch-off effect with customizable dimensions and animations, revealing hidden content beneath.
+
+---
+
+## Usage
+
+<ComponentPreview name="scratch-to-reveal-demo" />
+
+## Code
+
+<ComponentPreview showPreview={false} name="scratch-to-reveal" />
+
+## Props
+
+| Attribute            | Type        | Description                                                                                   | Default     |
+| -------------------- | ----------- | --------------------------------------------------------------------------------------------- | ----------- |
+| className            | `string`    | The class name to be applied to the component.                                                | `undefined` |
+| children             | `ReactNode` | The content to be displayed inside.                                                           | `undefined` |
+| width                | `number`    | Width of the scratch container.                                                               | `undefined` |
+| height               | `number`    | Height of the scratch container.                                                              | `undefined` |
+| minScratchPercentage | `number`    | Minimum percentage of scratched area to be considered as completed (Value between 0 and 100). | `50`        |
+| onCompete            | `function`  | Callback function called when scratch is completed                                            | `undefined` |

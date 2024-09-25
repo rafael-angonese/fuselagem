@@ -72,6 +72,13 @@ const ui: Registry = {
       file: "components/ui/shiny-button/shiny-button.tsx"
     }],
   },
+  "scratch-to-reveal": {
+    name: "scratch-to-reveal",
+    files: [{
+      name: "ScratchToReveal.tsx",
+      file: "components/ui/scratch-to-reveal/scratch-to-reveal.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -243,6 +250,16 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/shiny-button/shiny-button-demo"),
+      ),
+    },
+    "scratch-to-reveal-demo": {
+      name: "scratch-to-reveal-demo",
+      files: [{
+        name: "ScratchToRevealDemo.tsx",
+        file: "components/demos/scratch-to-reveal/scratch-to-reveal-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/scratch-to-reveal/scratch-to-reveal-demo"),
       ),
     },
 }
