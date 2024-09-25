@@ -129,6 +129,12 @@
           "title": "Scroll Progress",
           "keywords": "scroll-progress",
           "path": "/docs/components/scroll-progress.mdx"
+        },
+        {
+          "key": "animated-cursor",
+          "title": "Animated Cursor",
+          "keywords": "animated-cursor",
+          "path": "/docs/components/animated-cursor.mdx"
         }
       ]
     }

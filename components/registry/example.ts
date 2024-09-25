@@ -86,6 +86,13 @@ const ui: Registry = {
       file: "components/ui/scroll-progress/scroll-progress.tsx"
     }],
   },
+  "animated-cursor": {
+    name: "animated-cursor",
+    files: [{
+      name: "ScrollProgress.tsx",
+      file: "components/ui/animated-cursor/animated-cursor.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -277,6 +284,16 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/scroll-progress/scroll-progress-demo"),
+      ),
+    },
+    "animated-cursor-demo": {
+      name: "animated-cursor-demo",
+      files: [{
+        name: "AnimatedCursorDemo.tsx",
+        file: "components/demos/animated-cursor/animated-cursor-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/animated-cursor/animated-cursor-demo"),
       ),
     },
 }

@@ -12,8 +12,6 @@ import { MoonFilledIcon, SunFilledIcon } from "@nextui-org/shared-icons";
 import { useTheme } from "next-themes";
 import NextImage from "next/image";
 
-import { FloatingTabs } from "./floating-tabs";
-
 import { UserTwitterCard } from "@/components/demos/user-twitter-card";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text/animated-shiny-text";
 import { BorderBeam } from "@/components/ui/border-beam/border-beam";
@@ -21,6 +19,7 @@ import { ShineBorder } from "@/components/ui/shine-border/shine-border";
 import { useIsMounted } from "@/hooks/use-is-mounted";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { PlaneTakeoff } from "lucide-react";
+import { AnimatedCursor } from "@/components/ui/animated-cursor/animated-cursor";
 
 export const FloatingComponents: React.FC<{}> = () => {
   const { theme, setTheme } = useTheme();
@@ -79,7 +78,9 @@ export const FloatingComponents: React.FC<{}> = () => {
           <BorderBeam size={100} duration={6} delay={9} />
         </Card>
 
-        <FloatingTabs />
+        <div className="absolute left-[260px] -top-[240px] h-10">
+          <AnimatedCursor text="Rafa" />
+        </div>
 
         <UserTwitterCard className="absolute left-[80px] -top-[80px] animate-[levitate_16s_ease_infinite] border-none" />
 
