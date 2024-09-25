@@ -1,4 +1,3 @@
-'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { cnBase } from 'tailwind-variants'
