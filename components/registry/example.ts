@@ -65,6 +65,13 @@ const ui: Registry = {
       file: "components/ui/shine-border/shine-border.tsx"
     }],
   },
+  "shiny-button": {
+    name: "shiny-button",
+    files: [{
+      name: "ShineBorder.tsx",
+      file: "components/ui/shiny-button/shiny-button.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -226,6 +233,16 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/shine-border/shine-border-button-demo"),
+      ),
+    },
+    "shiny-button-demo": {
+      name: "shiny-button-demo",
+      files: [{
+        name: "ShinyButtonDemo.tsx",
+        file: "components/demos/shiny-button/shiny-button-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/shiny-button/shiny-button-demo"),
       ),
     },
 }

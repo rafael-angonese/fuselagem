@@ -52,7 +52,7 @@ export const FloatingComponents: React.FC<{}> = () => {
 
         <div className="absolute -top-[130px] -right-[120px] animate-[levitate_10s_ease_infinite]">
           <ShineBorder
-            className="text-center text-xl"
+            className="text-center"
             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
           >
             Fuselagem UI

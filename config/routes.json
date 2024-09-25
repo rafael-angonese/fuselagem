@@ -111,6 +111,12 @@
           "title": "Animated Beam",
           "keywords": "animated-beam",
           "path": "/docs/components/animated-beam.mdx"
+        },
+        {
+          "key": "shiny-button",
+          "title": "Shiny Button",
+          "keywords": "shiny-button",
+          "path": "/docs/components/shiny-button.mdx"
         }
       ]
     }
