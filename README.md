@@ -2,7 +2,7 @@
 
 ## 🧚‍♂️ Documentation
 
-Visit [https://www.fuselagem.com](https://www.fuselagem.com) to view the documentation.
+Visit [https://www.fuselagem.com.br](https://www.fuselagem.com.br) to view the documentation.
 
 ## ⚖️ **Licença**
 
