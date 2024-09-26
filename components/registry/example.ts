@@ -93,6 +93,13 @@ const ui: Registry = {
       file: "components/ui/animated-cursor/animated-cursor.tsx"
     }],
   },
+  "meteors": {
+    name: "meteors",
+    files: [{
+      name: "Meteors.tsx",
+      file: "components/ui/meteors/meteors.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -294,6 +301,16 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/animated-cursor/animated-cursor-demo"),
+      ),
+    },
+    "meteors-demo": {
+      name: "meteors-demo",
+      files: [{
+        name: "Meteors.tsx",
+        file: "components/demos/meteors/meteors-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/meteors/meteors-demo"),
       ),
     },
 }

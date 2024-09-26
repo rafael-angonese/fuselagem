@@ -135,6 +135,12 @@
           "title": "Animated Cursor",
           "keywords": "animated-cursor",
           "path": "/docs/components/animated-cursor.mdx"
+        },
+        {
+          "key": "meteors",
+          "title": "Meteors",
+          "keywords": "meteors",
+          "path": "/docs/components/meteors.mdx"
         }
       ]
     }
