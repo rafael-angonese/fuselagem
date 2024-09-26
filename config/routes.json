@@ -141,6 +141,12 @@
           "title": "Meteors",
           "keywords": "meteors",
           "path": "/docs/components/meteors.mdx"
+        },
+        {
+          "key": "particles",
+          "title": "Particles",
+          "keywords": "particles",
+          "path": "/docs/components/particles.mdx"
         }
       ]
     }

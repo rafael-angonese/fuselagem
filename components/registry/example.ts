@@ -100,6 +100,13 @@ const ui: Registry = {
       file: "components/ui/meteors/meteors.tsx"
     }],
   },
+  "particles": {
+    name: "particles",
+    files: [{
+      name: "Particles.tsx",
+      file: "components/ui/particles/particles.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -306,11 +313,21 @@ const example: Registry = {
     "meteors-demo": {
       name: "meteors-demo",
       files: [{
-        name: "Meteors.tsx",
+        name: "MeteorsDemo.tsx",
         file: "components/demos/meteors/meteors-demo.tsx"
       }],
       component: React.lazy(
         () => import("@/components/demos/meteors/meteors-demo"),
+      ),
+    },
+    "particles-demo": {
+      name: "particles-demo",
+      files: [{
+        name: "ParticlesDemo.tsx",
+        file: "components/demos/particles/particles-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/particles/particles-demo"),
       ),
     },
 }
