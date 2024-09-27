@@ -147,6 +147,12 @@
           "title": "Particles",
           "keywords": "particles",
           "path": "/docs/components/particles.mdx"
+        },
+        {
+          "key": "number-ticker",
+          "title": "Number Ticker",
+          "keywords": "number-ticker",
+          "path": "/docs/components/number-ticker.mdx"
         }
       ]
     }

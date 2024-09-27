@@ -107,6 +107,13 @@ const ui: Registry = {
       file: "components/ui/particles/particles.tsx"
     }],
   },
+  "number-ticker": {
+    name: "number-ticker",
+    files: [{
+      name: "NumberTicker.tsx",
+      file: "components/ui/number-ticker/number-ticker.tsx"
+    }],
+  },
 }
 
 const example: Registry = {
@@ -328,6 +335,26 @@ const example: Registry = {
       }],
       component: React.lazy(
         () => import("@/components/demos/particles/particles-demo"),
+      ),
+    },
+    "number-ticker-demo": {
+      name: "number-ticker-demo",
+      files: [{
+        name: "NumberTickerDemo.tsx",
+        file: "components/demos/number-ticker/number-ticker-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/number-ticker/number-ticker-demo"),
+      ),
+    },
+    "number-ticker-decimal-demo": {
+      name: "number-ticker-decimal-demo",
+      files: [{
+        name: "NumberTickerDecimalDemo.tsx",
+        file: "components/demos/number-ticker/number-ticker-decimal-demo.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/demos/number-ticker/number-ticker-decimal-demo"),
       ),
     },
 }
