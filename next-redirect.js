@@ -6,9 +6,8 @@ const rootDir = path.join(__dirname, ".");
 const contentDir = path.join(rootDir, "content");
 const docsDir = path.join(contentDir, "docs");
 const componentsDocsDir = path.join(docsDir, "components");
-const guidesDocsDir = path.join(docsDir, "guide");
+const gettingStartedDocsDir = path.join(docsDir, "getting-started");
 const frameworksDocsDir = path.join(docsDir, "frameworks");
-const customizationDocsDir = path.join(docsDir, "customization");
 
 const getFolderNames = (dir) => {
   const names = shell
@@ -32,15 +31,13 @@ const getFolderRoutes = (names = [], prefix = "") => {
 
 async function redirect() {
   const componentsName =getFolderNames(componentsDocsDir);
-  const guidesName = getFolderNames(guidesDocsDir);
+  const gettingStartedName = getFolderNames(gettingStartedDocsDir);
   const frameworksName = getFolderNames(frameworksDocsDir);
-  const  customizationName = getFolderNames(customizationDocsDir);
 
   return [
     ...getFolderRoutes(componentsName, "components"),
-    ...getFolderRoutes(guidesName, "guide"),
+    ...getFolderRoutes(gettingStartedName, "getting-started"),
     ...getFolderRoutes(frameworksName, "frameworks"),
-    ...getFolderRoutes(customizationName, "customization"),
     {
       source: "/docs",
       destination: "/docs/getting-started/introduction",
