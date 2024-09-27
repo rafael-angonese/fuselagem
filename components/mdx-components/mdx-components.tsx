@@ -10,11 +10,13 @@ import * as BlogComponents from "@/components/blog/components";
 import { TypewriterEffectDemo } from "@/components/demos/typewriter-effect-demo/typewriter-effect-demo";
 import * as DocsComponents from "@/components/docs/components";
 import { Codeblock } from "@/components/docs/components";
+import { CodeDemoMotion } from "@/components/docs/components/code-demo-motion";
 import { ComponentPreview } from "@/components/docs/components/component-preview/component-preview";
 import { Sandpack } from "@/components/sandpack";
 import { VirtualAnchor, virtualAnchorEncode } from "@/components/virtual-anchor";
 import { trackEvent } from "@/utils/va";
-import { CodeDemoMotion } from "@/components/docs/components/code-demo-motion";
+import { Check, Copy } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Table: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
@@ -130,33 +132,52 @@ export const Code = ({
     return <InlineCode>{children}</InlineCode>;
   }
 
+  const [isCopied, setIsCopied] = useState(false)
+
+  useEffect(() => {
+    if (isCopied) {
+      const timer = setTimeout(() => {
+        setIsCopied(false)
+      }, 2000)
+
+      return () => clearTimeout(timer)
+    }
+  }, [isCopied])
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(codeString)
+      setIsCopied(true)
+      trackEvent("MDXComponents - Copy", {
+        category: "docs",
+        action: "copyCode",
+      });
+    } catch (err) {
+      console.error('Failed to copy text: ', err)
+    }
+  }
+
   return (
-    <Components.Snippet
-      disableTooltip
-      fullWidth
-      hideSymbol
-      classNames={{
-        base: clsx(
-          "px-0 bg-code-background text-code-foreground",
-          {
-            "items-start": isMultiLine,
-          },
-          className,
-        ),
-        pre: "font-light w-full text-sm",
-        copyButton: "text-lg text-zinc-500 mr-2",
-      }}
-      codeString={codeString}
-      onCopy={() => {
-        trackEvent("MDXComponents - Copy", {
-          category: "docs",
-          action: "copyCode",
-        });
-      }}
-    >
-      <Codeblock codeString={codeString} language={language} metastring={meta} />
-    </Components.Snippet>
-  );
+    <div className="relative overflow-hidden">
+      <Components.Button
+        className="absolute right-4 top-1 z-10 ml-1 flex items-center rounded-lg "
+        variant="bordered"
+        size='sm'
+        isIconOnly
+        onClick={handleCopy}
+        aria-label={isCopied ? "Copied" : "Copy to clipboard"}
+      >
+        {isCopied ? (
+          <Check className="h-4 w-4" />
+        ) : (
+          <Copy className="h-4 w-4" />
+        )}
+      </Components.Button>
+      <div>
+        <Codeblock codeString={codeString} language={language} metastring={meta} />
+      </div>
+    </div>
+  )
 };
 
 const Link = ({ href, children }: { href?: string; children?: React.ReactNode }) => {

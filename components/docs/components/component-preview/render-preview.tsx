@@ -32,7 +32,7 @@ export const RenderPreview: React.FC<RenderPreviewProps> = ({ name }) => {
     <div className='relative flex flex-col items-center justify-center' key={key}>
       <Button
         onClick={() => setKey((prev) => prev + 1)}
-        className="absolute right-0 top-0 z-10 ml-2 flex items-center rounded-lg "
+        className="absolute right-1 top-1 z-10 ml-1 flex items-center rounded-lg "
         variant="bordered"
         size='sm'
         isIconOnly
