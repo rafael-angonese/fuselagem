@@ -159,20 +159,28 @@ export const Code = ({
 
   return (
     <div className="relative overflow-hidden">
-      <Components.Button
-        className="absolute right-4 top-1 z-10 ml-1 flex items-center rounded-lg "
-        variant="bordered"
-        size='sm'
-        isIconOnly
-        onClick={handleCopy}
-        aria-label={isCopied ? "Copied" : "Copy to clipboard"}
+      <Components.Tooltip
+        className="text-xs px-2"
+        closeDelay={0}
+        content={isCopied ? "Copied!" : "Copy to clipboard"}
+        radius="md"
       >
-        {isCopied ? (
-          <Check className="h-4 w-4" />
-        ) : (
-          <Copy className="h-4 w-4" />
-        )}
-      </Components.Button>
+        <Components.Button
+          className="absolute right-4 top-1 z-10 ml-1 flex items-center rounded-lg "
+          variant="light"
+          size='sm'
+          isIconOnly
+          onClick={handleCopy}
+          title="Copy Code"
+          aria-label={isCopied ? "Copied" : "Copy to clipboard"}
+        >
+          {isCopied ? (
+            <Check className="h-4 w-4 text-white dark:text-zinc-500" />
+          ) : (
+            <Copy className="h-4 w-4 text-white dark:text-zinc-500" />
+          )}
+        </Components.Button>
+      </Components.Tooltip>
       <div>
         <Codeblock codeString={codeString} language={language} metastring={meta} />
       </div>
