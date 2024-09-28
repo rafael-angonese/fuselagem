@@ -1,4 +1,4 @@
-import { ComponentName, registry } from '@/components/registry/example';
+import { ComponentName, registry } from '@/components/registry/registry';
 import { Button } from '@nextui-org/react';
 import { RotateCcw } from 'lucide-react';
 import React, { Suspense } from 'react';

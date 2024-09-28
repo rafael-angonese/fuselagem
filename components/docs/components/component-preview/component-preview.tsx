@@ -2,9 +2,9 @@ import * as React from "react";
 
 import { BgGridContainer } from "@/components/bg-grid-container";
 import { Code } from "@/components/mdx-components/mdx-components";
-import { ComponentName } from "@/components/registry/example";
 import { Tab, Tabs } from "@nextui-org/react";
 import { RenderPreview } from "./render-preview";
+import { ComponentName } from "@/components/registry/registry";
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: ComponentName
   showPreview?: boolean;

@@ -3,8 +3,8 @@ import path from "path";
 import { u } from "unist-builder";
 import { visit } from "unist-util-visit";
 
-import { registry } from '../components/registry/example';
 import { UnistTree, UnistNode } from "../types/unist";
+import { registry } from "../components/registry/registry";
 
 
 export function rehypeComponent() {
