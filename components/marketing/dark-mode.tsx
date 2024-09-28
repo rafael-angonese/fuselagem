@@ -1,18 +1,18 @@
 "use client";
 
 /* eslint-disable react/display-name */
-import {Code, Button, Tooltip} from "@nextui-org/react";
-import {useState} from "react";
-import NextLink from "next/link";
+import { Button, Code, Tooltip } from "@nextui-org/react";
 import dynamic from "next/dynamic";
+import NextLink from "next/link";
+import { useState } from "react";
 
-import {MusicPlayer} from "@/components/demos";
-import {title, subtitle, titleWrapper, sectionWrapper} from "@/components/primitives";
-import {ThemeSwitch} from "@/components/theme-switch";
-import {CodeWindow} from "@/components/code-window";
+import { GradientBox } from "@/components";
+import { CodeWindow } from "@/components/code-window";
+import { MusicPlayer } from "@/components/examples";
+import { InfoBoldIcon } from "@/components/icons";
+import { sectionWrapper, subtitle, title, titleWrapper } from "@/components/primitives";
+import { ThemeSwitch } from "@/components/theme-switch";
 import landingContent from "@/content/landing";
-import {GradientBox} from "@/components";
-import {InfoBoldIcon} from "@/components/icons";
 
 const DemoCodeModal = dynamic(() => import("../demo-code-modal").then((mod) => mod.DemoCodeModal), {
   ssr: false,

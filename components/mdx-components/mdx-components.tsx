@@ -7,11 +7,11 @@ import { Language } from "prism-react-renderer";
 import { ThemeSwitch } from "../theme-switch";
 
 import * as BlogComponents from "@/components/blog/components";
-import { TypewriterEffectDemo } from "@/components/demos/typewriter-effect-demo/typewriter-effect-demo";
 import * as DocsComponents from "@/components/docs/components";
 import { Codeblock } from "@/components/docs/components";
 import { CodeDemoMotion } from "@/components/docs/components/code-demo-motion";
 import { ComponentPreview } from "@/components/docs/components/component-preview/component-preview";
+import { TypewriterEffectDemo } from "@/components/examples/typewriter-effect-demo/typewriter-effect-demo";
 import { Sandpack } from "@/components/sandpack";
 import { VirtualAnchor, virtualAnchorEncode } from "@/components/virtual-anchor";
 import { trackEvent } from "@/utils/va";

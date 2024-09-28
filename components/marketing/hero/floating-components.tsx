@@ -1,25 +1,25 @@
 import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  Image,
-  Pagination,
-  Spinner,
-  Switch
+    Button,
+    Card,
+    CardBody,
+    CardFooter,
+    Image,
+    Pagination,
+    Spinner,
+    Switch
 } from "@nextui-org/react";
 import { MoonFilledIcon, SunFilledIcon } from "@nextui-org/shared-icons";
 import { useTheme } from "next-themes";
 import NextImage from "next/image";
 
-import { UserTwitterCard } from "@/components/demos/user-twitter-card";
+import { UserTwitterCard } from "@/components/examples/user-twitter-card";
+import { AnimatedCursor } from "@/components/ui/animated-cursor/animated-cursor";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text/animated-shiny-text";
 import { BorderBeam } from "@/components/ui/border-beam/border-beam";
 import { ShineBorder } from "@/components/ui/shine-border/shine-border";
 import { useIsMounted } from "@/hooks/use-is-mounted";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { PlaneTakeoff } from "lucide-react";
-import { AnimatedCursor } from "@/components/ui/animated-cursor/animated-cursor";
 
 export const FloatingComponents: React.FC<{}> = () => {
   const { theme, setTheme } = useTheme();

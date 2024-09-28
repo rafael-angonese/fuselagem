@@ -1,14 +1,14 @@
 "use client";
 
 /* eslint-disable react/display-name */
-import {Button, Link} from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 import NextLink from "next/link";
 
-import {title, subtitle, titleWrapper, sectionWrapper} from "@/components/primitives";
-import {CodeWindow} from "@/components/code-window";
+import { CodeWindow } from "@/components/code-window";
+import { CustomButton } from "@/components/examples";
+import { GradientBox } from "@/components/gradient-box";
+import { sectionWrapper, subtitle, title, titleWrapper } from "@/components/primitives";
 import landingContent from "@/content/landing";
-import {GradientBox} from "@/components/gradient-box";
-import {CustomButton} from "@/components/demos";
 
 export const Customization = () => {
   return (
