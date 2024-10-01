@@ -1,0 +1,183 @@
+---
+title: Contributing to FuselagemUI
+description: Thank you for your interest in contributing to FuselagemUI! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to FuselagemUI!
+---
+
+# Contributing to FuselagemUI
+
+Thank you for your interest in contributing to FuselagemUI! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to FuselagemUI!
+
+## Getting Started
+
+<Steps>
+
+### Fork the Repository
+
+Click [here](https://github.com/rafael-angonese/fuselagem/fork) to fork the repository.
+
+### Clone your forked repository to your local machine
+
+```codeBlock bash
+git clone https://github.com/<YOUR_USERNAME>/fuselagem.git
+```
+
+### Navigate to the project directory
+
+```codeBlock bash
+cd fuselagem
+```
+
+### Create a new branch for your changes
+
+```codeBlock bash
+git checkout -b my-new-branch
+```
+
+### Install dependencies
+
+<PackageManagers
+  commands={{
+    npm: "npm install",
+    yarn: "yarn install",
+    pnpm: "pnpm install",
+    bun: "bun install",
+  }}
+/>
+
+### Run the project
+
+<PackageManagers
+  commands={{
+    npm: "npm run dev",
+    yarn: "yarn dev",
+    pnpm: "pnpm run dev",
+    bun: "bun run dev",
+  }}
+/>
+
+Acess your [http://localhost:3000](http://localhost:3000).
+
+</Steps>
+
+## Adding a New Component
+
+To add a new component to FuselagemUI, you will need to modify several files. Follow these steps:
+
+<Steps>
+
+### Create Component
+
+Create the main component in `components/ui/{component-name}/{component-name}.tsx`
+
+```tsx
+import React from "react";
+
+export default function ComponentName() {
+  return <div>This is your component.</div>;
+}
+```
+
+### Create Component Example
+
+Provide a basic example to showcase your component in `components/examples/{component-name}/{component-name-example}.tsx`
+
+```tsx
+import React from "react";
+import { ComponentName } from "@/ui/component-name}/component-name}";
+
+export default function ComponentNameExample() {
+  return (
+    <div>
+      <ComponentName />
+    </div>
+  );
+}
+```
+
+### Update Registry
+
+Export your component and example in the registry files:
+
+In `components/registry/ui.ts`:
+
+```typescript
+export const ui: Registry = [
+    // ... existing components ...
+    "component-name": {
+        name: "component-name",
+        files: [{
+            name: "ComponentName.tsx",
+            file: "components/ui/component-name/component-name.tsx"
+        }],
+    },
+];
+```
+
+In `components/registry/example.ts`:
+
+```typescript
+export const example: Registry = [
+    // ... existing examples ...
+    "component-name-demo": {
+        name: "component-name-demo",
+        files: [{
+            name: "ComponentNameDemo.tsx",
+            file: "components/examples/component-name-demo/component-name-demo.tsx"
+        }],
+        component: React.lazy(
+            () => import("@/components/examples/component-name-demo/component-name-demo"),
+        ),
+    },
+];
+```
+
+### Update Sidebar
+
+Add your component to the sidebar in `config/routes.ts`
+
+```typescript
+{
+    key: "component-name",
+    title: "Component Name",
+    keywords: "component-name"
+    path: `/docs/components/component-name.mdx`,
+}
+```
+
+### Create docs
+
+Create an MDX file for documenting your component in `content/docs/components/component-name.mdx`
+
+```md
+---
+title: "Component Name"
+description: "Component Name for FuselagemUI."
+---
+
+# Component Name
+
+Component Name for FuselagemUI.
+
+## Usage
+
+<ComponentPreview name="component-name-demo" />
+
+## Code
+
+<ComponentPreview showPreview={false} name="component-name" />
+
+## Props
+
+| Attribute | Type              | Description                                                | Default     |
+| --------- | ----------------- | ---------------------------------------------------------- | ----------- |
+| children  | `React.ReactNode` | The content to be rendered within the gradient background. | `undefined` |
+| className | `string`          | The CSS class to be applied to the inner div.              | `undefined` |
+```
+
+### Send your pull request
+
+- Send your pull request to the `main` branch.
+- Your pull request will be reviewed by the maintainers and the maintainers will decide if it is accepted or not.
+- Once the pull request is accepted, the maintainers will merge it to the `main` branch.
+
+</Steps>

@@ -17,6 +17,12 @@
           "title": "Installation",
           "keywords": "installation, start",
           "path": "/docs/getting-started/installation.mdx"
+        },
+        {
+          "key": "contribution",
+          "title": "Contribution",
+          "keywords": "contribution",
+          "path": "/docs/getting-started/contribution.mdx"
         }
       ]
     },
