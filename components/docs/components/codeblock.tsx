@@ -148,7 +148,7 @@ const Codeblock = forwardRef<HTMLPreElement, CodeblockProps>(
               className={clsx(className, classNameProp, "flex max-w-full", {
                 "flex-col": isMultiLine,
                 "scrollbar-hide": hideScrollBar,
-                "overflow-scroll max-h-[700px]": true,
+                "overflow-auto max-h-[700px]": true,
               })}
               style={style}
             >
