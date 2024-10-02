@@ -2,15 +2,14 @@
 import path from "path";
 import fs from 'fs'
 
-import {v4 as uuid} from "uuid"
+import { v4 as uuid } from "uuid"
 import shell from "shelljs";
 import dotenv from "dotenv";
-import algoliasearch from "algoliasearch";
 // @ts-ignore
 import prettier from 'prettier'
 // @ts-ignore
 import toc from "markdown-toc";
-import {parseMarkdownFile, fileToPath, removePrefix} from "@docusaurus/utils";
+import { parseMarkdownFile, fileToPath, removePrefix } from "@docusaurus/utils";
 
 const docsRootFolder = "content/docs";
 const configFolder = "config";
@@ -43,7 +42,7 @@ const getUrl = (slug: string) => {
 }
 
 async function getMDXMeta(file: string) {
-  const {content, frontMatter: _frontMatter} = await parseMarkdownFile(file);
+  const { content, frontMatter: _frontMatter } = await parseMarkdownFile(file);
 
   const frontMatter = _frontMatter as Record<string, any>
   const tableOfContent = toc(content);
@@ -53,7 +52,7 @@ async function getMDXMeta(file: string) {
     .replace(process.cwd(), "");
 
 
-  const result:ResultType[] = [];
+  const result: ResultType[] = [];
   const title = frontMatter.title || "";
 
   result.push({
@@ -83,11 +82,11 @@ async function getMDXMeta(file: string) {
   return result;
 }
 
-async function getSearchMeta(saveMode: "algolia" | "local" = "local") {
+async function getSearchMeta() {
   dotenv.config();
 
   try {
-  
+
     let json: any = [];
 
     const files = shell
@@ -101,57 +100,27 @@ async function getSearchMeta(saveMode: "algolia" | "local" = "local") {
       try {
         result = await getMDXMeta(file);
         json.push(...result);
-      } catch (error) {}
+      } catch (error) { }
     }
 
-    if (saveMode === "local") {
-       // Uncomment this to see save json into a file
-        json = prettier.format(JSON.stringify(json), { parser: 'json' });
 
-        
-        // create a folder if it doesn't exist
-        if (!fs.existsSync(`${configFolder}`)) {
-          fs.mkdirSync(`${configFolder}`);
-        }
+    json = prettier.format(JSON.stringify(json), { parser: 'json' });
 
-        const outPath = path.join(
-          process.cwd(),
-          `${configFolder}`,
-          'search-meta.json'
-        );
-
-        fs.writeFileSync(outPath, json);
-
-
-      console.log("[NextUI] Search meta is ready ✅");
-
-      return;
+    // create a folder if it doesn't exist
+    if (!fs.existsSync(`${configFolder}`)) {
+      fs.mkdirSync(`${configFolder}`);
     }
 
-    // Initialize Algolia client
-    const client = algoliasearch(
-      process.env.ALGOLIA_APP_ID || "",
-      process.env.ALGOLIA_ADMIN_API_KEY || "",
+    const outPath = path.join(
+      process.cwd(),
+      `${configFolder}`,
+      'search-meta.json'
     );
-  
-    const tmpIndex = await client.initIndex("prod_docs_tmp");
-    const mainIndex = await client.initIndex("prod_docs");
 
-    // Get settings of main index and set them to the temp index
-    const indexSettings = await mainIndex.getSettings();
+    fs.writeFileSync(outPath, json);
 
-    await tmpIndex.setSettings(indexSettings);
 
-    console.log("[Items count 🚀]: " + json.length);
-
-    console.log("[Saving on Algolia ⏰...]");
-
-    await mainIndex.replaceAllObjects(json, {
-      autoGenerateObjectIDIfNotExist: true,
-      safe: true,
-    });
-
-    console.log("[NextUI] Search meta is ready ✅");
+    console.log("Search meta is ready ✅");
   } catch (error) {
     console.error(`[ERROR 🔥]:`, error);
   }
