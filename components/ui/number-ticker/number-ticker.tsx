@@ -3,18 +3,20 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import React, { useEffect, useRef } from 'react';
 import { cnBase } from "tailwind-variants";
 
-export const NumberTicker = ({
-    value,
-    direction = "up",
-    delay = 0,
-    className,
-    decimalPlaces = 0,
-}: {
+export interface NumberTickerProps {
     value: number;
     direction?: "up" | "down";
     className?: string;
     delay?: number; // delay in s
     decimalPlaces?: number;
+}
+
+export const NumberTicker: React.FC<NumberTickerProps> = ({
+    value,
+    direction = "up",
+    delay = 0,
+    className,
+    decimalPlaces = 0,
 }) => {
     const ref = useRef<HTMLSpanElement>(null);
     const motionValue = useMotionValue(direction === "down" ? value : 0);
