@@ -12,7 +12,7 @@ interface Sparkle {
   lifespan: number;
 }
 
-interface SparklesTextProps {
+export interface SparklesTextProps {
   as?: ReactElement;
   className?: string;
   text: string;
