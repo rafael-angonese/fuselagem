@@ -22,11 +22,13 @@ const animationProps = {
     },
   },
 } as AnimationProps;
-interface ShinyButtonProps {
+
+export interface ShinyButtonProps {
   children: React.ReactNode;
   className?: string;
 }
-export const ShinyButton = ({ children, className, ...props }: ShinyButtonProps) => {
+
+export const ShinyButton: React.FC<ShinyButtonProps> = ({ children, className, ...props }) => {
   return (
     <motion.button
       {...animationProps}
