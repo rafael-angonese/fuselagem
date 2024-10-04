@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { cnBase } from "tailwind-variants";
 
-interface MeteorsProps {
+export interface MeteorsProps {
   number?: number;
 }
-export const Meteors = ({ number = 20 }: MeteorsProps) => {
+
+export const Meteors: React.FC<MeteorsProps> = ({ number = 20 }) => {
   const [meteorStyles, setMeteorStyles] = useState<Array<React.CSSProperties>>(
     [],
   );
