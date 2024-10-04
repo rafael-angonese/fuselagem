@@ -1,13 +1,15 @@
 import { ReactNode } from "react";
 import { cnBase } from "tailwind-variants";
 
-export default function AnimatedGradientText({
-  children,
-  className,
-}: {
+export interface AnimatedGradientTextProps {
   children: ReactNode;
   className?: string;
-}) {
+}
+
+export const AnimatedGradientText: React.FC<AnimatedGradientTextProps> = ({
+  children,
+  className
+}) => {
   return (
     <div
       className={cnBase(
@@ -21,5 +23,6 @@ export default function AnimatedGradientText({
 
       {children}
     </div>
-  );
+  )
 }
+
