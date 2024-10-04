@@ -1,18 +1,18 @@
 import { useId } from "react";
 import { cnBase } from "tailwind-variants";
 
-interface GridPatternProps {
-  width?: any;
-  height?: any;
-  x?: any;
-  y?: any;
+export interface GridPatternProps {
+  width?: number;
+  height?: number;
+  x?: number;
+  y?: number;
   squares?: Array<[x: number, y: number]>;
-  strokeDasharray?: any;
+  strokeDasharray?: number;
   className?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
-export function GridPattern({
+export const GridPattern: React.FC<GridPatternProps> = ({
   width = 40,
   height = 40,
   x = -1,
@@ -20,8 +20,7 @@ export function GridPattern({
   strokeDasharray = 0,
   squares,
   className,
-  ...props
-}: GridPatternProps) {
+  ...props }) => {
   const id = useId();
 
   return (
