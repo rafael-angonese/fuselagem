@@ -1,7 +1,7 @@
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { cnBase } from 'tailwind-variants'
 
-interface ScrollProgressProps {
+export interface ScrollProgressProps {
    className?: string
 }
 

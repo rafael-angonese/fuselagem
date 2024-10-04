@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { cnBase } from 'tailwind-variants'
 
-interface ScratchToRevealProps {
+export interface ScratchToRevealProps {
    children: React.ReactNode
    width: number
    height: number
