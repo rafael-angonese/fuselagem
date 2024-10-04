@@ -1,4 +1,4 @@
-import { CSSProperties, FC, ReactNode } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 import { cnBase } from "tailwind-variants";
 
 interface AnimatedShinyTextProps {
@@ -7,7 +7,7 @@ interface AnimatedShinyTextProps {
   shimmerWidth?: number;
 }
 
-const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
+export const AnimatedShinyText: React.FC<AnimatedShinyTextProps> = ({
   children,
   className,
   shimmerWidth = 100,
@@ -35,5 +35,3 @@ const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
     </p>
   );
 };
-
-export default AnimatedShinyText;

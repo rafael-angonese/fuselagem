@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { RefObject, useEffect, useId, useState } from "react";
+import React, { RefObject, useEffect, useId, useState } from "react";
 import { cnBase } from "tailwind-variants";
 
 export interface AnimatedBeamProps {
