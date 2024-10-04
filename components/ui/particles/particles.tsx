@@ -5,7 +5,7 @@ interface MousePosition {
   y: number;
 }
 
-function MousePosition(): MousePosition {
+const useMousePosition = (): MousePosition => {
   const [mousePosition, setMousePosition] = useState<MousePosition>({
     x: 0,
     y: 0,
@@ -26,17 +26,6 @@ function MousePosition(): MousePosition {
   return mousePosition;
 }
 
-interface ParticlesProps {
-  className?: string;
-  quantity?: number;
-  staticity?: number;
-  ease?: number;
-  size?: number;
-  refresh?: boolean;
-  color?: string;
-  vx?: number;
-  vy?: number;
-}
 function hexToRgb(hex: string): number[] {
   hex = hex.replace("#", "");
 
@@ -54,6 +43,18 @@ function hexToRgb(hex: string): number[] {
   return [red, green, blue];
 }
 
+export interface ParticlesProps {
+  className?: string;
+  quantity?: number;
+  staticity?: number;
+  ease?: number;
+  size?: number;
+  refresh?: boolean;
+  color?: string;
+  vx?: number;
+  vy?: number;
+}
+
 export const Particles: React.FC<ParticlesProps> = ({
   className = "",
   quantity = 100,
@@ -69,7 +70,7 @@ export const Particles: React.FC<ParticlesProps> = ({
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
   const circles = useRef<Circle[]>([]);
-  const mousePosition = MousePosition();
+  const mousePosition = useMousePosition();
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
