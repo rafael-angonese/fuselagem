@@ -189,6 +189,12 @@
           "title": "Safari",
           "keywords": "safari",
           "path": "/docs/components/safari.mdx"
+        },
+        {
+          "key": "iphone",
+          "title": "iPhone 15 Pro",
+          "keywords": "iphone",
+          "path": "/docs/components/iphone.mdx"
         }
       ]
     }

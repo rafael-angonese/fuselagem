@@ -120,4 +120,11 @@ export const ui: Registry = {
       file: "components/ui/safari/safari.tsx"
     }],
   },
+  "iphone": {
+    name: "iphone",
+    files: [{
+      name: "IPhone.tsx",
+      file: "components/ui/iphone/iphone.tsx"
+    }],
+  },
 }
