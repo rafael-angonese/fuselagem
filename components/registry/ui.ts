@@ -113,4 +113,11 @@ export const ui: Registry = {
       file: "components/ui/number-ticker/number-ticker.tsx"
     }],
   },
+  "safari": {
+    name: "safari",
+    files: [{
+      name: "Safari.tsx",
+      file: "components/ui/safari/safari.tsx"
+    }],
+  },
 }

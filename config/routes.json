@@ -177,6 +177,20 @@
           "path": "/docs/components/grid-pattern.mdx"
         }
       ]
+    },
+    {
+      "key": "device-mocks",
+      "title": "Device Mocks",
+      "defaultOpen": true,
+      "keywords": "device, mocks, components",
+      "routes": [
+        {
+          "key": "safari",
+          "title": "Safari",
+          "keywords": "safari",
+          "path": "/docs/components/safari.mdx"
+        }
+      ]
     }
   ],
   "mobileRoutes": [

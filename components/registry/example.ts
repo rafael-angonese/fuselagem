@@ -242,4 +242,24 @@ export const example: Registry = {
         () => import("@/components/examples/number-ticker/number-ticker-decimal-demo"),
       ),
     },
+    "safari-example": {
+      name: "safari-example",
+      files: [{
+        name: "SafariExample.tsx",
+        file: "components/examples/safari/safari-example.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/examples/safari/safari-example"),
+      ),
+    },
+    "safari-with-image-example": {
+      name: "safari-example",
+      files: [{
+        name: "SafariWithImageExample.tsx",
+        file: "components/examples/safari/safari-with-image-example.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/examples/safari/safari-with-image-example"),
+      ),
+    },
 }
