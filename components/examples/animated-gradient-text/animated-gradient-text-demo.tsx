@@ -1,6 +1,6 @@
 import { ChevronRight } from "lucide-react";
 
-import AnimatedGradientText from "@/components/ui/animated-gradient-text/animated-gradient-text";
+import { AnimatedGradientText } from "@/components/ui/animated-gradient-text/animated-gradient-text";
 import { cnBase } from "tailwind-variants";
 
 export default function AnimatedGradientTextDemo() {

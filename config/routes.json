@@ -71,18 +71,6 @@
           "path": "/docs/components/background-gradient.mdx"
         },
         {
-          "key": "typewriter-effect",
-          "title": "Typewriter Effect",
-          "keywords": "typewriter-effect",
-          "path": "/docs/components/typewriter-effect.mdx"
-        },
-        {
-          "key": "grid-pattern",
-          "title": "Grid Pattern",
-          "keywords": "grid-pattern",
-          "path": "/docs/components/grid-pattern.mdx"
-        },
-        {
           "key": "border-beam",
           "title": "Border Beam",
           "keywords": "border-beam",
@@ -93,24 +81,6 @@
           "title": "Shine Border",
           "keywords": "shine-border",
           "path": "/docs/components/shine-border.mdx"
-        },
-        {
-          "key": "sparkles-text",
-          "title": "Sparkles Text",
-          "keywords": "sparkles-text",
-          "path": "/docs/components/sparkles-text.mdx"
-        },
-        {
-          "key": "animated-shiny-text",
-          "title": "Animated Shiny Text",
-          "keywords": "animated-shiny-text",
-          "path": "/docs/components/animated-shiny-text.mdx"
-        },
-        {
-          "key": "animated-gradient-text",
-          "title": "Animated Gradient Text",
-          "keywords": "animated-gradient-text",
-          "path": "/docs/components/animated-gradient-text.mdx"
         },
         {
           "key": "animated-beam",
@@ -141,7 +111,53 @@
           "title": "Animated Cursor",
           "keywords": "animated-cursor",
           "path": "/docs/components/animated-cursor.mdx"
+        }
+      ]
+    },
+    {
+      "key": "text-animation",
+      "title": "Text Animations",
+      "defaultOpen": true,
+      "keywords": "text, animations, components",
+      "routes": [
+        {
+          "key": "sparkles-text",
+          "title": "Sparkles Text",
+          "keywords": "sparkles-text",
+          "path": "/docs/components/sparkles-text.mdx"
         },
+        {
+          "key": "number-ticker",
+          "title": "Number Ticker",
+          "keywords": "number-ticker",
+          "path": "/docs/components/number-ticker.mdx"
+        },
+        {
+          "key": "typewriter-effect",
+          "title": "Typewriter Effect",
+          "keywords": "typewriter-effect",
+          "path": "/docs/components/typewriter-effect.mdx"
+        },
+        {
+          "key": "animated-shiny-text",
+          "title": "Animated Shiny Text",
+          "keywords": "animated-shiny-text",
+          "path": "/docs/components/animated-shiny-text.mdx"
+        },
+        {
+          "key": "animated-gradient-text",
+          "title": "Animated Gradient Text",
+          "keywords": "animated-gradient-text",
+          "path": "/docs/components/animated-gradient-text.mdx"
+        }
+      ]
+    },
+    {
+      "key": "backgrounds",
+      "title": "Backgrounds",
+      "defaultOpen": true,
+      "keywords": "backgrounds, components",
+      "routes": [
         {
           "key": "meteors",
           "title": "Meteors",
@@ -155,10 +171,10 @@
           "path": "/docs/components/particles.mdx"
         },
         {
-          "key": "number-ticker",
-          "title": "Number Ticker",
-          "keywords": "number-ticker",
-          "path": "/docs/components/number-ticker.mdx"
+          "key": "grid-pattern",
+          "title": "Grid Pattern",
+          "keywords": "grid-pattern",
+          "path": "/docs/components/grid-pattern.mdx"
         }
       ]
     }
