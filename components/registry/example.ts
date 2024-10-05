@@ -282,4 +282,14 @@ export const example: Registry = {
         () => import("@/components/examples/iphone/iphone-with-image-example"),
       ),
     },
+    "tiles-example": {
+      name: "tiles-example",
+      files: [{
+        name: "TilesExample.tsx",
+        file: "components/examples/tiles/tiles-example.tsx"
+      }],
+      component: React.lazy(
+        () => import("@/components/examples/tiles/tiles-example"),
+      ),
+    },
 }

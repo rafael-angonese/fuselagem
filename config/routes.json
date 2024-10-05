@@ -175,6 +175,12 @@
           "title": "Grid Pattern",
           "keywords": "grid-pattern",
           "path": "/docs/components/grid-pattern.mdx"
+        },
+        {
+          "key": "tiles",
+          "title": "Tiles",
+          "keywords": "tiles",
+          "path": "/docs/components/tiles.mdx"
         }
       ]
     },

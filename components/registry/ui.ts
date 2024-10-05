@@ -127,4 +127,11 @@ export const ui: Registry = {
       file: "components/ui/iphone/iphone.tsx"
     }],
   },
+  "tiles": {
+    name: "tiles",
+    files: [{
+      name: "Tiles.tsx",
+      file: "components/ui/tiles/tiles.tsx"
+    }],
+  },
 }
