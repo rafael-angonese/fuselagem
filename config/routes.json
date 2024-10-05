@@ -155,6 +155,12 @@
           "title": "Animated Gradient Text",
           "keywords": "animated-gradient-text",
           "path": "/docs/components/animated-gradient-text.mdx"
+        },
+        {
+          "key": "word-rotate",
+          "title": "Word Rotate",
+          "keywords": "word-rotate",
+          "path": "/docs/components/word-rotate.mdx"
         }
       ]
     },

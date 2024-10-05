@@ -141,4 +141,11 @@ export const ui: Registry = {
       file: "components/ui/marquee/marquee.tsx"
     }],
   },
+  "word-rotate": {
+    name: "word-rotate",
+    files: [{
+      name: "WordRotate.tsx",
+      file: "components/ui/word-rotate/word-rotate.tsx"
+    }],
+  },
 }
