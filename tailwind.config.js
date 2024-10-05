@@ -353,6 +353,9 @@ module.exports = {
             opacity: 0,
           },
         },
+        marquee: {
+          to: { transform: 'translateX(-50%)' }
+        }
       },
       animation: {
         heartbeat: "heartbeat 1s ease-in-out infinite",
@@ -364,6 +367,7 @@ module.exports = {
         "shimmer-ui": "shimmer-ui 5s infinite",
         gradient: "gradient 8s linear infinite",
         meteor: "meteor 5s linear infinite",
+        marquee: 'marquee var(--duration, 30s) linear infinite'
       },
     },
   },

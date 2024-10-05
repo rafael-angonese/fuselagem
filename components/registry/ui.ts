@@ -134,4 +134,11 @@ export const ui: Registry = {
       file: "components/ui/tiles/tiles.tsx"
     }],
   },
+  "marquee": {
+    name: "marquee",
+    files: [{
+      name: "Marquee.tsx",
+      file: "components/ui/marquee/marquee.tsx"
+    }],
+  },
 }
