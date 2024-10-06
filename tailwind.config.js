@@ -355,6 +355,14 @@ module.exports = {
         },
         marquee: {
           to: { transform: 'translateX(-50%)' }
+        },
+        "shiny-button": {
+          from: {
+            "backgroundPosition": "0 0"
+          },
+          to: {
+            "backgroundPosition": "-200% 0"
+          }
         }
       },
       animation: {
@@ -367,7 +375,8 @@ module.exports = {
         "shimmer-ui": "shimmer-ui 5s infinite",
         gradient: "gradient 8s linear infinite",
         meteor: "meteor 5s linear infinite",
-        marquee: 'marquee var(--duration, 30s) linear infinite'
+        marquee: 'marquee var(--duration, 30s) linear infinite',
+        "shiny-button": "shiny-button 2s linear infinite"
       },
     },
   },

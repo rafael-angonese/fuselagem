@@ -148,4 +148,11 @@ export const ui: Registry = {
       file: "components/ui/word-rotate/word-rotate.tsx"
     }],
   },
+  "shiny-button-v2": {
+    name: "shiny-button-v2",
+    files: [{
+      name: "ShinyButtonV2.tsx",
+      file: "components/ui/shiny-button/shiny-button-v2.tsx"
+    }],
+  },
 }

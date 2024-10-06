@@ -1,0 +1,51 @@
+---
+title: "Shiny Button v2"
+description: "Animated grid background tiles."
+---
+
+# Shiny Button v2
+
+Animated grid background tiles
+
+---
+
+## Usage
+
+<ComponentPreview name="shiny-button-v2-example" />
+
+## Code
+
+<ComponentPreview showPreview={false} name="shiny-button-v2" />
+
+### Update `tailwind.config.js`
+
+Add the following animations to your `tailwind.config.js` file.
+
+```js {5-17}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        "shiny-button": "shiny-button 2s linear infinite",
+      },
+      keyframes: {
+        "shiny-button": {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+## Props
+
+| Attribute | Type     | Description                                | Default     |
+| --------- | -------- | ------------------------------------------ | ----------- |
+| className | `string` | The CSS class to be applied to the button. | `undefined` |

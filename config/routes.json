@@ -89,12 +89,6 @@
           "path": "/docs/components/animated-beam.mdx"
         },
         {
-          "key": "shiny-button",
-          "title": "Shiny Button",
-          "keywords": "shiny-button",
-          "path": "/docs/components/shiny-button.mdx"
-        },
-        {
           "key": "scratch-to-reveal",
           "title": "Scratch To Reveal",
           "keywords": "scratch-to-reveal",
@@ -117,6 +111,26 @@
           "title": "Marquee",
           "keywords": "marquee",
           "path": "/docs/components/marquee.mdx"
+        }
+      ]
+    },
+    {
+      "key": "buttons",
+      "title": "Buttons",
+      "defaultOpen": true,
+      "keywords": "buttons, animations, components",
+      "routes": [
+        {
+          "key": "shiny-button",
+          "title": "Shiny Button",
+          "keywords": "shiny-button",
+          "path": "/docs/components/shiny-button.mdx"
+        },
+        {
+          "key": "shiny-button-v2",
+          "title": "Shiny Button V2",
+          "keywords": "shiny-button-v2",
+          "path": "/docs/components/shiny-button-v2.mdx"
         }
       ]
     },
