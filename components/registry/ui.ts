@@ -155,4 +155,11 @@ export const ui: Registry = {
       file: "components/ui/shiny-button/shiny-button-v2.tsx"
     }],
   },
+  "lines": {
+    name: "lines",
+    files: [{
+      name: "Lines.tsx",
+      file: "components/ui/lines/lines.tsx"
+    }],
+  },
 }

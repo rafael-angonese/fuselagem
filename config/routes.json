@@ -111,6 +111,12 @@
           "title": "Marquee",
           "keywords": "marquee",
           "path": "/docs/components/marquee.mdx"
+        },
+        {
+          "key": "lines",
+          "title": "Lines",
+          "keywords": "lines",
+          "path": "/docs/components/lines.mdx"
         }
       ]
     },

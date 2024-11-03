@@ -322,4 +322,14 @@ export const example: Registry = {
       () => import("@/components/examples/shiny-button/shiny-button-v2-example"),
     ),
   },
+  "lines-example": {
+    name: "lines-example",
+    files: [{
+      name: "ShimmerButtonExample.tsx",
+      file: "components/examples/lines/lines-example.tsx"
+    }],
+    component: React.lazy(
+      () => import("@/components/examples/lines/lines-example"),
+    ),
+  },
 }
