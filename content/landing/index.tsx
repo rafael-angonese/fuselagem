@@ -31,13 +31,13 @@ export default {
     {
       title: "Light & Dark UI",
       description:
-        "Automatic dark mode recognition, NextUI automatically changes the theme when detects HTML theme prop changes.",
+        "Automatic dark mode recognition, FuselagemUI automatically changes the theme when detects HTML theme prop changes.",
       icon: <MoonIcon className="text-pink-500" />,
     },
     {
       title: "Unique DX",
       description:
-        "NextUI is fully-typed to minimize the learning curve, and provide the best possible developer experience.",
+        "FuselagemUI is fully-typed to minimize the learning curve, and provide the best possible developer experience.",
       icon: <DevicesIcon className="text-pink-500" />,
     },
   ],
