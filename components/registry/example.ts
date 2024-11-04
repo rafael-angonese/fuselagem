@@ -332,4 +332,14 @@ export const example: Registry = {
       () => import("@/components/examples/lines/lines-example"),
     ),
   },
+  "mark-example": {
+    name: "mark-example",
+    files: [{
+      name: "MarkExample.tsx",
+      file: "components/examples/mark/mark-example.tsx"
+    }],
+    component: React.lazy(
+      () => import("@/components/examples/mark/mark-example"),
+    ),
+  },
 }

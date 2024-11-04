@@ -162,4 +162,11 @@ export const ui: Registry = {
       file: "components/ui/lines/lines.tsx"
     }],
   },
+  "mark": {
+    name: "mark",
+    files: [{
+      name: "Mark.tsx",
+      file: "components/ui/mark/mark.tsx"
+    }],
+  },
 }

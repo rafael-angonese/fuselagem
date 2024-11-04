@@ -181,6 +181,12 @@
           "title": "Word Rotate",
           "keywords": "word-rotate",
           "path": "/docs/components/word-rotate.mdx"
+        },
+        {
+          "key": "mark",
+          "title": "Mark",
+          "keywords": "mark",
+          "path": "/docs/components/mark.mdx"
         }
       ]
     },
